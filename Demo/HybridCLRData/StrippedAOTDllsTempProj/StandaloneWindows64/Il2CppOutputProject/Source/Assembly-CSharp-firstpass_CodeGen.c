@@ -1,0 +1,92 @@
+﻿#include "pch-c.h"
+#ifndef _MSC_VER
+# include <alloca.h>
+#else
+# include <malloc.h>
+#endif
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+extern void ConsoleToScreen_OnEnable_m90E54414C23B5A1C6DF72733134DD30983551A78 (void);
+extern void ConsoleToScreen_OnDisable_m74517D60E156DDA31F68E466ADC692F4223EE46A (void);
+extern void ConsoleToScreen_Log_m6044B292544FF020448BEBE77BF8CAA2D703F76B (void);
+extern void ConsoleToScreen_OnGUI_m55E61AD930DF96D789DC04615F7FA00AAB1604D2 (void);
+extern void ConsoleToScreen__ctor_m948B0138E114265E431C228A850E27048594F45B (void);
+extern void GameUpdateController_Start_mB0B1F2FC31E784A183CF2EF99106C57CA5D1F289 (void);
+extern void GameUpdateController_Update_m45F2128C59FBB81CBB5442DAFCD63C6F405616D5 (void);
+extern void GameUpdateController__ctor_m9D4BFD59870672F1DDC0D3A8E900FB8B034358DA (void);
+extern void HybridCLRController_Start_m69119ECF43AE1DA30310F057A21D7DC130A08B86 (void);
+extern void HybridCLRController_Update_mC8DDD6194FCADC02450EC7FBDB9E480DD2690C67 (void);
+extern void HybridCLRController__ctor_m6F09E36CC37EE0DC4F603477A30256D673A3942D (void);
+extern void HybridCLRController__cctor_mA43C9E9795475AECE394E413DE83BCE9EFFB47A6 (void);
+extern void Main_Start_m480177EE235F01DC319847766193DF2B5AADE49B (void);
+extern void Main_Update_m229E291F724168FB7B48DC198D950AB2F5A93F63 (void);
+extern void Main__ctor_mFC5B2765686D3D69C7A6D0D04E33EC15ECEA08DB (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mC7CA174A23290C34424DF6D2733D5E64B92E5977 (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m3C9D09F94200334DD5FA29A465481C7848AF4549 (void);
+static Il2CppMethodPointer s_methodPointers[17] = 
+{
+	ConsoleToScreen_OnEnable_m90E54414C23B5A1C6DF72733134DD30983551A78,
+	ConsoleToScreen_OnDisable_m74517D60E156DDA31F68E466ADC692F4223EE46A,
+	ConsoleToScreen_Log_m6044B292544FF020448BEBE77BF8CAA2D703F76B,
+	ConsoleToScreen_OnGUI_m55E61AD930DF96D789DC04615F7FA00AAB1604D2,
+	ConsoleToScreen__ctor_m948B0138E114265E431C228A850E27048594F45B,
+	GameUpdateController_Start_mB0B1F2FC31E784A183CF2EF99106C57CA5D1F289,
+	GameUpdateController_Update_m45F2128C59FBB81CBB5442DAFCD63C6F405616D5,
+	GameUpdateController__ctor_m9D4BFD59870672F1DDC0D3A8E900FB8B034358DA,
+	HybridCLRController_Start_m69119ECF43AE1DA30310F057A21D7DC130A08B86,
+	HybridCLRController_Update_mC8DDD6194FCADC02450EC7FBDB9E480DD2690C67,
+	HybridCLRController__ctor_m6F09E36CC37EE0DC4F603477A30256D673A3942D,
+	HybridCLRController__cctor_mA43C9E9795475AECE394E413DE83BCE9EFFB47A6,
+	Main_Start_m480177EE235F01DC319847766193DF2B5AADE49B,
+	Main_Update_m229E291F724168FB7B48DC198D950AB2F5A93F63,
+	Main__ctor_mFC5B2765686D3D69C7A6D0D04E33EC15ECEA08DB,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mC7CA174A23290C34424DF6D2733D5E64B92E5977,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m3C9D09F94200334DD5FA29A465481C7848AF4549,
+};
+static const int32_t s_InvokerIndices[17] = 
+{
+	1350,
+	1350,
+	395,
+	1350,
+	1350,
+	1350,
+	1350,
+	1350,
+	1350,
+	1350,
+	1350,
+	2568,
+	1350,
+	1350,
+	1350,
+	2570,
+	1350,
+};
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharpU2Dfirstpass_CodeGenModule;
+const Il2CppCodeGenModule g_AssemblyU2DCSharpU2Dfirstpass_CodeGenModule = 
+{
+	"Assembly-CSharp-firstpass.dll",
+	17,
+	s_methodPointers,
+	0,
+	NULL,
+	s_InvokerIndices,
+	0,
+	NULL,
+	0,
+	NULL,
+	0,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+};
