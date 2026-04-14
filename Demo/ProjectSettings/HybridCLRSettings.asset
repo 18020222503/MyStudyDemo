@@ -25,6 +25,21 @@ MonoBehaviour:
   strippedAOTDllOutputRootDir: HybridCLRData/AssembliesPostIl2CppStrip
   patchAOTAssemblies: []
   outputLinkFile: HybridCLRGenerate/link.xml
+  differentialHybridAssemblies: []
+  injectRuleFiles: []
+  generateCompatibleMethodSignature: 0
   outputAOTGenericReferenceFile: HybridCLRGenerate/AOTGenericReferences.cs
   maxGenericReferenceIteration: 10
   maxMethodBridgeGenericIteration: 10
+  encryptionSettings:
+    encryptGlobalMetadataData: 0
+    vmSeed: 0
+    metadataSeed: 0
+    key: 1234567890abcdef
+    stringEncCodeLength: 128
+    blobEncCodeLength: 128
+    userStringEncCodeLength: 128
+    tableEncCodeLength: 128
+    lazyUserStringEncCodeLength: 16
+    lazyTableEncCodeLength: 16
+    methodBodyEncCodeLength: 16

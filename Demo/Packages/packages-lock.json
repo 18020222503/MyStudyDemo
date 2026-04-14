@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "com.code-philosophy.hybridclr": {
+      "version": "file:E:/work/g36/HybridCRL-Flagship",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "com.unity.addressables": {
       "version": "1.22.3",
       "depth": 0,

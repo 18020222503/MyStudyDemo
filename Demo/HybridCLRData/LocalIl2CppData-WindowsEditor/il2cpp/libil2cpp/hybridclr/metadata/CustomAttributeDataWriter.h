@@ -10,6 +10,9 @@ namespace hybridclr
 {
 namespace metadata
 {
+
+	constexpr uint32_t CUSTOME_ATTRIBUTE_DATA_ALIGMENT = 8;
+
 	class CustomAttributeDataWriter
 	{
 	private:
@@ -17,15 +20,16 @@ namespace metadata
 		uint32_t _capacity;
 		uint32_t _size;
 
+
 	public:
 		CustomAttributeDataWriter(uint32_t capacity) : _capacity(Round2Exp(capacity)), _size(0)
 		{
-			_data = (uint8_t*)HYBRIDCLR_MALLOC_ZERO(_capacity);
+			_data = (uint8_t*)HYBRIDCLR_MALLOC_ALIGNED(_capacity, CUSTOME_ATTRIBUTE_DATA_ALIGMENT);
 		}
 
 		~CustomAttributeDataWriter()
 		{
-			HYBRIDCLR_FREE(_data);
+			HYBRIDCLR_FREE_ALIGNED(_data);
 			_data = nullptr;
 		}
 
@@ -164,6 +168,16 @@ namespace metadata
 			_data[_size - 1] = x;
 		}
 
+		void AdjustToAligment()
+		{
+			uint32_t n = _size % CUSTOME_ATTRIBUTE_DATA_ALIGMENT;
+			if (n != 0)
+			{
+				SureRemainSize(CUSTOME_ATTRIBUTE_DATA_ALIGMENT - n);
+				_size += CUSTOME_ATTRIBUTE_DATA_ALIGMENT - n;
+			}
+		}
+
 	private:
 		uint32_t Round2Exp(uint32_t n)
 		{
@@ -191,9 +205,9 @@ namespace metadata
 		{
 			_capacity = newSize = Round2Exp(newSize);
 			uint8_t* oldData = _data;
-			_data = (uint8_t*)HYBRIDCLR_MALLOC(newSize);
+			_data = (uint8_t*)HYBRIDCLR_MALLOC_ALIGNED(newSize, CUSTOME_ATTRIBUTE_DATA_ALIGMENT);
 			std::memcpy(_data, oldData, _size);
-			HYBRIDCLR_FREE(oldData);
+			HYBRIDCLR_FREE_ALIGNED(oldData);
 		}
 	};
 }

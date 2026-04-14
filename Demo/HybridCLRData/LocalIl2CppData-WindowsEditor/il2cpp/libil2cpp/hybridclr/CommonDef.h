@@ -8,9 +8,10 @@
 
 #include "utils/Memory.h"
 #include "utils/StringView.h"
-#include "utils/Il2CppHashSet.h"
 #include "utils/Il2CppHashMap.h"
+#include "utils/Il2CppHashSet.h"
 #include "utils/HashUtils.h"
+#include "utils/dynamic_array.h"
 #include "vm/GlobalMetadataFileInternals.h"
 #include "vm/Exception.h"
 #include "vm/Class.h"
@@ -63,6 +64,10 @@ namespace hybridclr
 	{
 		bool operator()(const char* _Left, const char* _Right) const
 		{
+			if (!_Left || !_Right)
+			{
+				return _Left == _Right;
+			}
 			return std::strcmp(_Left, _Right) == 0;
 		}
 	};

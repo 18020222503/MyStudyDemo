@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 #include "../CommonDef.h"
 
@@ -6,6 +6,7 @@ namespace hybridclr
 {
 namespace metadata
 {
+
 	enum class OpcodeValue : uint8_t
 	{
 		//!!!{{OPCODE_VALUE

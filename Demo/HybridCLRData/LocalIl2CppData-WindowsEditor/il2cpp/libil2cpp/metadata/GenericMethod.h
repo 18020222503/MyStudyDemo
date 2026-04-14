@@ -1,6 +1,8 @@
 #pragma once
 
 #include <string>
+#include <unordered_set>
+
 #include "il2cpp-class-internals.h"
 #include "os/Mutex.h"
 
@@ -32,6 +34,9 @@ namespace metadata
         static void ClearStatics();
         static const Il2CppRGCTXData* InflateRGCTX(const MethodInfo* method);
 
+        static void AnUnresolvedCallStubWasNotFound();
+        static void AnUnresolvedCallStubWasNotFoundValueType(void* obj);
+		static void InvalidateMethodInterpreterData(const std::unordered_set<const MethodInfo*>& methods);
     private:
         static const MethodInfo* GetMethod(const Il2CppGenericMethod* gmethod, bool copyMethodPtr);
         static const MethodInfo* CreateMethodLocked(const Il2CppGenericMethod* gmethod, bool copyMethodPtr);

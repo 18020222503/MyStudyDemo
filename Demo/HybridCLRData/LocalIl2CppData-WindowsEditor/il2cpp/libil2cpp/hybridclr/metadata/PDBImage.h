@@ -68,13 +68,13 @@ namespace metadata
 			return document ? document->sourceFiles : nullptr;
 		}
 
-		typedef Il2CppHashMap<uint32_t, SymbolMethodDefData*, il2cpp::utils::PassThroughHash<uint32_t>> SymbolMethodDataMap;
+		typedef Il2CppNotDefaultKeyHashMap<uint32_t, SymbolMethodDefData*, il2cpp::utils::PassThroughHash<uint32_t>> SymbolMethodDataMap;
 		SymbolMethodDataMap _methods;
 
-		typedef Il2CppHashMap<uint32_t, SymbolDocumentData*, il2cpp::utils::PassThroughHash<uint32_t>> SymbolDocumentDataMap;
+		typedef Il2CppNotDefaultKeyHashMap<uint32_t, SymbolDocumentData*, il2cpp::utils::PassThroughHash<uint32_t>> SymbolDocumentDataMap;
 		SymbolDocumentDataMap _documents;
 
-		typedef Il2CppHashMap<const MethodInfo*, SymbolMethodInfoData*, il2cpp::utils::PassThroughHash<const MethodInfo*>> SymbolMethodInfoDataMap;
+		typedef Il2CppNotDefaultKeyHashMap<const MethodInfo*, SymbolMethodInfoData*, il2cpp::utils::PassThroughHash<const MethodInfo*>> SymbolMethodInfoDataMap;
 		SymbolMethodInfoDataMap _methodInfos;
 	};
 }

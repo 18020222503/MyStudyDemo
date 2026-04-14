@@ -42,6 +42,7 @@ namespace vm
             return gclass1->type->data.typeHandle == gclass2->type->data.typeHandle;
         }
 
+        static void RetargetOriginalImageToFinalImage(Il2CppImage* originalImage, Il2CppImage* finalImage);
     private:
         static Il2CppClass* CreateClass(Il2CppGenericClass *gclass, bool throwOnError = true);
     };

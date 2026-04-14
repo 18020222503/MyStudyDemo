@@ -1,6 +1,8 @@
 #pragma once
 
 #include <vector>
+#include <unordered_map>
+#include <unordered_set>
 
 #include "metadata/Il2CppTypeHash.h"
 #include "metadata/Il2CppTypeCompare.h"
@@ -36,13 +38,13 @@ namespace metadata
 		uint32_t offset;
 	};
 
-	typedef Il2CppHashMap<const Il2CppType*, VTableSetUp*, il2cpp::metadata::Il2CppTypeHash, il2cpp::metadata::Il2CppTypeEqualityComparer> Il2CppType2TypeDeclaringTreeMap;
+	typedef std::unordered_map<const Il2CppType*, VTableSetUp*, il2cpp::metadata::Il2CppTypeHash, il2cpp::metadata::Il2CppTypeEqualityComparer> Il2CppType2TypeDeclaringTreeMap;
 
 	class VTableSetUp
 	{
 	public:
-		typedef Il2CppHashMap<int32_t, uint16_t, il2cpp::utils::PassThroughHash<int32_t>> Int32ToUin16Map;
-		typedef Il2CppHashSet<uint16_t, il2cpp::utils::PassThroughHash<uint16_t>> Uin16Set;
+		typedef std::unordered_map<int32_t, uint16_t, il2cpp::utils::PassThroughHash<int32_t>> Int32ToUin16Map;
+		typedef std::unordered_set<uint16_t, il2cpp::utils::PassThroughHash<uint16_t>> Uin16Set;
 
 		static VTableSetUp* BuildByType(Il2CppType2TypeDeclaringTreeMap& cache, const Il2CppType* type);
 		static VTableSetUp* InflateVts(Il2CppType2TypeDeclaringTreeMap& cache, VTableSetUp* genericType, const Il2CppType* type);

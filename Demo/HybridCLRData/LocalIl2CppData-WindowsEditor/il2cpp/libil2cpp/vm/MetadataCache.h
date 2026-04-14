@@ -53,10 +53,10 @@ namespace vm
         GenericParameterRestrictionReferenceType,
     };
 
-    typedef Il2CppHashMap<const char*, Il2CppClass*, il2cpp::utils::StringUtils::StringHasher<const char*>, il2cpp::utils::VmStringUtils::CaseSensitiveComparer> WindowsRuntimeTypeNameToClassMap;
-    typedef Il2CppHashMap<const Il2CppClass*, const char*, il2cpp::utils::PointerHash<Il2CppClass> > ClassToWindowsRuntimeTypeNameMap;
-    typedef Il2CppHashMap<il2cpp::metadata::Il2CppSignature, int32_t, il2cpp::metadata::Il2CppSignatureHash, il2cpp::metadata::Il2CppSignatureCompare> Il2CppUnresolvedSignatureMap;
-    typedef Il2CppHashMap<const Il2CppGenericMethod*, const Il2CppGenericMethodIndices*, il2cpp::metadata::Il2CppGenericMethodHash, il2cpp::metadata::Il2CppGenericMethodCompare> Il2CppMethodTableMap;
+    typedef Il2CppNotDefaultKeyHashMap<const char*, Il2CppClass*, il2cpp::utils::StringUtils::StringHasher<const char*>, il2cpp::utils::VmStringUtils::CaseSensitiveComparer> WindowsRuntimeTypeNameToClassMap;
+    typedef Il2CppNotDefaultKeyHashMap<const Il2CppClass*, const char*, il2cpp::utils::PointerHash<Il2CppClass> > ClassToWindowsRuntimeTypeNameMap;
+    typedef Il2CppNotDefaultKeyHashMap<il2cpp::metadata::Il2CppSignature, int32_t, il2cpp::metadata::Il2CppSignatureHash, il2cpp::metadata::Il2CppSignatureCompare> Il2CppUnresolvedSignatureMap;
+    typedef Il2CppNotDefaultKeyHashMap<const Il2CppGenericMethod*, const Il2CppGenericMethodIndices*, il2cpp::metadata::Il2CppGenericMethodHash, il2cpp::metadata::Il2CppGenericMethodCompare> Il2CppMethodTableMap;
 
     class LIBIL2CPP_CODEGEN_API MetadataCache
     {
@@ -84,7 +84,11 @@ namespace vm
         static Il2CppClass* GetClassForGuid(const Il2CppGuid* guid);
         static void AddPointerTypeLocked(Il2CppClass* type, Il2CppClass* pointerType, const il2cpp::os::FastAutoLock& lock);
 
+		static void PreserveGenericInstCount(size_t count);
+		static void RegisterGenericInst(const Il2CppGenericInst* inst);
         static const Il2CppGenericInst* GetGenericInst(const Il2CppType* const* types, uint32_t typeCount);
+		static void PreserveGenericMethodCount(size_t count);
+        static void RegisterGenericMethod(const Il2CppGenericMethod* gmethod);
         static const Il2CppGenericMethod* GetGenericMethod(const MethodInfo* methodDefinition, const Il2CppGenericInst* classInst, const Il2CppGenericInst* methodInst);
         static GenericParameterRestriction IsReferenceTypeGenericParameter(Il2CppMetadataGenericParameterHandle genericParameter);
 
@@ -118,7 +122,6 @@ namespace vm
         static Il2CppMetadataGenericParameterHandle GetGenericParameterFromIndex(Il2CppMetadataGenericContainerHandle handle, GenericContainerParameterIndex index);
         static Il2CppClass* GetContainerDeclaringType(Il2CppMetadataGenericContainerHandle handle);
         static Il2CppClass* GetParameterDeclaringType(Il2CppMetadataGenericParameterHandle handle);
-        static const MethodInfo* GetParameterDeclaringMethod(Il2CppMetadataGenericParameterHandle handle);
 
         static const Il2CppType* GetGenericParameterConstraintFromIndex(Il2CppMetadataGenericParameterHandle handle, GenericParameterConstraintIndex index);
         static Il2CppClass* GetNestedTypeFromOffset(const Il2CppClass* klass, TypeNestedTypeIndex offset);
@@ -198,6 +201,7 @@ namespace vm
         static Il2CppImage* GetImageFromIndex(ImageIndex index);
         static const Il2CppAssembly* GetAssemblyFromIndex(AssemblyIndex index);
         static Il2CppMetadataTypeHandle GetTypeHandleFromIndex(const Il2CppImage* image, TypeDefinitionIndex typeIndex);
+        static void RetargetOriginalImageToFinalImage(Il2CppImage* originalImage, Il2CppImage* finalImage);
 
         static void RegisterInterpreterAssembly(Il2CppAssembly* assembly);
         static const Il2CppAssembly* LoadAssemblyFromBytes(const char* assemblyBytes, size_t length, const char* rawSymbolStoreBytes, size_t rawSymbolStoreLength);

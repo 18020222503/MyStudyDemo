@@ -23,6 +23,7 @@ namespace metadata
         static void SetupArrayVTable(Il2CppClass* klass, const il2cpp::os::FastAutoLock& lock);
 
         static void Clear();
+        static void RetargetOriginalImageToFinalImage(Il2CppImage* originalImage, Il2CppImage* finalImage);
 
         /* From ECMA-335, I.8.7 Assignment compatibility:
 

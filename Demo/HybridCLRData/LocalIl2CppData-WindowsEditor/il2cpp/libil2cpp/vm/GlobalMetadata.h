@@ -78,12 +78,13 @@ namespace vm
 
         static void BuildIl2CppImage(Il2CppImage* image, ImageIndex imageIndex, AssemblyIndex* imageAssemblyIndex);
         static void BuildIl2CppAssembly(Il2CppAssembly* assembly, AssemblyIndex assemblyIndex, ImageIndex* assemblyImageIndex);
+        static void RetargetOriginalImageToFinalImage(Il2CppImage* originalImage, Il2CppImage* finalImage);
 
         static void Clear();
 
         static const MethodInfo* GetAssemblyEntryPoint(const Il2CppImage* image);
         static Il2CppMetadataTypeHandle GetAssemblyTypeHandle(const Il2CppImage* image, AssemblyTypeIndex index);
-        static const Il2CppAssembly* GetReferencedAssembly(const Il2CppAssembly* assembly, int32_t referencedAssemblyTableIndex, const Il2CppAssembly assembliesTable[], int assembliesCount);
+        static const Il2CppAssembly* GetReferencedAssembly(const Il2CppAssembly* assembly, int32_t referencedAssemblyTableIndex, const Il2CppAssembly** assembliesTable, int assembliesCount);
         static Il2CppMetadataTypeHandle GetAssemblyExportedTypeHandle(const Il2CppImage* image, AssemblyExportedTypeIndex index);
 
         static Il2CppClass* GetTypeInfoFromType(const Il2CppType* type);
@@ -128,7 +129,7 @@ namespace vm
 
         static const char* GetStringFromIndex(StringIndex index);
         static TypeDefinitionIndex GetIndexForTypeDefinition(const Il2CppClass* klass);
-        static TypeDefinitionIndex GetIndexForTypeDefinition(const Il2CppTypeDefinition* typeDef);
+        static TypeDefinitionIndex GetIndexForTypeDefinition(const Il2CppTypeDefinition* typeDefinition);
         static const Il2CppParameterDefinition* GetParameterDefinitionFromIndex(const Il2CppClass* klass, ParameterIndex index);
         static const Il2CppParameterDefinition* GetParameterDefinitionFromIndex(const Il2CppMethodDefinition* methodDef, ParameterIndex index);
 
@@ -155,7 +156,6 @@ namespace vm
         static std::pair<const Il2CppType*, const MethodInfo*> GetConstrainedCallFromRgctxDefinition(const Il2CppRGCTXDefinition* rgctxDef);
         static Il2CppClass* GetContainerDeclaringType(Il2CppMetadataGenericContainerHandle handle);
         static Il2CppClass* GetParameterDeclaringType(Il2CppMetadataGenericParameterHandle handle);
-        static const MethodInfo* GetParameterDeclaringMethod(Il2CppMetadataGenericParameterHandle handle);
         static Il2CppMetadataGenericParameterHandle GetGenericParameterFromIndex(Il2CppMetadataGenericContainerHandle handle, GenericContainerParameterIndex index);
         static const Il2CppType* GetGenericParameterConstraintFromIndex(Il2CppMetadataGenericParameterHandle handle, GenericParameterConstraintIndex index);
         static void MakeGenericArgType(Il2CppMetadataGenericContainerHandle containerHandle, Il2CppMetadataGenericParameterHandle paramHandle, Il2CppType* arg);
@@ -174,6 +174,7 @@ namespace vm
         static Il2CppClass* GetTypeInfoFromTypeIndex(TypeIndex index, bool throwOnError = true);
         static const Il2CppType* GetIl2CppTypeFromIndex(TypeIndex index);
         static const MethodInfo* GetMethodInfoFromMethodDefinitionIndex(MethodIndex index);
+        static const Il2CppImage* GetImageForTypeDefinitionIndex(TypeDefinitionIndex index);
 
         template<typename T>
         static inline bool IsRuntimeMetadataInitialized(T item)

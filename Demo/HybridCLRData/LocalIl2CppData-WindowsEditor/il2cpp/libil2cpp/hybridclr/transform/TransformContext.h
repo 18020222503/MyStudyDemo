@@ -109,7 +109,7 @@ namespace transform
 		il2cpp::utils::dynamic_array<EvalStackVarInfo> evalStack;
 	};
 
-	typedef Il2CppHashMap<IRCommon*, uint32_t, il2cpp::utils::PointerHash<IRCommon>> IR2OffsetMap;
+	typedef Il2CppNotDefaultKeyHashMap<IRCommon*, uint32_t, il2cpp::utils::PointerHash<IRCommon>> IR2OffsetMap;
 
 	LocationDescInfo ComputLocationDescInfo(const Il2CppType* type);
 
@@ -138,8 +138,8 @@ namespace transform
 		int32_t curStackSize;
 
 		il2cpp::utils::dynamic_array<uint64_t>& resolveDatas;
-		Il2CppHashMap<uint32_t, uint32_t, il2cpp::utils::PassThroughHash<uint32_t>> token2DataIdxs;
-		Il2CppHashMap<const void*, uint32_t, il2cpp::utils::PassThroughHash<const void*>> ptr2DataIdxs;
+		Il2CppNotDefaultKeyHashMap<uint32_t, uint32_t, il2cpp::utils::PassThroughHash<uint32_t>> token2DataIdxs;
+		Il2CppNotDefaultKeyHashMap<const void*, uint32_t, il2cpp::utils::PassThroughHash<const void*>> ptr2DataIdxs;
 		std::vector<int32_t*> relocationOffsets;
 		std::vector<std::pair<int32_t, int32_t>> switchOffsetsInResolveData;
 		std::vector<FlowInfo*> pendingFlows;
@@ -251,11 +251,23 @@ namespace transform
 			return evalStack[evalStackTop - 1].locOffset;
 		}
 
+		uint64_t GetResolveData(size_t index) const
+		{
+			return resolveDatas[index];
+		}
+
+		il2cpp::utils::dynamic_array<uint64_t>& GetResolveDatas() const
+		{
+			return resolveDatas;
+		}
+
 		void PushStackByType(const Il2CppType* type);
 
 		void PushStackByReduceType(EvalStackReduceDataType t);
 
 		void DuplicateStack();
+
+		void InsertNewObjectStackByType(int32_t index, const Il2CppType* type);
 
 		void PopStack();
 

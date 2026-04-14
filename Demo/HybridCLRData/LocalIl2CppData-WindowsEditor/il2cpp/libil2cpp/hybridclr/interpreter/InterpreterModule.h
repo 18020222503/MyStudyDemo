@@ -29,6 +29,13 @@ namespace interpreter
 			return *state;
 		}
 
+		static MachineState* GetCurrentThreadMachineStatePtrWithoutInit()
+		{
+			MachineState* state = nullptr;
+			s_machineState.GetValue((void**)&state);
+			return state;
+		}
+
 		static void FreeThreadLocalMachineState()
 		{
 			MachineState* state = nullptr;
@@ -56,13 +63,13 @@ namespace interpreter
 
 		static bool IsImplementsByInterpreter(const MethodInfo* method);
 
-		static bool HasImplementCallNative2Managed(const MethodInfo* method)
+		static bool HasImplementNative2Managed(const MethodInfo* method)
 		{
 			IL2CPP_ASSERT(method->methodPointerCallByInterp != NotSupportAdjustorThunk);
 			return method->methodPointerCallByInterp != (Il2CppMethodPointer)NotSupportNative2Managed;
 		}
 
-		static bool HasImplementCallVirtualNative2Managed(const MethodInfo* method)
+		static bool HasImplementVirtualNative2Managed(const MethodInfo* method)
 		{
 			IL2CPP_ASSERT(method->virtualMethodPointerCallByInterp != NotSupportNative2Managed);
 			return method->virtualMethodPointerCallByInterp != (Il2CppMethodPointer)NotSupportAdjustorThunk;

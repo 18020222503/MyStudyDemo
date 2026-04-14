@@ -11,7 +11,7 @@ namespace metadata
     class Il2CppGenericInstCompare
     {
     public:
-        bool operator()(const Il2CppGenericInst* left, const Il2CppGenericInst* right) const;
+        bool operator()(const Il2CppGenericInst* t1, const Il2CppGenericInst* t2) const;
         static bool Compare(const Il2CppGenericInst* left, const Il2CppGenericInst* right);
         static bool AreEqual(const Il2CppGenericInst* left, const Il2CppGenericInst* right);
     };

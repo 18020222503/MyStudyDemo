@@ -9,8 +9,8 @@
 #include "vm/Runtime.h"
 #include "vm/GlobalMetadataFileInternals.h"
 #include "vm/MetadataAlloc.h"
-#include "icalls/mscorlib/System/Type.h"
 #include "gc/GarbageCollector.h"
+#include "icalls/mscorlib/System/Type.h"
 
 #if HYBRIDCLR_UNITY_2020
 #include "icalls/mscorlib/System/MonoType.h"
@@ -89,6 +89,7 @@
 
 namespace hybridclr
 {
+	extern const char* g_differentialHybridAssemblies[];
 
 	extern const char* g_placeHolderAssemblies[];
 
@@ -96,6 +97,9 @@ namespace hybridclr
 
 	inline Il2CppMethodPointer InitAndGetInterpreterDirectlyCallMethodPointer(const MethodInfo* method)
 	{
+#if HYBRIDCLR_UNITY_2022_OR_NEW
+		return method->methodPointerCallByInterp;
+#else
 		Il2CppMethodPointer methodPointer = method->methodPointerCallByInterp;
 		if (methodPointer)
 		{
@@ -106,6 +110,7 @@ namespace hybridclr
 			return methodPointer;
 		}
 		return InitAndGetInterpreterDirectlyCallMethodPointerSlow(const_cast<MethodInfo*>(method));
+#endif
 	}
 
 	inline Il2CppMethodPointer InitAndGetInterpreterDirectlyCallVirtualMethodPointer(const MethodInfo* method)

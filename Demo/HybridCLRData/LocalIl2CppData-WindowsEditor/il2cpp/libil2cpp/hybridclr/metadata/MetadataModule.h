@@ -246,6 +246,7 @@ namespace metadata
 				return strcmp(method->name, "Invoke") == 0;
 			}
 		}
+
 	private:
 
 	};
