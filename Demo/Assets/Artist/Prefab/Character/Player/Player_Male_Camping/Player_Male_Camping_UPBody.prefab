@@ -1,0 +1,165 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5475640296322085194
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6153535350517591956}
+  - component: {fileID: 7320841371822055676}
+  m_Layer: 0
+  m_Name: Player_Male_Camping_UPBody
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6153535350517591956
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5475640296322085194}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1658652533401984206}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7320841371822055676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5475640296322085194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38133fe640cf78249bbccb676c78e9dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Bones:
+  - {fileID: 8153326091118027367}
+  - {fileID: 368703981462111062}
+  - {fileID: 5046674333840550550}
+  - {fileID: 8916811143207774571}
+--- !u!1001 &1192907227305311013
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6153535350517591956}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: cefd4e10ea71efa4d93583591dd20ff3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cefd4e10ea71efa4d93583591dd20ff3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cefd4e10ea71efa4d93583591dd20ff3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cefd4e10ea71efa4d93583591dd20ff3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cefd4e10ea71efa4d93583591dd20ff3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cefd4e10ea71efa4d93583591dd20ff3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cefd4e10ea71efa4d93583591dd20ff3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cefd4e10ea71efa4d93583591dd20ff3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cefd4e10ea71efa4d93583591dd20ff3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cefd4e10ea71efa4d93583591dd20ff3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6135410873876292767, guid: cefd4e10ea71efa4d93583591dd20ff3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919111457197610570, guid: cefd4e10ea71efa4d93583591dd20ff3,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: e76e9322e851f2548a0c89037b911d69, type: 2}
+    - target: {fileID: 919111457197610570, guid: cefd4e10ea71efa4d93583591dd20ff3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8658c37642686384f8e95dc0809fd781, type: 2}
+    - target: {fileID: 919132149155446097, guid: cefd4e10ea71efa4d93583591dd20ff3,
+        type: 3}
+      propertyPath: m_Name
+      value: Mesh_Char_Player_Male_Camping_UPBody
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cefd4e10ea71efa4d93583591dd20ff3, type: 3}
+--- !u!4 &368703981462111062 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1554842056840788083, guid: cefd4e10ea71efa4d93583591dd20ff3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1192907227305311013}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1658652533401984206 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cefd4e10ea71efa4d93583591dd20ff3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1192907227305311013}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5046674333840550550 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -2988299581669584461, guid: cefd4e10ea71efa4d93583591dd20ff3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1192907227305311013}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8153326091118027367 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -2186391876011763390, guid: cefd4e10ea71efa4d93583591dd20ff3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1192907227305311013}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8916811143207774571 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -1499436234661719474, guid: cefd4e10ea71efa4d93583591dd20ff3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1192907227305311013}
+  m_PrefabAsset: {fileID: 0}

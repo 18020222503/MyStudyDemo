@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27b0e08e3047f5442a0412e7a9d6916f, type: 3}
+  m_Name: Home_BH_FishFac_SparseVATClipData
+  m_EditorClassIdentifier: 
+  totalVertexCount: 19154
+  movingVertexCount: 1198
+  compressionRatio: 0.06254568
+  encoding: 3
+  movementThreshold: 0.001
+  bonePaths:
+  - Bone006
+  - Bone006/Bone001
+  - Bone006/Bone002
+  - Bone006/Bone003
+  - Bone006/Bone004
+  - Bone006/Bone005
+  clips:
+  - clipName: Ani_Home_BH_FishFac_Feeding
+    frameCount: 40
+    fps: 10
+    isLooping: 0
+    duration: 4
+    vatTexture: {fileID: 2800000, guid: b32d6fee57c26d54ca583608aba57128, type: 3}
+    texWidth: 40
+    texHeight: 1198
+    pixelsPerRow: 40
+    rowsPerVertex: 1
+    logicalHeight: 1198
+    deltaMin: {x: -0.011305165, y: -0.43762052, z: -0.15369287}
+    deltaMax: {x: 0.13112558, y: 0.11374052, z: 0.107909955}
+    deltaSize: {x: 0.14243075, y: 0.551361, z: 0.26160282}
+    boneVatData: {fileID: 11400000, guid: d72602bd5ada70943b73b535cb8baa71, type: 2}
+    boneCount: 6

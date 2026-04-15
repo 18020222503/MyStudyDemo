@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Mesh_Char_Player_Female_Pilot_Gloves
+  m_Shader: {fileID: 4800000, guid: d7a066627d40bd44b85017f5fa700af0, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - CurvedEnable
+  - OutLineOrthographic
+  - _BASIC_ON
+  - _CURVEDENABLE_ON
+  - _MASKSECTION_ON
+  - _OUTLINESECTION_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap:
+    RenderType: Opaque
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: 5f2a92ee66c623946b0c4739daaa566b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskTexture:
+        m_Texture: {fileID: 2800000, guid: 4748185b318b3ae45b2cb7bfbf5ef117, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaClip: 0
+    - _Basic: 1
+    - _BlackEdge: 0
+    - _BlendMode: 0
+    - _CullingMode: 2
+    - _CurvedEnable: 1
+    - _CustomRange2U: 0
+    - _Cutoff: 0.5
+    - _DstBlend: 0
+    - _FoldoutOut5: 1
+    - _MaskSection: 1
+    - _Mode: 1
+    - _OutLineChannle: 0
+    - _OutLineSmeshEnable: 0
+    - _OutlineOffset: 0
+    - _OutlinePara: 1
+    - _OutlineSection: 1
+    - _OutlineWidth: 1.2
+    - _SrcBlend: 1
+    - _Surface: 0
+    - _SurfaceMode: 0
+    - _UseColorR: 1
+    - _WhiteEdge: 1
+    - _ZWrite: 1
+    m_Colors:
+    - _BC: {r: 0, g: 0, b: 0, a: 0}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _OutLineColor: {r: 0.50980395, g: 0.34901962, b: 0.34901962, a: 1}
+    - _TC: {r: 1, g: 1, b: 1, a: 1}
+    - _blackColor: {r: 0, g: 0, b: 0, a: 1}
+    - _grayColor: {r: 0.9339623, g: 0.8502581, b: 0.8502581, a: 1}
+    - _whiteColor: {r: 0, g: 0, b: 0, a: 1}
+  m_BuildTextureStacks: []

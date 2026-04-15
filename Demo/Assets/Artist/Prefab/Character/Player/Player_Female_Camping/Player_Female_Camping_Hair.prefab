@@ -1,0 +1,193 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8671582841697150121
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8302227598247488619}
+  - component: {fileID: 5344090252025480223}
+  m_Layer: 0
+  m_Name: Player_Female_Camping_Hair
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8302227598247488619
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8671582841697150121}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2367781784550976425}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5344090252025480223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8671582841697150121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38133fe640cf78249bbccb676c78e9dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Bones:
+  - {fileID: 7841681014477666933}
+  - {fileID: 5769242227769032699}
+  - {fileID: 8510723767719508168}
+  - {fileID: 4270869268485939239}
+  - {fileID: 2075700944659122066}
+  - {fileID: 2372142256818239573}
+  - {fileID: 8821352995962868810}
+  - {fileID: 129146640271762841}
+--- !u!1001 &2834652583605324866
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8302227598247488619}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 381bb453a5762dd489fcf37d6e6a5921,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 381bb453a5762dd489fcf37d6e6a5921,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 381bb453a5762dd489fcf37d6e6a5921,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 381bb453a5762dd489fcf37d6e6a5921,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 381bb453a5762dd489fcf37d6e6a5921,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 381bb453a5762dd489fcf37d6e6a5921,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 381bb453a5762dd489fcf37d6e6a5921,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 381bb453a5762dd489fcf37d6e6a5921,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 381bb453a5762dd489fcf37d6e6a5921,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 381bb453a5762dd489fcf37d6e6a5921,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1314099770896654835, guid: 381bb453a5762dd489fcf37d6e6a5921,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 381bb453a5762dd489fcf37d6e6a5921,
+        type: 3}
+      propertyPath: m_Name
+      value: Mesh_Char_Player_Female_Camping_Hair
+      objectReference: {fileID: 0}
+    - target: {fileID: 3541008187993719052, guid: 381bb453a5762dd489fcf37d6e6a5921,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: c62e27549a82faa46a7df9236822a2d3, type: 2}
+    - target: {fileID: 3541008187993719052, guid: 381bb453a5762dd489fcf37d6e6a5921,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6eb3eb4be902592408c0d7896f10ae18, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 381bb453a5762dd489fcf37d6e6a5921, type: 3}
+--- !u!4 &129146640271762841 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -6441159365962159653, guid: 381bb453a5762dd489fcf37d6e6a5921,
+    type: 3}
+  m_PrefabInstance: {fileID: 2834652583605324866}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2075700944659122066 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4294440094823730128, guid: 381bb453a5762dd489fcf37d6e6a5921,
+    type: 3}
+  m_PrefabInstance: {fileID: 2834652583605324866}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2367781784550976425 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 381bb453a5762dd489fcf37d6e6a5921,
+    type: 3}
+  m_PrefabInstance: {fileID: 2834652583605324866}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2372142256818239573 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8665700486887214057, guid: 381bb453a5762dd489fcf37d6e6a5921,
+    type: 3}
+  m_PrefabInstance: {fileID: 2834652583605324866}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4270869268485939239 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -7200242633505182619, guid: 381bb453a5762dd489fcf37d6e6a5921,
+    type: 3}
+  m_PrefabInstance: {fileID: 2834652583605324866}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5769242227769032699 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8594771055253091257, guid: 381bb453a5762dd489fcf37d6e6a5921,
+    type: 3}
+  m_PrefabInstance: {fileID: 2834652583605324866}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7841681014477666933 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5441908370010142263, guid: 381bb453a5762dd489fcf37d6e6a5921,
+    type: 3}
+  m_PrefabInstance: {fileID: 2834652583605324866}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8510723767719508168 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -3365702204532624246, guid: 381bb453a5762dd489fcf37d6e6a5921,
+    type: 3}
+  m_PrefabInstance: {fileID: 2834652583605324866}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8821352995962868810 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6718535351847196680, guid: 381bb453a5762dd489fcf37d6e6a5921,
+    type: 3}
+  m_PrefabInstance: {fileID: 2834652583605324866}
+  m_PrefabAsset: {fileID: 0}

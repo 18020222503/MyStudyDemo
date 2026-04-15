@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27b0e08e3047f5442a0412e7a9d6916f, type: 3}
+  m_Name: Home_RF_LoggingSite_SparseVATClipData
+  m_EditorClassIdentifier: 
+  totalVertexCount: 7317
+  movingVertexCount: 1741
+  compressionRatio: 0.23793904
+  encoding: 3
+  movementThreshold: 0.001
+  bonePaths:
+  - Bone_Famu
+  - Bone_Famu01
+  - Bone_Famu01/Bone_Famu05
+  - Bone_Famu01/Bone_Famu06
+  - Bone_Famu01/Bone_Famu07
+  - Bone_Famu01/Bone_Famu08
+  - Bone_Famu09
+  - Bone_Famu09/Bone_Famu10
+  - Bone_Famu09/Bone_Famu11
+  - Bone_Famu09/Bone_Famu12
+  - Bone_Famu09/Bone_Famu13
+  - Bone_Famu14
+  - Bone_Famu14/Bone_Famu15
+  - Bone_Famu14/Bone_Famu16
+  - Bone_Famu14/Bone_Famu17
+  - Bone_Famu18
+  - Bone_Famu18/Bone_Famu19
+  - Bone_Famu18/Bone_Famu20
+  - Bone_Famu18/Bone_Famu21
+  - Bone_Famu18/Bone_Famu22
+  - Bone_Famu23
+  - Bone_Famu24
+  - Bone_Famu25
+  - Bone_Famu26
+  - Bone_Famu26/Bone_Famu27
+  - Bone_Famu28
+  - Bone_Famu29
+  - Bone_Famu30
+  - Bone_Famu31
+  - Bone_Famu32
+  clips:
+  - clipName: Ani_Home_RF_LoggingSite_Logging
+    frameCount: 60
+    fps: 15
+    isLooping: 0
+    duration: 4
+    vatTexture: {fileID: 2800000, guid: 6b8c6d6e4ec63fa48a7877be8576437b, type: 3}
+    texWidth: 60
+    texHeight: 1741
+    pixelsPerRow: 60
+    rowsPerVertex: 1
+    logicalHeight: 1741
+    deltaMin: {x: -0.81402457, y: -1.2536235, z: -0.36695015}
+    deltaMax: {x: 0.28061533, y: 0.14798799, z: 1.7254443}
+    deltaSize: {x: 1.0946399, y: 1.4016114, z: 2.0923944}
+    boneVatData: {fileID: 11400000, guid: aa841c05e9070584f953d62561120092, type: 2}
+    boneCount: 30

@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27b0e08e3047f5442a0412e7a9d6916f, type: 3}
+  m_Name: Home_RF_MainCity_05_SparseVATClipData
+  m_EditorClassIdentifier: 
+  totalVertexCount: 11927
+  movingVertexCount: 393
+  compressionRatio: 0.03295045
+  encoding: 3
+  movementThreshold: 0.001
+  bonePaths:
+  - Bone_MainCity01
+  - Bone_MainCity02
+  - Bone_MainCity03
+  - Bone_MainCity04
+  - Bone_MainCity05
+  - Bone_MainCity06
+  - Bone_MainCity07
+  - Bone_MainCity07/Bone_MainCity08
+  - Bone_MainCity07/Bone_MainCity08/Bone_MainCity09
+  - Bone_MainCity10
+  - Bone_MainCity10/Bone_MainCity11
+  - Bone_MainCity12
+  - Bone_MainCity12/Bone_MainCity13
+  - Bone_MainCity12/Bone_MainCity13/Bone_MainCity14
+  - Bone_MainCity15
+  - Bone_MainCity15/Bone_MainCity16
+  - Bone_MainCity15/Bone_MainCity16/Bone_MainCity17
+  - Bone_MainCity18
+  - Bone_MainCity19
+  - Bone_MainCity20
+  clips:
+  - clipName: Ani_Home_RF_MainCity_05_Loop
+    frameCount: 40
+    fps: 10
+    isLooping: 0
+    duration: 4
+    vatTexture: {fileID: 2800000, guid: 90a4070868524c145b90f4d448e592cd, type: 3}
+    texWidth: 40
+    texHeight: 393
+    pixelsPerRow: 40
+    rowsPerVertex: 1
+    logicalHeight: 393
+    deltaMin: {x: -0.25645557, y: -0.32651946, z: -0.032830324}
+    deltaMax: {x: 0.010642564, y: 0.069396704, z: 0.08990463}
+    deltaSize: {x: 0.26709813, y: 0.39591616, z: 0.12273495}
+    boneVatData: {fileID: 11400000, guid: da00588577870af4cb4ebb6f2ee98968, type: 2}
+    boneCount: 20

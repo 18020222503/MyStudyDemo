@@ -1,0 +1,165 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2474891629074933576
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3439772401957964115}
+  - component: {fileID: 6017415419786163896}
+  m_Layer: 0
+  m_Name: CatShark_Psychic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3439772401957964115
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2474891629074933576}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8408810402135334650}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6017415419786163896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2474891629074933576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38133fe640cf78249bbccb676c78e9dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Bones:
+  - {fileID: 1699592369236387676}
+  - {fileID: 7567902330330992746}
+  - {fileID: 7215740867205754759}
+  - {fileID: 7759301842261156521}
+--- !u!1001 &8302564030524930321
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3439772401957964115}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 709cda3ee0a29174fb228f3e0257b701,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 709cda3ee0a29174fb228f3e0257b701,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 709cda3ee0a29174fb228f3e0257b701,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 709cda3ee0a29174fb228f3e0257b701,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 709cda3ee0a29174fb228f3e0257b701,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 709cda3ee0a29174fb228f3e0257b701,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 709cda3ee0a29174fb228f3e0257b701,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 709cda3ee0a29174fb228f3e0257b701,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 709cda3ee0a29174fb228f3e0257b701,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 709cda3ee0a29174fb228f3e0257b701,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4503836492145784531, guid: 709cda3ee0a29174fb228f3e0257b701,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 5293e875504699642a026f5f50102c52, type: 2}
+    - target: {fileID: -4503836492145784531, guid: 709cda3ee0a29174fb228f3e0257b701,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5c004481bb4941c42ab2862856f1fc38, type: 2}
+    - target: {fileID: 919132149155446097, guid: 709cda3ee0a29174fb228f3e0257b701,
+        type: 3}
+      propertyPath: m_Name
+      value: Mesh_Hand_CatShark_Psychic
+      objectReference: {fileID: 0}
+    - target: {fileID: 3964599554162202975, guid: 709cda3ee0a29174fb228f3e0257b701,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 709cda3ee0a29174fb228f3e0257b701, type: 3}
+--- !u!4 &1699592369236387676 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7254889699831127629, guid: 709cda3ee0a29174fb228f3e0257b701,
+    type: 3}
+  m_PrefabInstance: {fileID: 8302564030524930321}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7215740867205754759 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -7558210150774942058, guid: 709cda3ee0a29174fb228f3e0257b701,
+    type: 3}
+  m_PrefabInstance: {fileID: 8302564030524930321}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7567902330330992746 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -7332362749187102341, guid: 709cda3ee0a29174fb228f3e0257b701,
+    type: 3}
+  m_PrefabInstance: {fileID: 8302564030524930321}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7759301842261156521 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1771658569349667768, guid: 709cda3ee0a29174fb228f3e0257b701,
+    type: 3}
+  m_PrefabInstance: {fileID: 8302564030524930321}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8408810402135334650 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 709cda3ee0a29174fb228f3e0257b701,
+    type: 3}
+  m_PrefabInstance: {fileID: 8302564030524930321}
+  m_PrefabAsset: {fileID: 0}

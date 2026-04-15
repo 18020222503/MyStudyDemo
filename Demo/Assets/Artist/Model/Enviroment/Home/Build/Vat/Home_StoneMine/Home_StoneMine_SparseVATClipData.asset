@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27b0e08e3047f5442a0412e7a9d6916f, type: 3}
+  m_Name: Home_StoneMine_SparseVATClipData
+  m_EditorClassIdentifier: 
+  totalVertexCount: 14155
+  movingVertexCount: 5491
+  compressionRatio: 0.38791946
+  encoding: 3
+  movementThreshold: 0.001
+  bonePaths:
+  - Bone_StoneMine01
+  - Bone_StoneMine01/Bone_StoneMine02
+  - Bone_StoneMine01/Bone_StoneMine02/Bone_StoneMine03
+  - Bone_StoneMine01/Bone_StoneMine02/Bone_StoneMine03/Bone_StoneMine04
+  - Bone_StoneMine01/Bone_StoneMine02/Bone_StoneMine03/Bone_StoneMine04/Bone_StoneMine05
+  - Bone_StoneMine01/Bone_StoneMine02/Bone_StoneMine03/Bone_StoneMine04/Bone_StoneMine05/Bone_StoneMine06
+  - Bone_StoneMine01/Bone_StoneMine02/Bone_StoneMine03/Bone_StoneMine04/Bone_StoneMine05/Bone_StoneMine06/Bone_StoneMine07
+  - Bone_StoneMine01/Bone_StoneMine02/Bone_StoneMine03/Bone_StoneMine04/Bone_StoneMine05/Bone_StoneMine06/Bone_StoneMine07/Bone_StoneMine08
+  - Bone_StoneMine09
+  - Bone_StoneMine09/Bone_StoneMine10
+  - Bone_StoneMine09/Bone_StoneMine10/Bone_StoneMine11
+  - Bone_StoneMine09/Bone_StoneMine12
+  clips:
+  - clipName: Ani_Home_StoneMine_Mining
+    frameCount: 40
+    fps: 10
+    isLooping: 0
+    duration: 4
+    vatTexture: {fileID: 2800000, guid: 4640181800aa7b84687a5fa81aa85ca7, type: 3}
+    texWidth: 120
+    texHeight: 1831
+    pixelsPerRow: 40
+    rowsPerVertex: 3
+    logicalHeight: 5491
+    deltaMin: {x: -0.60210156, y: -0.40770036, z: -0.75693303}
+    deltaMax: {x: 3.056916, y: 0.57693714, z: 1.341331}
+    deltaSize: {x: 3.6590176, y: 0.9846375, z: 2.098264}
+    boneVatData: {fileID: 11400000, guid: 99c63d22491cfdf4e8b7b5d3743c3c5c, type: 2}
+    boneCount: 12

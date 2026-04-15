@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27b0e08e3047f5442a0412e7a9d6916f, type: 3}
+  m_Name: Home_CoalPD_SparseVATClipData
+  m_EditorClassIdentifier: 
+  totalVertexCount: 13183
+  movingVertexCount: 7825
+  compressionRatio: 0.5935675
+  encoding: 3
+  movementThreshold: 0.001
+  bonePaths:
+  - Bone_Luzi
+  - Bone_Luzi/Bone_Men
+  - Bone_Luzi/Bone_Yancong
+  - Bone_Luzi/Bone_Zhizhen
+  - Bone_Tanshi_01
+  - Bone_Tanshi_02
+  - Bone_Tanshi_03
+  clips:
+  - clipName: Ani_Home_CoalPD_Firing
+    frameCount: 61
+    fps: 10
+    isLooping: 0
+    duration: 6.0000005
+    vatTexture: {fileID: 2800000, guid: a2b8c7ea0fbb70741b8bce4943674c7d, type: 3}
+    texWidth: 244
+    texHeight: 1957
+    pixelsPerRow: 61
+    rowsPerVertex: 4
+    logicalHeight: 7825
+    deltaMin: {x: -0.21449615, y: -0.087970264, z: -0.3069928}
+    deltaMax: {x: 1.0736258, y: 0.16881615, z: 0.6923285}
+    deltaSize: {x: 1.2881219, y: 0.2567864, z: 0.99932134}
+    boneVatData: {fileID: 11400000, guid: 28f84eebe4227604da6e269333597db3, type: 2}
+    boneCount: 7

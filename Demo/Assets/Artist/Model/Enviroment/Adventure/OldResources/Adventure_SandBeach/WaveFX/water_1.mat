@@ -1,0 +1,284 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4934386220503690563
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 7
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: water_1
+  m_Shader: {fileID: 4800000, guid: 2135505f3630dfd47857b543895ae7c4, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - CurvedEnable
+  - _BASIC_ON
+  - _DISSOLVEDISTORTION_OFF
+  - _DISSOLVEMODE_NODIRTECTOR
+  - _DISSOLVETEXALPHA_R
+  - _FLIPBOOKBLENDING_OFF
+  - _FRESNELADD_OFF
+  - _MAINREPEATENABLE_ON
+  - _MAINUVANIMENABLE_ON
+  - _OUTLINESECTION_ON
+  - _RECEIVE_SHADOWS_OFF
+  - _STREAMERALPHA_OFF
+  - _STREAMERDISTORTION_OFF
+  - _STREAMERTEXCOLORREMOVE_OFF
+  - _STREAMERVERTEXCOLOR_OFF
+  - _SURFACE_TYPE_TRANSPARENT
+  - _TURBMASKMODE_OFF
+  - _USEVERTEXCOLOR_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - ALWAYS
+  - SHADOWCASTER
+  - DepthOnly
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DissolveDirTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DissolveTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 7460ba4d1f2bf9341919670d6853b714, type: 3}
+        m_Scale: {x: 4.33, y: 0.53}
+        m_Offset: {x: 0, y: 0.36}
+    - _Mask2Tex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskTex:
+        m_Texture: {fileID: 2800000, guid: 0d6a7f0260246824ca62f5117be6c9dc, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OutLineMaskMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _StreamerTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TurbMaskTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TurbTex:
+        m_Texture: {fileID: 2800000, guid: a48ca75ed47bd7a46a148bb97212db9e, type: 3}
+        m_Scale: {x: 6.86, y: 0.05}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaClip: 0
+    - _AlphaToMask: 0
+    - _BackColorEnable: 0
+    - _BaseColorMode: 0
+    - _Basic: 1
+    - _Blend: 0
+    - _BlendMode: 0
+    - _BlendOp: 0
+    - _BumpScale: 1
+    - _CameraFadingEnabled: 0
+    - _CameraFarFadeDistance: 2
+    - _CameraNearFadeDistance: 1
+    - _ColorMode: 0
+    - _Cull: 2
+    - _CullMode: 0
+    - _CullingMode: 2
+    - _CurvedEnable: 1
+    - _Custom1XY: 0
+    - _Custom2W: 0
+    - _Custom2X: 0
+    - _CustomUVEnable: 0
+    - _Cutoff: 0.5
+    - _DepthAlpha: 0
+    - _DetailNormalMapScale: 1
+    - _DissolveColorIntensity: 1
+    - _DissolveDistortion: 0
+    - _DissolveEnable: 0
+    - _DissolveHardness: 0.45
+    - _DissolveHighlightWidth: 0
+    - _DissolveMode: 0
+    - _DissolveProgress: 0.6
+    - _DissolveTexAlpha: 0
+    - _DissolveU: 0
+    - _DissolveV: 0
+    - _DistortionBlend: 0.5
+    - _DistortionEnabled: 0
+    - _DistortionStrength: 1
+    - _DistortionStrengthScaled: 0
+    - _DstBlend: 1
+    - _DstBlendAlpha: 10
+    - _EmissionEnabled: 0
+    - _EnvironmentReflections: 1
+    - _FlipbookBlending: 0
+    - _FlipbookMode: 0
+    - _FogEnable: 0
+    - _FogIntensity: 1
+    - _FoldoutOut5: 1
+    - _FresnelAdd: 0
+    - _FresnelBias: 0
+    - _FresnelEnable: 0
+    - _FresnelPower: 1
+    - _FresnelReverse: 0
+    - _FresnelScale: 2
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _InvFade: 1
+    - _InverseUVYIfNeeded: 0
+    - _LightingEnabled: 0
+    - _MainAlphaScale: 1
+    - _MainColorDoubleEnable: 0
+    - _MainPolarEnable: 0
+    - _MainRepeatEnable: 1
+    - _MainRotationFactor: 0
+    - _MainTexU: -0.05
+    - _MainTexV: -0.28
+    - _MainUVAnimEnable: 1
+    - _Mask2Channel: 0
+    - _Mask2Enable: 0
+    - _Mask2U: 0
+    - _Mask2V: 0
+    - _MaskChannel: 0
+    - _MaskEnable: 0
+    - _MaskU: 0
+    - _MaskV: 0
+    - _Metallic: 0
+    - _Mode: 2
+    - _OcclusionStrength: 1
+    - _OffsetDepthAlpha: 1
+    - _OutLineChannle: 0
+    - _OutLineClip: 0.5
+    - _OutLineClipEnable: 0
+    - _OutLineSmeshEnable: 0
+    - _OutlinePara: 0.4
+    - _OutlineSection: 1
+    - _OutlineWidth: 1
+    - _Parallax: 0.02
+    - _PreviewTreeRange: 0
+    - _QueueOffset: 0
+    - _ReferenceDistance: 7
+    - _ReferenceDistanceEnable: 0
+    - _SmoothnessTextureChannel: 0
+    - _SoftParticleNewEnable: 0
+    - _SoftParticlesEnabled: 0
+    - _SoftParticlesFarFadeDistance: 1
+    - _SoftParticlesNearFadeDistance: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 5
+    - _SrcBlendAlpha: 1
+    - _StencilComp: 0
+    - _StencilMode: 0
+    - _StencilPass: 0
+    - _StencilReadMask: 0
+    - _StencilRef: 0
+    - _StencilWriteMask: 0
+    - _StreamerAlpha: 0
+    - _StreamerDistortion: 0
+    - _StreamerEnable: 0
+    - _StreamerRotation: 0
+    - _StreamerStrength: 2
+    - _StreamerTexColorRemove: 0
+    - _StreamerU: 0
+    - _StreamerV: 0
+    - _StreamerVertexColor: 0
+    - _Surface: 1
+    - _TreeAnimation: 0
+    - _TurbChannel: 0
+    - _TurbEnable: 0
+    - _TurbMaskMode: 0
+    - _TurbPower: 0.07
+    - _TurbU: 0.13
+    - _TurbV: 0.18
+    - _UVSec: 0
+    - _UseCustomUV: 0
+    - _UseRectifyUV: 0
+    - _UseVertexColor: 1
+    - _ZTest: 4
+    - _ZWrite: 0
+    - _ZWriteOn: 0
+    - _blackWhiteOffset: 0.5
+    - _blackWhiteRange: 0.5
+    - _frequency: 1
+    - _heightRange: 0.5
+    - _heightScale: 0.5
+    - _wave: 1
+    m_Colors:
+    - _BackColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
+    - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
+    - _CustomTillingOffset: {r: 1, g: 1, b: 0, a: 0}
+    - _DissolveDirector: {r: 0, g: 1, b: 0, a: 0}
+    - _DissolveHighlightColor: {r: 1, g: 0, b: 0, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FresnelColor: {r: 1, g: 1, b: 1, a: 1}
+    - _MainColor: {r: 0.40557134, g: 0.59804565, b: 0.9245283, a: 0.31764707}
+    - _OutLineColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}
+    - _StreamerColor: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []

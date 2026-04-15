@@ -1,0 +1,208 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1908019704254369453
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1813602721389637429}
+  - component: {fileID: 5143637313004259581}
+  m_Layer: 0
+  m_Name: Player_Male_BaseSet05_Hair
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1813602721389637429
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908019704254369453}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2751115381842987199}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5143637313004259581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908019704254369453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38133fe640cf78249bbccb676c78e9dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Bones:
+  - {fileID: 3761839657373210407}
+  - {fileID: 5194917015097038546}
+  - {fileID: 8891190703619399885}
+  - {fileID: 9070243990782313212}
+  - {fileID: 6105147263135576339}
+  - {fileID: 5734977308738382509}
+  - {fileID: 5686215848971779057}
+  - {fileID: 4089617186759776604}
+  - {fileID: 1646704884447999219}
+  - {fileID: 5374970358720085274}
+--- !u!1001 &2425001071662346068
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1813602721389637429}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 721b92ada5bf52342817191b9910033d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 721b92ada5bf52342817191b9910033d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 721b92ada5bf52342817191b9910033d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 721b92ada5bf52342817191b9910033d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 721b92ada5bf52342817191b9910033d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 721b92ada5bf52342817191b9910033d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 721b92ada5bf52342817191b9910033d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 721b92ada5bf52342817191b9910033d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 721b92ada5bf52342817191b9910033d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 721b92ada5bf52342817191b9910033d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50976909828476099, guid: 721b92ada5bf52342817191b9910033d,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 0f38fd8e34c9a6a4f9fcfc2f5a12eb78, type: 2}
+    - target: {fileID: 50976909828476099, guid: 721b92ada5bf52342817191b9910033d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e029fa3eead1dbd4ab9fe6b0f50be3a3, type: 2}
+    - target: {fileID: 919132149155446097, guid: 721b92ada5bf52342817191b9910033d,
+        type: 3}
+      propertyPath: m_Name
+      value: Mesh_Char_Player_Male_BaseSet05_Hair
+      objectReference: {fileID: 0}
+    - target: {fileID: 2823478865001976598, guid: 721b92ada5bf52342817191b9910033d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 6940573891213051451, guid: 721b92ada5bf52342817191b9910033d, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 721b92ada5bf52342817191b9910033d, type: 3}
+--- !u!4 &1646704884447999219 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3998370728474598311, guid: 721b92ada5bf52342817191b9910033d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2425001071662346068}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2751115381842987199 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 721b92ada5bf52342817191b9910033d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2425001071662346068}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3761839657373210407 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1554842056840788083, guid: 721b92ada5bf52342817191b9910033d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2425001071662346068}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4089617186759776604 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1830265238411687432, guid: 721b92ada5bf52342817191b9910033d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2425001071662346068}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5194917015097038546 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -1603466046883366522, guid: 721b92ada5bf52342817191b9910033d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2425001071662346068}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5374970358720085274 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -1499436234661719474, guid: 721b92ada5bf52342817191b9910033d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2425001071662346068}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5686215848971779057 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8020394786274448549, guid: 721b92ada5bf52342817191b9910033d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2425001071662346068}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5734977308738382509 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -1282981797643762183, guid: 721b92ada5bf52342817191b9910033d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2425001071662346068}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6105147263135576339 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8439326472094932551, guid: 721b92ada5bf52342817191b9910033d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2425001071662346068}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8891190703619399885 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -2682861739978174567, guid: 721b92ada5bf52342817191b9910033d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2425001071662346068}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &9070243990782313212 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -2560103449222730328, guid: 721b92ada5bf52342817191b9910033d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2425001071662346068}
+  m_PrefabAsset: {fileID: 0}

@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27b0e08e3047f5442a0412e7a9d6916f, type: 3}
+  m_Name: Home_S0_Otter_Base_SparseVATClipData
+  m_EditorClassIdentifier: 
+  totalVertexCount: 2444
+  movingVertexCount: 156
+  compressionRatio: 0.06382979
+  encoding: 3
+  movementThreshold: 0.001
+  bonePaths:
+  - Bone001
+  - Bone001/Bone002
+  - Bone001/Bone002/Bone003
+  - Bone001/Bone002/Bone003/Bone006
+  - Bone001/Bone004
+  - Bone001/Bone004/Bone005
+  - Bone007
+  clips:
+  - clipName: Ani_Home_S0_Otter_Base_Show
+    frameCount: 40
+    fps: 10
+    isLooping: 0
+    duration: 4
+    vatTexture: {fileID: 2800000, guid: 7c5870a6a95333d42afdee50050f3103, type: 3}
+    texWidth: 40
+    texHeight: 156
+    pixelsPerRow: 40
+    rowsPerVertex: 1
+    logicalHeight: 156
+    deltaMin: {x: -0.8952837, y: -0.3713181, z: -3.2614284}
+    deltaMax: {x: 0.0013341963, y: 1.2546947, z: 0.0040734443}
+    deltaSize: {x: 0.8966179, y: 1.6260128, z: 3.2655017}
+    boneVatData: {fileID: 11400000, guid: d4d688c0392b5cc41867a9f4b3ef40f8, type: 2}
+    boneCount: 7

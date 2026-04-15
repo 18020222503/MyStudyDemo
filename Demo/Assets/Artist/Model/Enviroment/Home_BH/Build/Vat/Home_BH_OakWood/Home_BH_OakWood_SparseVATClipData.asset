@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27b0e08e3047f5442a0412e7a9d6916f, type: 3}
+  m_Name: Home_BH_OakWood_SparseVATClipData
+  m_EditorClassIdentifier: 
+  totalVertexCount: 2125
+  movingVertexCount: 108
+  compressionRatio: 0.05082353
+  encoding: 3
+  movementThreshold: 0.001
+  bonePaths:
+  - Bone_Wood01
+  - Bone_Wood02
+  clips:
+  - clipName: Ani_Home_BH_OakWood_Logging
+    frameCount: 60
+    fps: 15
+    isLooping: 0
+    duration: 4
+    vatTexture: {fileID: 2800000, guid: be2e31a8ffd73724381e96f35369cc8f, type: 3}
+    texWidth: 60
+    texHeight: 108
+    pixelsPerRow: 60
+    rowsPerVertex: 1
+    logicalHeight: 108
+    deltaMin: {x: -1.0883862, y: -0.9494857, z: -0.36827832}
+    deltaMax: {x: 1.9478781, y: 2.3354537, z: 0.5255583}
+    deltaSize: {x: 3.0362644, y: 3.2849395, z: 0.8938366}
+    boneVatData: {fileID: 11400000, guid: 227aa9be61086fa459925dab16dc4749, type: 2}
+    boneCount: 2

@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27b0e08e3047f5442a0412e7a9d6916f, type: 3}
+  m_Name: Home_RF_PineWood_SparseVATClipData
+  m_EditorClassIdentifier: 
+  totalVertexCount: 4977
+  movingVertexCount: 974
+  compressionRatio: 0.19570023
+  encoding: 3
+  movementThreshold: 0.001
+  bonePaths:
+  - Bone_Grass01
+  - Bone_Grass02
+  - Bone_Grass03
+  - Bone_Grass04
+  - Bone_Grass05
+  - Bone_Grass06
+  - Bone_Grass07
+  - Bone_Tree01
+  - Bone_Tree02
+  - Bone_Tree03
+  - Bone_Tree04
+  - Bone_Tree05
+  - Bone_Wood01
+  - Bone_Wood02
+  clips:
+  - clipName: Ani_Home_RF_PineWood_Logging
+    frameCount: 60
+    fps: 15
+    isLooping: 0
+    duration: 4
+    vatTexture: {fileID: 2800000, guid: 04ef2bdcd017c2b47ab51f275cca6c56, type: 3}
+    texWidth: 60
+    texHeight: 974
+    pixelsPerRow: 60
+    rowsPerVertex: 1
+    logicalHeight: 974
+    deltaMin: {x: -1.0883856, y: -0.949486, z: -0.36827835}
+    deltaMax: {x: 1.9470952, y: 2.3354542, z: 0.5255593}
+    deltaSize: {x: 3.0354807, y: 3.2849402, z: 0.8938377}
+    boneVatData: {fileID: 11400000, guid: dc1c5e7746e11a9448f4fd3f474b2f3f, type: 2}
+    boneCount: 14

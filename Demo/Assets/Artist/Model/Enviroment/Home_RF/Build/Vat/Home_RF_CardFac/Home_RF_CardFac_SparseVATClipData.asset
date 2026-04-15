@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27b0e08e3047f5442a0412e7a9d6916f, type: 3}
+  m_Name: Home_RF_CardFac_SparseVATClipData
+  m_EditorClassIdentifier: 
+  totalVertexCount: 8164
+  movingVertexCount: 1912
+  compressionRatio: 0.23419893
+  encoding: 3
+  movementThreshold: 0.001
+  bonePaths:
+  - Bone_Card01
+  - Bone_Card02
+  - Bone_Card03
+  - Bone_Card04
+  - Bone_Card05
+  - Bone_Card06
+  - Bone_Chui
+  clips:
+  - clipName: Ani_Home_RF_CardFac_Bottle_Wheel_Loop
+    frameCount: 37
+    fps: 10
+    isLooping: 0
+    duration: 3.6666667
+    vatTexture: {fileID: 2800000, guid: 8b9f953dcf83f194e9e47e01a740e61b, type: 3}
+    texWidth: 37
+    texHeight: 1912
+    pixelsPerRow: 37
+    rowsPerVertex: 1
+    logicalHeight: 1912
+    deltaMin: {x: -0.15799546, y: -0.7816242, z: -0.15580437}
+    deltaMax: {x: 0.16565803, y: 0.051973455, z: 0.7698039}
+    deltaSize: {x: 0.3236535, y: 0.83359766, z: 0.9256083}
+    boneVatData: {fileID: 11400000, guid: 22c4fb94c57a3b848b8f033c5456126d, type: 2}
+    boneCount: 7

@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27b0e08e3047f5442a0412e7a9d6916f, type: 3}
+  m_Name: Home_RF_MainCity_01_SparseVATClipData
+  m_EditorClassIdentifier: 
+  totalVertexCount: 4774
+  movingVertexCount: 251
+  compressionRatio: 0.052576456
+  encoding: 3
+  movementThreshold: 0.001
+  bonePaths:
+  - Bone_Home_MainCity_01
+  - Bone_Home_MainCity_02
+  - Bone_Home_MainCity_03
+  - Bone_Home_MainCity_04
+  - Bone_Home_MainCity_05
+  clips:
+  - clipName: Ani_Home_RF_MainCity_01_Loop
+    frameCount: 40
+    fps: 10
+    isLooping: 0
+    duration: 4
+    vatTexture: {fileID: 2800000, guid: fefad837c54db954cb7854e4dcc6bf38, type: 3}
+    texWidth: 40
+    texHeight: 251
+    pixelsPerRow: 40
+    rowsPerVertex: 1
+    logicalHeight: 251
+    deltaMin: {x: -0.107846625, y: -0.111732505, z: -0.03142827}
+    deltaMax: {x: 0.070591636, y: 0.091567226, z: 0.05054342}
+    deltaSize: {x: 0.17843826, y: 0.20329973, z: 0.08197169}
+    boneVatData: {fileID: 11400000, guid: 25efc9a918ba4234fbe21d5cb6eaee24, type: 2}
+    boneCount: 5
