@@ -293,11 +293,7 @@ namespace metadata
         // Ensure that the metadata token is zero (and not copied from the method definition) so any
         // metadata lookup (e.g. custom attributes) will not find anything
         inflatedMethod->klass = klass;
-		// ==={{ modify by HybridCLR
-		// 补充元数据需要这个token
-        // inflatedMethod->token = 0;
-        inflatedMethod->token = genericArrayMethod.method->token;
-		// ===}}
+        inflatedMethod->token = 0;
 
         return inflatedMethod;
     }

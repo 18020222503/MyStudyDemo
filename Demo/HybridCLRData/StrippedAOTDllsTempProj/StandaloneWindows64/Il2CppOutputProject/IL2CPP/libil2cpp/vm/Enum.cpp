@@ -11,8 +11,6 @@
 #include "vm/Type.h"
 #include "utils/MemoryRead.h"
 
-#include "hybridclr/metadata/MetadataUtil.h"
-
 namespace il2cpp
 {
 namespace vm

@@ -27,8 +27,6 @@
 #include "Cpp/Atomic.h"
 #include "Cpp/ReentrantLock.h"
 
-#include "hybridclr/interpreter/InterpreterModule.h"
-
 namespace il2cpp
 {
 namespace vm
@@ -270,7 +268,7 @@ namespace vm
 #if IL2CPP_MONO_DEBUGGER
         utils::Debugger::FreeThreadLocalData();
 #endif
-        hybridclr::interpreter::InterpreterModule::FreeThreadLocalMachineState();
+
         os::Thread::DetachCurrentThread();
         s_CurrentThread.SetValue(NULL);
     }
@@ -488,7 +486,6 @@ namespace vm
     int32_t Thread::AllocThreadStaticData(int32_t size)
     {
         AUTO_LOCK_THREADS();
-        IL2CPP_ASSERT(size > 0);
         int32_t index = (int32_t)s_ThreadStaticSizes.size();
 
         IL2CPP_ASSERT(index < kMaxThreadStaticSlots * kMaxThreadStaticDataPointers);

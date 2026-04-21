@@ -16,6 +16,5 @@ namespace vm
 // These metadata structures have their own locks, since they do lightweight initialization
     Il2CppGenericClass* MetadataAllocGenericClass();
     Il2CppGenericMethod* MetadataAllocGenericMethod();
-	bool MetadataContains(const void* data);
 } // namespace vm
 } // namespace il2cpp

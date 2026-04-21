@@ -9,7 +9,7 @@ namespace metadata
 {
     bool Il2CppGenericMethodCompare::operator()(const Il2CppGenericMethod* m1, const Il2CppGenericMethod* m2) const
     {
-        return m1 == m2 || Equals(m1, m2);
+        return Equals(m1, m2);
     }
 
     bool Il2CppGenericMethodCompare::Equals(const Il2CppGenericMethod* m1, const Il2CppGenericMethod* m2)

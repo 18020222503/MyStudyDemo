@@ -1,5 +1,4 @@
 #pragma once
-#include <utility>
 
 struct Il2CppGuid;
 struct Il2CppIUnknown;
@@ -108,10 +107,6 @@ namespace gc
 
         static void RegisterRoot(char *start, size_t size);
         static void UnregisterRoot(char* start);
-
-        typedef std::pair<char*, size_t> (*GetDynamicRootDataProc)(void* root);
-        static void RegisterDynamicRoot(void* root, GetDynamicRootDataProc getRootDataFunc);
-        static void UnregisterDynamicRoot(void* root);
 
         static void SetSkipThread(bool skip);
 

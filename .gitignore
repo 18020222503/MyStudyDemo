@@ -4,6 +4,10 @@
 /Demo/Logs
 /Demo/Temp
 /Demo/UserSettings
+/Demo/.idea
+/Demo/ProjectSettings
+/Demo/obj
 
-
-
+*.csproj
+*.sln
+*.user

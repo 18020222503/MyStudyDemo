@@ -42,25 +42,109 @@
     <UnityPlayerConfiguration>Master</UnityPlayerConfiguration>
   </PropertyGroup>
   <ItemGroup>
-    <ClCompile Include="Source\Assembly-CSharp-firstpass.cpp">
+    <ClCompile Include="Source\Assembly-CSharp.cpp">
     </ClCompile>
     <ClCompile Include="Source\GenericMethods.cpp">
     </ClCompile>
     <ClCompile Include="Source\GenericMethods__1.cpp">
     </ClCompile>
+    <ClCompile Include="Source\GenericMethods__10.cpp">
+    </ClCompile>
     <ClCompile Include="Source\GenericMethods__2.cpp">
     </ClCompile>
     <ClCompile Include="Source\GenericMethods__3.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\GenericMethods__4.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\GenericMethods__5.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\GenericMethods__6.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\GenericMethods__7.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\GenericMethods__8.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\GenericMethods__9.cpp">
     </ClCompile>
     <ClCompile Include="Source\Generics.cpp">
     </ClCompile>
     <ClCompile Include="Source\Generics__1.cpp">
     </ClCompile>
+    <ClCompile Include="Source\Generics__10.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__11.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__12.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__13.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__14.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__15.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__16.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__17.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__18.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__19.cpp">
+    </ClCompile>
     <ClCompile Include="Source\Generics__2.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__20.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__21.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__22.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__23.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__24.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__25.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__26.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__27.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__28.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__29.cpp">
     </ClCompile>
     <ClCompile Include="Source\Generics__3.cpp">
     </ClCompile>
+    <ClCompile Include="Source\Generics__30.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__31.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__32.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__33.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__34.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__35.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__36.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__37.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__38.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__39.cpp">
+    </ClCompile>
     <ClCompile Include="Source\Generics__4.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__40.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__41.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__42.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__43.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__44.cpp">
     </ClCompile>
     <ClCompile Include="Source\Generics__5.cpp">
     </ClCompile>
@@ -73,6 +157,8 @@
     <ClCompile Include="Source\Generics__9.cpp">
     </ClCompile>
     <ClCompile Include="Source\Il2CppCCalculateFieldValues.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Il2CppCCalculateFieldValues1.cpp">
     </ClCompile>
     <ClCompile Include="Source\Il2CppCCalculateTypeValues.cpp">
     </ClCompile>
@@ -128,6 +214,8 @@
     </ClCompile>
     <ClCompile Include="Source\mscorlib__9.cpp">
     </ClCompile>
+    <ClCompile Include="Source\Plugins.cpp">
+    </ClCompile>
     <ClCompile Include="Source\System.Configuration.cpp">
     </ClCompile>
     <ClCompile Include="Source\System.Core.cpp">
@@ -139,6 +227,8 @@
     <ClCompile Include="Source\System__1.cpp">
     </ClCompile>
     <ClCompile Include="Source\System__2.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\System__3.cpp">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.AIModule.cpp">
     </ClCompile>
@@ -154,6 +244,8 @@
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.CoreModule__1.cpp">
     </ClCompile>
+    <ClCompile Include="Source\UnityEngine.CoreModule__2.cpp">
+    </ClCompile>
     <ClCompile Include="Source\UnityEngine.cpp">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.DirectorModule.cpp">
@@ -161,6 +253,8 @@
     <ClCompile Include="Source\UnityEngine.GridModule.cpp">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.IMGUIModule.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.IMGUIModule__1.cpp">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.InputLegacyModule.cpp">
     </ClCompile>
@@ -176,17 +270,67 @@
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.SharedInternalsModule.cpp">
     </ClCompile>
+    <ClCompile Include="Source\UnityEngine.SpriteShapeModule.cpp">
+    </ClCompile>
     <ClCompile Include="Source\UnityEngine.SubsystemsModule.cpp">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.TerrainModule.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.TextCoreFontEngineModule.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.TextCoreTextEngineModule.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.TextCoreTextEngineModule__1.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.TextCoreTextEngineModule__2.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.TextCoreTextEngineModule__3.cpp">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.TextRenderingModule.cpp">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.TilemapModule.cpp">
     </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UI.cpp">
+    </ClCompile>
     <ClCompile Include="Source\UnityEngine.UIElementsModule.cpp">
     </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UIElementsModule__1.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UIElementsModule__10.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UIElementsModule__11.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UIElementsModule__12.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UIElementsModule__13.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UIElementsModule__14.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UIElementsModule__15.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UIElementsModule__2.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UIElementsModule__3.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UIElementsModule__4.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UIElementsModule__5.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UIElementsModule__6.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UIElementsModule__7.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UIElementsModule__8.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UIElementsModule__9.cpp">
+    </ClCompile>
     <ClCompile Include="Source\UnityEngine.UIModule.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UI__1.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UI__2.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UI__3.cpp">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.UnityAnalyticsModule.cpp">
     </ClCompile>
@@ -202,7 +346,7 @@
     </ClCompile>
     <ClCompile Include="Source\__Generated.cpp">
     </ClCompile>
-    <ClCompile Include="Source\Assembly-CSharp-firstpass_CodeGen.c">
+    <ClCompile Include="Source\Assembly-CSharp_CodeGen.c">
     </ClCompile>
     <ClCompile Include="Source\Il2CppGenericAdjustorThunkTable.c">
     </ClCompile>
@@ -227,6 +371,8 @@
     <ClCompile Include="Source\Mono.Security_CodeGen.c">
     </ClCompile>
     <ClCompile Include="Source\mscorlib_CodeGen.c">
+    </ClCompile>
+    <ClCompile Include="Source\Plugins_CodeGen.c">
     </ClCompile>
     <ClCompile Include="Source\System.Configuration_CodeGen.c">
     </ClCompile>
@@ -268,9 +414,15 @@
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.SharedInternalsModule_CodeGen.c">
     </ClCompile>
+    <ClCompile Include="Source\UnityEngine.SpriteShapeModule_CodeGen.c">
+    </ClCompile>
     <ClCompile Include="Source\UnityEngine.SubsystemsModule_CodeGen.c">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.TerrainModule_CodeGen.c">
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.TextCoreFontEngineModule_CodeGen.c">
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.TextCoreTextEngineModule_CodeGen.c">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.TextRenderingModule_CodeGen.c">
     </ClCompile>
@@ -279,6 +431,8 @@
     <ClCompile Include="Source\UnityEngine.UIElementsModule_CodeGen.c">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.UIModule_CodeGen.c">
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UI_CodeGen.c">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.UnityAnalyticsModule_CodeGen.c">
     </ClCompile>
@@ -2155,166 +2309,6 @@
     <ClCompile Include="IL2CPP\libil2cpp\gc\WriteBarrierValidation.cpp">
     </ClCompile>
     <ClInclude Include="IL2CPP\libil2cpp\gc\WriteBarrierValidation.h">
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\CommonDef.cpp">
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\CommonDef.h">
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\generated\AssemblyManifest.cpp">
-    </ClCompile>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\generated\MethodBridge.cpp">
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\generated\UnityVersion.h">
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\Il2CppCompatibleDef.cpp">
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\Il2CppCompatibleDef.h">
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\interpreter\Engine.cpp">
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\interpreter\Engine.h">
-    </ClInclude>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\interpreter\InstrinctDef.h">
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\interpreter\Instruction.cpp">
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\interpreter\Instruction.h">
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\interpreter\Interpreter.cpp">
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\interpreter\Interpreter.h">
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\interpreter\InterpreterDefs.cpp">
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\interpreter\InterpreterDefs.h">
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\interpreter\InterpreterModule.cpp">
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\interpreter\InterpreterModule.h">
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\interpreter\InterpreterUtil.cpp">
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\interpreter\InterpreterUtil.h">
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\interpreter\Interpreter_Execute.cpp">
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\interpreter\MemoryUtil.h">
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\interpreter\MethodBridge.cpp">
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\interpreter\MethodBridge.h">
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\metadata\AOTHomologousImage.cpp">
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\AOTHomologousImage.h">
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\metadata\Assembly.cpp">
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\Assembly.h">
-    </ClInclude>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\BlobReader.h">
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\metadata\ClassFieldLayoutCalculator.cpp">
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\ClassFieldLayoutCalculator.h">
-    </ClInclude>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\Coff.h">
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\metadata\ConsistentAOTHomologousImage.cpp">
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\ConsistentAOTHomologousImage.h">
-    </ClInclude>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\CustomAttributeDataWriter.h">
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\metadata\Image.cpp">
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\Image.h">
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\metadata\InterpreterImage.cpp">
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\InterpreterImage.h">
-    </ClInclude>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\MetadataDef.h">
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\metadata\MetadataModule.cpp">
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\MetadataModule.h">
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\metadata\MetadataPool.cpp">
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\MetadataPool.h">
-    </ClInclude>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\MetadataReader.h">
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\metadata\MetadataUtil.cpp">
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\MetadataUtil.h">
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\metadata\MethodBodyCache.cpp">
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\MethodBodyCache.h">
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\metadata\Opcodes.cpp">
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\Opcodes.h">
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\metadata\PDBImage.cpp">
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\PDBImage.h">
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\metadata\RawImage.cpp">
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\RawImage.h">
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\metadata\RawImageBase.cpp">
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\RawImageBase.h">
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\metadata\SuperSetAOTHomologousImage.cpp">
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\SuperSetAOTHomologousImage.h">
-    </ClInclude>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\Tables.h">
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\metadata\VTableSetup.cpp">
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\VTableSetup.h">
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\Runtime.cpp">
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\Runtime.h">
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\RuntimeApi.cpp">
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\RuntimeApi.h">
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\RuntimeConfig.cpp">
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\RuntimeConfig.h">
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\transform\BasicBlockSpliter.cpp">
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\transform\BasicBlockSpliter.h">
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\transform\TemporaryMemoryArena.cpp">
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\transform\TemporaryMemoryArena.h">
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\transform\Transform.cpp">
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\transform\Transform.h">
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\transform\TransformContext.cpp">
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\transform\TransformContext.h">
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\transform\TransformContext_CallCommon.cpp">
-    </ClCompile>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\transform\TransformContext_Instinct.cpp">
-    </ClCompile>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\transform\TransformModule.cpp">
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\transform\TransformModule.h">
     </ClInclude>
     <ClCompile Include="IL2CPP\libil2cpp\icalls\mscorlib\Interop.cpp">
     </ClCompile>

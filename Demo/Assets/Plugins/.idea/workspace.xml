@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a341fe68-a3a0-45cc-82ca-195f445c3570" name="更改" comment="">
+      <change beforePath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home/Build/Vat/Home_B_Idyll_1/Home_B_Idyll_1_BoneVATData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home/Build/Vat/Home_B_Idyll_1/Home_B_Idyll_1_BoneVATData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home/Build/Vat/Home_CardPD/Home_CardPD_BoneVATData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home/Build/Vat/Home_CardPD/Home_CardPD_BoneVATData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home/Build/Vat/Home_CoalPD/Home_CoalPD_BoneVATData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home/Build/Vat/Home_CoalPD/Home_CoalPD_BoneVATData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home/Build/Vat/Home_Construction_MainCity/Home_Construction_MainCity_BoneVATData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home/Build/Vat/Home_Construction_MainCity/Home_Construction_MainCity_BoneVATData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home/Build/Vat/Home_Forge/Home_Forge_BoneVATData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home/Build/Vat/Home_Forge/Home_Forge_BoneVATData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home/Build/Vat/Home_Lumberyard/Home_Lumberyard_BoneVATData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home/Build/Vat/Home_Lumberyard/Home_Lumberyard_BoneVATData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home/Build/Vat/Home_MetalMine/Home_MetalMine_BoneVATData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home/Build/Vat/Home_MetalMine/Home_MetalMine_BoneVATData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home/Build/Vat/Home_StoneMine/Home_StoneMine_BoneVATData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home/Build/Vat/Home_StoneMine/Home_StoneMine_BoneVATData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_BH/Build/Vat/Home_BH_FishFac/Home_BH_FishFac_BoneVATData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_BH/Build/Vat/Home_BH_FishFac/Home_BH_FishFac_BoneVATData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_BH/Build/Vat/Home_BH_IceMaking/Home_BH_IceMaking_BoneVATData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_BH/Build/Vat/Home_BH_IceMaking/Home_BH_IceMaking_BoneVATData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_BH/Build/Vat/Home_BH_IceShed/Home_BH_IceShed_BoneVATData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_BH/Build/Vat/Home_BH_IceShed/Home_BH_IceShed_BoneVATData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_BH/Build/Vat/Home_BH_OakWood/Home_BH_OakWood_BoneVATData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_BH/Build/Vat/Home_BH_OakWood/Home_BH_OakWood_BoneVATData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_BH/Build/Vat/Home_BH_Perfume/Home_BH_Perfume_BoneVATData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_BH/Build/Vat/Home_BH_Perfume/Home_BH_Perfume_BoneVATData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_RF/Build/Vat/Home_RF_CardFac/Home_RF_CardFac_BoneVATData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_RF/Build/Vat/Home_RF_CardFac/Home_RF_CardFac_BoneVATData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_RF/Build/Vat/Home_RF_CardFacPro/Home_RF_CardFacPro_BoneVATData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_RF/Build/Vat/Home_RF_CardFacPro/Home_RF_CardFacPro_BoneVATData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_RF/Build/Vat/Home_RF_CrystalFac/Home_RF_CrystalFac_BoneVATData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_RF/Build/Vat/Home_RF_CrystalFac/Home_RF_CrystalFac_BoneVATData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_RF/Build/Vat/Home_RF_CrystalMine/Home_RF_CrystalMine_BoneVATData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_RF/Build/Vat/Home_RF_CrystalMine/Home_RF_CrystalMine_BoneVATData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_RF/Build/Vat/Home_RF_ExpTree/Home_RF_ExpTree_BoneVATData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_RF/Build/Vat/Home_RF_ExpTree/Home_RF_ExpTree_BoneVATData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_RF/Build/Vat/Home_RF_LoggingSite/Home_RF_LoggingSite_BoneVATData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_RF/Build/Vat/Home_RF_LoggingSite/Home_RF_LoggingSite_BoneVATData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_RF/Build/Vat/Home_RF_MainCity_01/Home_RF_MainCity_01_BoneVATData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_RF/Build/Vat/Home_RF_MainCity_01/Home_RF_MainCity_01_BoneVATData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_RF/Build/Vat/Home_RF_MainCity_02/Home_RF_MainCity_02_BoneVATData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_RF/Build/Vat/Home_RF_MainCity_02/Home_RF_MainCity_02_BoneVATData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_RF/Build/Vat/Home_RF_MainCity_03/Home_RF_MainCity_03_BoneVATData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_RF/Build/Vat/Home_RF_MainCity_03/Home_RF_MainCity_03_BoneVATData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_RF/Build/Vat/Home_RF_MainCity_04/Home_RF_MainCity_04_BoneVATData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_RF/Build/Vat/Home_RF_MainCity_04/Home_RF_MainCity_04_BoneVATData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_RF/Build/Vat/Home_RF_MainCity_05/Home_RF_MainCity_05_BoneVATData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_RF/Build/Vat/Home_RF_MainCity_05/Home_RF_MainCity_05_BoneVATData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_RF/Build/Vat/Home_RF_MainCity_06/Home_RF_MainCity_06_BoneVATData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_RF/Build/Vat/Home_RF_MainCity_06/Home_RF_MainCity_06_BoneVATData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_RF/Build/Vat/Home_RF_PineWood/Home_RF_PineWood_BoneVATData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_RF/Build/Vat/Home_RF_PineWood/Home_RF_PineWood_BoneVATData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_RF/Build/Vat/Home_RF_StarPool/Home_RF_StarPool_BoneVATData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_RF/Build/Vat/Home_RF_StarPool/Home_RF_StarPool_BoneVATData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_S0/Build/Vat/Home_S0_Deer_Lily/Home_S0_Deer_Lily_BoneVATData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_S0/Build/Vat/Home_S0_Deer_Lily/Home_S0_Deer_Lily_BoneVATData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_S0/Build/Vat/Home_S0_Dragon_Forest/Home_S0_Dragon_Forest_BoneVATData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_S0/Build/Vat/Home_S0_Dragon_Forest/Home_S0_Dragon_Forest_BoneVATData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_S0/Build/Vat/Home_S0_Otter_Base/Home_S0_Otter_Base_BoneVATData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_S0/Build/Vat/Home_S0_Otter_Base/Home_S0_Otter_Base_BoneVATData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_S0/Build/Vat/Home_S0_Reef/Home_S0_Reef_BoneVATData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Artist/Model/Enviroment/Home_S0/Build/Vat/Home_S0_Reef/Home_S0_Reef_BoneVATData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotUpdate/Hello.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../HotUpdate/Hello.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameUpdateController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameUpdateController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Packages/packages-lock.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../HotUpdate/UITest.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="3CO30Kd89t2O19dFvEtTNPWvajE" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "configurable.group.appearance",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="a341fe68-a3a0-45cc-82ca-195f445c3570" name="更改" comment="" />
+      <created>1776242565629</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1776242565629</updated>
+      <workItem from="1776242568190" duration="716000" />
+      <workItem from="1776243522897" duration="35000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.Tasks.TaskCanceledException" breakIfHandledByOtherCode="false" displayValue="System.Threading.Tasks.TaskCanceledException" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

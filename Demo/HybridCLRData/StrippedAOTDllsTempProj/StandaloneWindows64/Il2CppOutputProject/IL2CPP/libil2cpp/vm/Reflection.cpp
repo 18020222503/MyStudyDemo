@@ -458,11 +458,7 @@ namespace vm
             Il2CppReflectionParameter* parameter = (Il2CppReflectionParameter*)obj;
             Il2CppReflectionMethod* method = (Il2CppReflectionMethod*)parameter->MemberImpl;
             const Il2CppImage* image = method->method->klass->image;
-#if !SUPPORT_METHOD_RETURN_TYPE_CUSTOM_ATTRIBUTE
-            if (parameter->PositionImpl == -1)
-                return std::make_tuple(0x8000000, method->method->klass->image); // This is what mono returns as a fixed value.
 
-#endif
             return std::make_tuple(vm::Method::GetParameterToken(method->method, parameter->PositionImpl), method->method->klass->image);
         }
         if (IsAssembly(obj))
@@ -561,58 +557,9 @@ namespace vm
 
             if (method->method->parameters == NULL)
                 return il2cpp::metadata::CustomAttributeDataReader::Empty();
-
-#if !SUPPORT_METHOD_RETURN_TYPE_CUSTOM_ATTRIBUTE
-            IL2CPP_NOT_IMPLEMENTED_NO_ASSERT(Reflection::GetCustomAttributeReaderFor, "-1 represents the return value. Need to emit custom attribute information for that.")
-                if (parameter->PositionImpl == -1)
-                    return il2cpp::metadata::CustomAttributeDataReader::Empty();
-#endif
         }
 
         return il2cpp::vm::MetadataCache::GetCustomAttributeDataReader(image, token);
-    }
-
-    ReflectionObjInfo Reflection::GetImageOfReflectionObject(Il2CppObject* obj)
-    {
-        if (il2cpp::vm::Reflection::IsAnyMethod(obj))
-        {
-            const MethodInfo* method = ((Il2CppReflectionMethod*)obj)->method;
-            return { method->klass->image, method->token };
-        }
-        else if (il2cpp::vm::Reflection::IsProperty(obj))
-        {
-            const PropertyInfo* prop = ((Il2CppReflectionProperty*)obj)->property;
-            return { prop->parent->image, prop->token };
-        }
-        else if (il2cpp::vm::Reflection::IsField(obj))
-        {
-            FieldInfo* field = ((Il2CppReflectionField*)obj)->field;
-            return { field->parent->image, field->token };
-        }
-        else if (il2cpp::vm::Reflection::IsEvent(obj))
-        {
-            const EventInfo* eventInfo = ((Il2CppReflectionMonoEvent*)obj)->eventInfo;
-            return { eventInfo->parent->image, eventInfo->token };
-        }
-        else if (IsParameter(obj))
-        {
-            Il2CppReflectionParameter* parameter = (Il2CppReflectionParameter*)obj;
-            Il2CppReflectionMethod* method = (Il2CppReflectionMethod*)parameter->MemberImpl;
-            return { method->method->klass->image, il2cpp::vm::Method::GetParameterToken(method->method, parameter->PositionImpl) };
-        }
-        else if (IsAssembly(obj))
-        {
-            const Il2CppAssembly* assembly = ((Il2CppReflectionAssembly*)obj)->assembly;
-            return { assembly->image, assembly->token };
-        }
-        else
-        {
-            Il2CppClass* klass = il2cpp::vm::Reflection::IsType(obj)
-                ? il2cpp::vm::Class::FromSystemType((Il2CppReflectionType*)obj)
-                : obj->klass;
-
-            return { klass->image, klass->token };
-        }
     }
 
     bool Reflection::HasAttribute(Il2CppObject *obj, Il2CppClass* attributeClass)

@@ -45,12 +45,6 @@
 #include <limits>
 #include <stdarg.h>
 
-#include <set>
-#include "hybridclr/metadata/MetadataUtil.h"
-#include "hybridclr/interpreter/Engine.h"
-#include "hybridclr/interpreter/Interpreter.h"
-#include "hybridclr/interpreter/InterpreterModule.h"
-
 namespace il2cpp
 {
 namespace vm
@@ -66,7 +60,6 @@ namespace vm
     static void GetBitmapNoInit(Il2CppClass* klass, size_t* bitmap, size_t& maxSetBit, size_t parentOffset, const il2cpp::os::FastAutoLock* lockPtr);
     static Il2CppClass* ResolveGenericInstanceType(Il2CppClass*, const il2cpp::vm::TypeNameParseInfo&, TypeSearchFlags searchFlags);
     static void SetupVTable(Il2CppClass *klass, const il2cpp::os::FastAutoLock& lock);
-    static void AddStaticFieldData(Il2CppClass* klass);
 
     Il2CppClass* Class::FromIl2CppType(const Il2CppType* type, bool throwOnError)
     {
@@ -179,11 +172,7 @@ namespace vm
                 IL2CPP_ASSERT(genericTypeDefinition->interfaces_count == klass->interfaces_count);
                 klass->implementedInterfaces = (Il2CppClass**)MetadataCalloc(genericTypeDefinition->interfaces_count, sizeof(Il2CppClass*));
                 for (uint16_t i = 0; i < genericTypeDefinition->interfaces_count; i++)
-                {
-                    Il2CppClass* intfKlass = Class::FromIl2CppType(il2cpp::metadata::GenericMetadata::InflateIfNeeded(MetadataCache::GetInterfaceFromOffset(genericTypeDefinition, i), context, false));
-                    Class::InitLocked(intfKlass, lock);
-                    klass->implementedInterfaces[i] = intfKlass;
-                }
+                    klass->implementedInterfaces[i] = Class::FromIl2CppType(il2cpp::metadata::GenericMetadata::InflateIfNeeded(MetadataCache::GetInterfaceFromOffset(genericTypeDefinition, i), context, false));
             }
         }
         else if (klass->rank > 0)
@@ -197,11 +186,7 @@ namespace vm
             {
                 klass->implementedInterfaces = (Il2CppClass**)MetadataCalloc(klass->interfaces_count, sizeof(Il2CppClass*));
                 for (uint16_t i = 0; i < klass->interfaces_count; i++)
-                {
-                    Il2CppClass* intfKlass = Class::FromIl2CppType(MetadataCache::GetInterfaceFromOffset(klass, i));
-                    Class::InitLocked(intfKlass, lock);
-                    klass->implementedInterfaces[i] = intfKlass;
-                }
+                    klass->implementedInterfaces[i] = Class::FromIl2CppType(MetadataCache::GetInterfaceFromOffset(klass, i));
             }
         }
 
@@ -248,7 +233,7 @@ namespace vm
 
         klass->instance_size = sizeof(void*);
         klass->stack_slot_size = sizeof(void*);
-        klass->thread_static_fields_size = 0;
+        klass->thread_static_fields_size = -1;
         klass->native_size = -1;
         klass->size_inited = true;
         klass->typeHierarchyDepth = 1;
@@ -1009,7 +994,9 @@ namespace vm
         if (klass->static_fields_size)
         {
             klass->static_fields = il2cpp::gc::GarbageCollector::AllocateFixed(klass->static_fields_size, NULL);
-            AddStaticFieldData(klass);
+            s_staticFieldData.push_back(klass);
+
+            il2cpp_runtime_stats.class_static_data_size += klass->static_fields_size;
         }
         if (klass->thread_static_fields_size)
             klass->thread_static_fields_offset = il2cpp::vm::Thread::AllocThreadStaticData(klass->thread_static_fields_size);
@@ -1137,9 +1124,6 @@ namespace vm
                 if (newMethod->virtualMethodPointer == NULL)
                     newMethod->virtualMethodPointer = newMethod->methodPointer;
 
-                newMethod->methodPointerCallByInterp = newMethod->methodPointer;
-                newMethod->virtualMethodPointerCallByInterp = newMethod->virtualMethodPointer;
-                newMethod->initInterpCallMethodPointer = true;
                 newMethod->klass = klass;
                 newMethod->return_type = methodInfo.return_type;
 
@@ -1176,7 +1160,6 @@ namespace vm
                     newMethod->virtualMethodPointer = stubs.virtualMethodPointer;
                 }
 
-                newMethod->isInterpterImpl = hybridclr::interpreter::InterpreterModule::IsImplementsByInterpreter(newMethod);
 
                 klass->methods[index] = newMethod;
 
@@ -1905,22 +1888,8 @@ namespace vm
         return klass->has_references;
     }
 
-    static void AddStaticFieldData(Il2CppClass* klass)
-    {
-        // The s_staticFieldData collect is used by liveness checking with the GC lock held
-        // Use the GC lock to add to this array
-
-        gc::GarbageCollector::CallWithAllocLockHeld([](void* klass) {
-            s_staticFieldData.push_back((Il2CppClass*)klass);
-            return (void*)nullptr;
-        }, klass);
-
-        il2cpp_runtime_stats.class_static_data_size += klass->static_fields_size;
-    }
-
     const il2cpp::utils::dynamic_array<Il2CppClass*>& Class::GetStaticFieldData()
     {
-        // Must be called with the GC lock held!
         return s_staticFieldData;
     }
 
@@ -2156,43 +2125,13 @@ namespace vm
             }
 
             klass = Image::FromTypeNameParseInfo(image, info, searchFlags & kTypeSearchFlagIgnoreCase);
-            if (klass)
-            {
-                return klass;
-            }
-            hybridclr::interpreter::MachineState& state = hybridclr::interpreter::InterpreterModule::GetCurrentThreadMachineState();
-            const hybridclr::interpreter::InterpFrame* frame = state.GetTopFrame();
-            if (frame)
-            {
-                const Il2CppImage* interpImage = frame->method->klass->image;
-                if (interpImage != image)
-                {
-                    klass = Image::FromTypeNameParseInfo(interpImage, info, searchFlags & kTypeSearchFlagIgnoreCase);
-                    if (klass)
-                    {
-                        return klass;
-                    }
-                }
-            }
-            const  Il2CppImage* interpImage = state.GetTopExecutingImage();
-            if (interpImage)
-            {
-                klass = Image::FromTypeNameParseInfo(interpImage, info, searchFlags & kTypeSearchFlagIgnoreCase);
-                if (klass)
-                {
-                    return klass;
-                }
-            }
 
-            // First, try mscorlib            if (klass == NULL && image != Image::GetCorlib())
-            klass = Image::FromTypeNameParseInfo(Image::GetCorlib(), info, searchFlags & kTypeSearchFlagIgnoreCase);
-            if (klass)
-            {
-                return klass;
-            }
+            // First, try mscorlib
+            if (klass == NULL && image != Image::GetCorlib())
+                klass = Image::FromTypeNameParseInfo(Image::GetCorlib(), info, searchFlags & kTypeSearchFlagIgnoreCase);
 
             // If we did not find it, now look in all loaded assemblies, except the ones we have tried already.
-            if (!dontUseExecutingImage)
+            if (klass == NULL && !dontUseExecutingImage)
             {
                 for (auto assembly : *Assembly::GetAllAssemblies())
                 {
@@ -2200,8 +2139,8 @@ namespace vm
                     if (currentImage != Image::GetCorlib() && currentImage != image)
                     {
                         klass = Image::FromTypeNameParseInfo(currentImage, info, searchFlags & kTypeSearchFlagIgnoreCase);
-                        if (klass)
-                            return klass;
+                        if (klass != NULL)
+                            break;
                     }
                 }
             }
@@ -2273,7 +2212,7 @@ namespace vm
 
     static bool is_generic_argument(Il2CppType* type)
     {
-        return type->type == IL2CPP_TYPE_VAR || type->type == IL2CPP_TYPE_MVAR;
+        return type->type == IL2CPP_TYPE_VAR || type->type == IL2CPP_TYPE_VAR;
     }
 
     Il2CppClass* Class::GenericParamGetBaseType(Il2CppClass* klass)

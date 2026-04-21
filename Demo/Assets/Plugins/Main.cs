@@ -7,7 +7,6 @@ public class Main : MonoBehaviour
     void Start()
     {
 
-        HybridCLRController.Instance.Start();
     }
 
     void Update()

@@ -304,21 +304,6 @@
     <Filter Include="IL2CPP\libil2cpp\gc">
       <UniqueIdentifier>{933498df-dc63-1700-4338-eb34be1d6fdf}</UniqueIdentifier>
     </Filter>
-    <Filter Include="IL2CPP\libil2cpp\hybridclr">
-      <UniqueIdentifier>{2ef28163-9a49-e86d-625d-393dd78fa6cc}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="IL2CPP\libil2cpp\hybridclr\generated">
-      <UniqueIdentifier>{33aad4fe-7c16-0cfd-e46a-90d67a588891}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="IL2CPP\libil2cpp\hybridclr\interpreter">
-      <UniqueIdentifier>{a4b3a3ef-b1a1-06bc-5e08-63abb3a59064}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="IL2CPP\libil2cpp\hybridclr\metadata">
-      <UniqueIdentifier>{323c90b4-cf4d-4546-5032-e6c87c8a6d95}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="IL2CPP\libil2cpp\hybridclr\transform">
-      <UniqueIdentifier>{8e7daae9-4282-51a5-e100-985c410488bd}</UniqueIdentifier>
-    </Filter>
     <Filter Include="IL2CPP\libil2cpp\icalls\mscorlib">
       <UniqueIdentifier>{b7e627c6-f61e-5a72-d708-b429cca1d89d}</UniqueIdentifier>
     </Filter>
@@ -538,7 +523,7 @@
     <Filter Include="IL2CPP\libmono">
       <UniqueIdentifier>{130ea70e-f388-26fc-5b2c-208e276f0f5e}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="Source\Assembly-CSharp-firstpass.cpp">
+    <ClCompile Include="Source\Assembly-CSharp.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\GenericMethods.cpp">
@@ -547,10 +532,31 @@
     <ClCompile Include="Source\GenericMethods__1.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\GenericMethods__10.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
     <ClCompile Include="Source\GenericMethods__2.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\GenericMethods__3.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GenericMethods__4.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GenericMethods__5.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GenericMethods__6.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GenericMethods__7.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GenericMethods__8.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GenericMethods__9.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\Generics.cpp">
@@ -559,13 +565,118 @@
     <ClCompile Include="Source\Generics__1.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Generics__10.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__11.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__12.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__13.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__14.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__15.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__16.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__17.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__18.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__19.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
     <ClCompile Include="Source\Generics__2.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__20.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__21.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__22.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__23.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__24.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__25.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__26.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__27.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__28.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__29.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\Generics__3.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Generics__30.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__31.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__32.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__33.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__34.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__35.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__36.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__37.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__38.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__39.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
     <ClCompile Include="Source\Generics__4.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__40.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__41.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__42.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__43.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__44.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\Generics__5.cpp">
@@ -584,6 +695,9 @@
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\Il2CppCCalculateFieldValues.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Il2CppCCalculateFieldValues1.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\Il2CppCCalculateTypeValues.cpp">
@@ -667,6 +781,9 @@
     <ClCompile Include="Source\mscorlib__9.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Plugins.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
     <ClCompile Include="Source\System.Configuration.cpp">
       <Filter>Source</Filter>
     </ClCompile>
@@ -683,6 +800,9 @@
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\System__2.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System__3.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.AIModule.cpp">
@@ -706,6 +826,9 @@
     <ClCompile Include="Source\UnityEngine.CoreModule__1.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\UnityEngine.CoreModule__2.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
     <ClCompile Include="Source\UnityEngine.cpp">
       <Filter>Source</Filter>
     </ClCompile>
@@ -716,6 +839,9 @@
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.IMGUIModule.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.IMGUIModule__1.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.InputLegacyModule.cpp">
@@ -739,10 +865,28 @@
     <ClCompile Include="Source\UnityEngine.SharedInternalsModule.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\UnityEngine.SpriteShapeModule.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
     <ClCompile Include="Source\UnityEngine.SubsystemsModule.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.TerrainModule.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.TextCoreFontEngineModule.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.TextCoreTextEngineModule.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.TextCoreTextEngineModule__1.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.TextCoreTextEngineModule__2.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.TextCoreTextEngineModule__3.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.TextRenderingModule.cpp">
@@ -751,10 +895,67 @@
     <ClCompile Include="Source\UnityEngine.TilemapModule.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UI.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
     <ClCompile Include="Source\UnityEngine.UIElementsModule.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UIElementsModule__1.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UIElementsModule__10.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UIElementsModule__11.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UIElementsModule__12.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UIElementsModule__13.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UIElementsModule__14.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UIElementsModule__15.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UIElementsModule__2.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UIElementsModule__3.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UIElementsModule__4.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UIElementsModule__5.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UIElementsModule__6.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UIElementsModule__7.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UIElementsModule__8.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UIElementsModule__9.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
     <ClCompile Include="Source\UnityEngine.UIModule.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UI__1.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UI__2.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UI__3.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.UnityAnalyticsModule.cpp">
@@ -778,7 +979,7 @@
     <ClCompile Include="Source\__Generated.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Assembly-CSharp-firstpass_CodeGen.c">
+    <ClCompile Include="Source\Assembly-CSharp_CodeGen.c">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\Il2CppGenericAdjustorThunkTable.c">
@@ -815,6 +1016,9 @@
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\mscorlib_CodeGen.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Plugins_CodeGen.c">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\System.Configuration_CodeGen.c">
@@ -877,10 +1081,19 @@
     <ClCompile Include="Source\UnityEngine.SharedInternalsModule_CodeGen.c">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\UnityEngine.SpriteShapeModule_CodeGen.c">
+      <Filter>Source</Filter>
+    </ClCompile>
     <ClCompile Include="Source\UnityEngine.SubsystemsModule_CodeGen.c">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.TerrainModule_CodeGen.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.TextCoreFontEngineModule_CodeGen.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.TextCoreTextEngineModule_CodeGen.c">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.TextRenderingModule_CodeGen.c">
@@ -893,6 +1106,9 @@
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.UIModule_CodeGen.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.UI_CodeGen.c">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.UnityAnalyticsModule_CodeGen.c">
@@ -3708,246 +3924,6 @@
     </ClCompile>
     <ClInclude Include="IL2CPP\libil2cpp\gc\WriteBarrierValidation.h">
       <Filter>IL2CPP\libil2cpp\gc</Filter>
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\CommonDef.cpp">
-      <Filter>IL2CPP\libil2cpp\hybridclr</Filter>
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\CommonDef.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr</Filter>
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\generated\AssemblyManifest.cpp">
-      <Filter>IL2CPP\libil2cpp\hybridclr\generated</Filter>
-    </ClCompile>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\generated\MethodBridge.cpp">
-      <Filter>IL2CPP\libil2cpp\hybridclr\generated</Filter>
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\generated\UnityVersion.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr\generated</Filter>
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\Il2CppCompatibleDef.cpp">
-      <Filter>IL2CPP\libil2cpp\hybridclr</Filter>
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\Il2CppCompatibleDef.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr</Filter>
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\interpreter\Engine.cpp">
-      <Filter>IL2CPP\libil2cpp\hybridclr\interpreter</Filter>
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\interpreter\Engine.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr\interpreter</Filter>
-    </ClInclude>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\interpreter\InstrinctDef.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr\interpreter</Filter>
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\interpreter\Instruction.cpp">
-      <Filter>IL2CPP\libil2cpp\hybridclr\interpreter</Filter>
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\interpreter\Instruction.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr\interpreter</Filter>
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\interpreter\Interpreter.cpp">
-      <Filter>IL2CPP\libil2cpp\hybridclr\interpreter</Filter>
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\interpreter\Interpreter.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr\interpreter</Filter>
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\interpreter\InterpreterDefs.cpp">
-      <Filter>IL2CPP\libil2cpp\hybridclr\interpreter</Filter>
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\interpreter\InterpreterDefs.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr\interpreter</Filter>
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\interpreter\InterpreterModule.cpp">
-      <Filter>IL2CPP\libil2cpp\hybridclr\interpreter</Filter>
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\interpreter\InterpreterModule.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr\interpreter</Filter>
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\interpreter\InterpreterUtil.cpp">
-      <Filter>IL2CPP\libil2cpp\hybridclr\interpreter</Filter>
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\interpreter\InterpreterUtil.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr\interpreter</Filter>
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\interpreter\Interpreter_Execute.cpp">
-      <Filter>IL2CPP\libil2cpp\hybridclr\interpreter</Filter>
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\interpreter\MemoryUtil.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr\interpreter</Filter>
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\interpreter\MethodBridge.cpp">
-      <Filter>IL2CPP\libil2cpp\hybridclr\interpreter</Filter>
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\interpreter\MethodBridge.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr\interpreter</Filter>
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\metadata\AOTHomologousImage.cpp">
-      <Filter>IL2CPP\libil2cpp\hybridclr\metadata</Filter>
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\AOTHomologousImage.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr\metadata</Filter>
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\metadata\Assembly.cpp">
-      <Filter>IL2CPP\libil2cpp\hybridclr\metadata</Filter>
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\Assembly.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr\metadata</Filter>
-    </ClInclude>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\BlobReader.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr\metadata</Filter>
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\metadata\ClassFieldLayoutCalculator.cpp">
-      <Filter>IL2CPP\libil2cpp\hybridclr\metadata</Filter>
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\ClassFieldLayoutCalculator.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr\metadata</Filter>
-    </ClInclude>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\Coff.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr\metadata</Filter>
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\metadata\ConsistentAOTHomologousImage.cpp">
-      <Filter>IL2CPP\libil2cpp\hybridclr\metadata</Filter>
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\ConsistentAOTHomologousImage.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr\metadata</Filter>
-    </ClInclude>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\CustomAttributeDataWriter.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr\metadata</Filter>
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\metadata\Image.cpp">
-      <Filter>IL2CPP\libil2cpp\hybridclr\metadata</Filter>
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\Image.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr\metadata</Filter>
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\metadata\InterpreterImage.cpp">
-      <Filter>IL2CPP\libil2cpp\hybridclr\metadata</Filter>
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\InterpreterImage.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr\metadata</Filter>
-    </ClInclude>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\MetadataDef.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr\metadata</Filter>
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\metadata\MetadataModule.cpp">
-      <Filter>IL2CPP\libil2cpp\hybridclr\metadata</Filter>
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\MetadataModule.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr\metadata</Filter>
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\metadata\MetadataPool.cpp">
-      <Filter>IL2CPP\libil2cpp\hybridclr\metadata</Filter>
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\MetadataPool.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr\metadata</Filter>
-    </ClInclude>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\MetadataReader.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr\metadata</Filter>
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\metadata\MetadataUtil.cpp">
-      <Filter>IL2CPP\libil2cpp\hybridclr\metadata</Filter>
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\MetadataUtil.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr\metadata</Filter>
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\metadata\MethodBodyCache.cpp">
-      <Filter>IL2CPP\libil2cpp\hybridclr\metadata</Filter>
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\MethodBodyCache.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr\metadata</Filter>
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\metadata\Opcodes.cpp">
-      <Filter>IL2CPP\libil2cpp\hybridclr\metadata</Filter>
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\Opcodes.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr\metadata</Filter>
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\metadata\PDBImage.cpp">
-      <Filter>IL2CPP\libil2cpp\hybridclr\metadata</Filter>
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\PDBImage.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr\metadata</Filter>
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\metadata\RawImage.cpp">
-      <Filter>IL2CPP\libil2cpp\hybridclr\metadata</Filter>
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\RawImage.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr\metadata</Filter>
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\metadata\RawImageBase.cpp">
-      <Filter>IL2CPP\libil2cpp\hybridclr\metadata</Filter>
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\RawImageBase.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr\metadata</Filter>
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\metadata\SuperSetAOTHomologousImage.cpp">
-      <Filter>IL2CPP\libil2cpp\hybridclr\metadata</Filter>
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\SuperSetAOTHomologousImage.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr\metadata</Filter>
-    </ClInclude>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\Tables.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr\metadata</Filter>
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\metadata\VTableSetup.cpp">
-      <Filter>IL2CPP\libil2cpp\hybridclr\metadata</Filter>
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\metadata\VTableSetup.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr\metadata</Filter>
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\Runtime.cpp">
-      <Filter>IL2CPP\libil2cpp\hybridclr</Filter>
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\Runtime.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr</Filter>
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\RuntimeApi.cpp">
-      <Filter>IL2CPP\libil2cpp\hybridclr</Filter>
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\RuntimeApi.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr</Filter>
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\RuntimeConfig.cpp">
-      <Filter>IL2CPP\libil2cpp\hybridclr</Filter>
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\RuntimeConfig.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr</Filter>
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\transform\BasicBlockSpliter.cpp">
-      <Filter>IL2CPP\libil2cpp\hybridclr\transform</Filter>
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\transform\BasicBlockSpliter.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr\transform</Filter>
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\transform\TemporaryMemoryArena.cpp">
-      <Filter>IL2CPP\libil2cpp\hybridclr\transform</Filter>
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\transform\TemporaryMemoryArena.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr\transform</Filter>
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\transform\Transform.cpp">
-      <Filter>IL2CPP\libil2cpp\hybridclr\transform</Filter>
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\transform\Transform.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr\transform</Filter>
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\transform\TransformContext.cpp">
-      <Filter>IL2CPP\libil2cpp\hybridclr\transform</Filter>
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\transform\TransformContext.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr\transform</Filter>
-    </ClInclude>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\transform\TransformContext_CallCommon.cpp">
-      <Filter>IL2CPP\libil2cpp\hybridclr\transform</Filter>
-    </ClCompile>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\transform\TransformContext_Instinct.cpp">
-      <Filter>IL2CPP\libil2cpp\hybridclr\transform</Filter>
-    </ClCompile>
-    <ClCompile Include="IL2CPP\libil2cpp\hybridclr\transform\TransformModule.cpp">
-      <Filter>IL2CPP\libil2cpp\hybridclr\transform</Filter>
-    </ClCompile>
-    <ClInclude Include="IL2CPP\libil2cpp\hybridclr\transform\TransformModule.h">
-      <Filter>IL2CPP\libil2cpp\hybridclr\transform</Filter>
     </ClInclude>
     <ClCompile Include="IL2CPP\libil2cpp\icalls\mscorlib\Interop.cpp">
       <Filter>IL2CPP\libil2cpp\icalls\mscorlib</Filter>

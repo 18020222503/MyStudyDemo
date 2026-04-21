@@ -18,7 +18,6 @@ namespace Memory
         return memalign(alignment, size);
 #else
         void* ptr = NULL;
-        alignment = alignment < sizeof(void*) ? sizeof(void*) : alignment;
         posix_memalign(&ptr, alignment, size);
         return ptr;
 #endif

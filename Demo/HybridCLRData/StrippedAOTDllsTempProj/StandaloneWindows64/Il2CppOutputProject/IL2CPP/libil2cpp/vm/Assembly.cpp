@@ -7,10 +7,6 @@
 #include "il2cpp-tabledefs.h"
 #include "il2cpp-class-internals.h"
 
-#include "Baselib.h"
-#include "Cpp/ReentrantLock.h"
-#include "os/Atomic.h"
-
 #include <vector>
 #include <string>
 
@@ -18,58 +14,16 @@ namespace il2cpp
 {
 namespace vm
 {
-    static baselib::ReentrantLock s_assemblyLock;
-    // copy on write
-    static int32_t s_assemblyVersion = 0;
     static AssemblyVector s_Assemblies;
-
-    static int32_t s_snapshotAssemblyVersion = 0;
-    static AssemblyVector* s_snapshotAssemblies = &s_Assemblies;
-
-    static void CopyValidAssemblies(AssemblyVector& dst, const AssemblyVector& src)
-    {
-        for (AssemblyVector::const_iterator assIt = src.begin(); assIt != src.end(); ++assIt)
-        {
-            const Il2CppAssembly* ass = *assIt;
-            if (ass->token)
-            {
-                dst.push_back(ass);
-            }
-        }
-    }
 
     AssemblyVector* Assembly::GetAllAssemblies()
     {
-        os::FastAutoLock lock(&s_assemblyLock);
-        if (s_assemblyVersion != s_snapshotAssemblyVersion)
-        {
-            s_snapshotAssemblies = new AssemblyVector();
-            CopyValidAssemblies(*s_snapshotAssemblies, s_Assemblies);
-            s_snapshotAssemblyVersion = s_assemblyVersion;
-        }
-
-        return s_snapshotAssemblies;
-    }
-
-
-    void Assembly::GetAllAssemblies(AssemblyVector& assemblies)
-    {
-        os::FastAutoLock lock(&s_assemblyLock);
-        if (s_assemblyVersion != s_snapshotAssemblyVersion)
-        {
-            CopyValidAssemblies(assemblies, s_Assemblies);
-        }
-        else
-        {
-            assemblies = *s_snapshotAssemblies;
-        }
+        return &s_Assemblies;
     }
 
     const Il2CppAssembly* Assembly::GetLoadedAssembly(const char* name)
     {
-        os::FastAutoLock lock(&s_assemblyLock);
-        AssemblyVector& assemblies = s_Assemblies;
-        for (AssemblyVector::const_reverse_iterator assembly = assemblies.rbegin(); assembly != assemblies.rend(); ++assembly)
+        for (AssemblyVector::const_iterator assembly = s_Assemblies.begin(); assembly != s_Assemblies.end(); ++assembly)
         {
             if (strcmp((*assembly)->aname.name, name) == 0)
                 return *assembly;
@@ -108,15 +62,17 @@ namespace vm
 
     const Il2CppAssembly* Assembly::Load(const char* name)
     {
-        const Il2CppAssembly* loadedAssembly = MetadataCache::GetAssemblyByName(name);
-        if (loadedAssembly)
+        const size_t len = strlen(name);
+        utils::VmStringUtils::CaseInsensitiveComparer comparer;
+
+        for (AssemblyVector::const_iterator assembly = s_Assemblies.begin(); assembly != s_Assemblies.end(); ++assembly)
         {
-            return loadedAssembly;
+            if (comparer(name, (*assembly)->aname.name))
+                return *assembly;
         }
 
         if (!ends_with(name, ".dll") && !ends_with(name, ".exe"))
         {
-            const size_t len = strlen(name);
             char *tmp = new char[len + 5];
 
             memset(tmp, 0, len + 5);
@@ -124,46 +80,38 @@ namespace vm
             memcpy(tmp, name, len);
             memcpy(tmp + len, ".dll", 4);
 
-            loadedAssembly = MetadataCache::GetAssemblyByName(tmp);
+            const Il2CppAssembly* result = Load(tmp);
 
-            if (!loadedAssembly)
+            if (!result)
             {
                 memcpy(tmp + len, ".exe", 4);
-                loadedAssembly = MetadataCache::GetAssemblyByName(tmp);
+                result = Load(tmp);
             }
 
             delete[] tmp;
 
-            return loadedAssembly;
+            return result;
         }
         else
         {
-            return nullptr;
+            for (AssemblyVector::const_iterator assembly = s_Assemblies.begin(); assembly != s_Assemblies.end(); ++assembly)
+            {
+                if (comparer(name, (*assembly)->image->name))
+                    return *assembly;
+            }
+
+            return NULL;
         }
     }
 
     void Assembly::Register(const Il2CppAssembly* assembly)
     {
-        os::FastAutoLock lock(&s_assemblyLock);
-
         s_Assemblies.push_back(assembly);
-        ++s_assemblyVersion;
-    }
-
-    void Assembly::InvalidateAssemblyList()
-    {
-        os::FastAutoLock lock(&s_assemblyLock);
-
-        ++s_assemblyVersion;
     }
 
     void Assembly::ClearAllAssemblies()
     {
-        os::FastAutoLock lock(&s_assemblyLock);
         s_Assemblies.clear();
-        delete s_snapshotAssemblies;
-        s_snapshotAssemblies = &s_Assemblies;
-        s_assemblyVersion = s_snapshotAssemblyVersion = 0;
     }
 
     void Assembly::Initialize()

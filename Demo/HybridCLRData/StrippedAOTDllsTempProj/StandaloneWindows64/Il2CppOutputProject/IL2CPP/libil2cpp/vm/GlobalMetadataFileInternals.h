@@ -156,9 +156,7 @@ typedef struct Il2CppMethodDefinition
     StringIndex nameIndex;
     TypeDefinitionIndex declaringType;
     TypeIndex returnType;
-#if SUPPORT_METHOD_RETURN_TYPE_CUSTOM_ATTRIBUTE
     uint32_t returnParameterToken;
-#endif
     ParameterIndex parameterStart;
     GenericContainerIndex genericContainerIndex;
     uint32_t token;
@@ -344,5 +342,3 @@ typedef struct Il2CppGlobalMetadataHeader
     int32_t exportedTypeDefinitionsSize;
 } Il2CppGlobalMetadataHeader;
 #pragma pack(pop, p1)
-
-typedef Il2CppCustomAttributeDataRange Il2CppCustomAttributeTypeRange;

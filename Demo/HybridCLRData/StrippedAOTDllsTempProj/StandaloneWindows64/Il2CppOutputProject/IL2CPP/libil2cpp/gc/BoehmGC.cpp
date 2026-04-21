@@ -35,9 +35,6 @@ static GC_push_other_roots_proc default_push_other_roots;
 typedef Il2CppHashMap<char*, char*, il2cpp::utils::PassThroughHash<char*> > RootMap;
 static RootMap s_Roots;
 
-typedef Il2CppHashMap<void*, il2cpp::gc::GarbageCollector::GetDynamicRootDataProc, il2cpp::utils::PassThroughHash<void*> > DynamicRootMap;
-static DynamicRootMap s_DynamicRoots;
-
 static void push_other_roots(void);
 
 typedef struct ephemeron_node ephemeron_node;
@@ -138,11 +135,8 @@ il2cpp::gc::GarbageCollector::Initialize()
 #endif
 
     GC_INIT();
-    // Always manually trigger finalizers. This is done by the notifier callback registered
-    // below on the majority of platforms. On the Web platform we trigger finalizers if needed
-    // in CollectALittle which is called at top of each frame.
-    GC_set_finalize_on_demand(1);
 #if defined(GC_THREADS)
+    GC_set_finalize_on_demand(1);
 #if !RUNTIME_TINY
     GC_set_finalizer_notifier(&il2cpp::gc::GarbageCollector::NotifyFinalizers);
 #endif
@@ -200,28 +194,16 @@ int32_t
 il2cpp::gc::GarbageCollector::CollectALittle()
 {
 #if IL2CPP_ENABLE_DEFERRED_GC
-    // This should only be called from Unity at the top of stack
-    // with the GC enabled.
-
-    IL2CPP_ASSERT(!GC_is_disabled());
-    int32_t ret = 0;
     if (s_PendingGC)
     {
         s_PendingGC = false;
         GC_gcollect();
-        ret = 0; // no more work to do
+        return 0; // no more work to do
     }
     else
     {
-        ret = GC_collect_a_little();
+        return GC_collect_a_little();
     }
-
-    // Disable the GC to run finalizers, as they may allocate and interact with managed memory.
-    GC_disable();
-    // this checks and only runs finalizers if there is work to do
-    GarbageCollector::WaitForPendingFinalizers();
-    GC_enable();
-    return ret;
 #else
     return GC_collect_a_little();
 #endif
@@ -273,7 +255,6 @@ il2cpp::gc::GarbageCollector::IsDisabled()
 }
 
 static baselib::ReentrantLock s_GCSetModeLock;
-static Il2CppGCMode s_CurrentGCMode = IL2CPP_GC_MODE_ENABLED;
 
 void
 il2cpp::gc::GarbageCollector::SetMode(Il2CppGCMode mode)
@@ -282,24 +263,22 @@ il2cpp::gc::GarbageCollector::SetMode(Il2CppGCMode mode)
     switch (mode)
     {
         case IL2CPP_GC_MODE_ENABLED:
-            if (s_CurrentGCMode == IL2CPP_GC_MODE_DISABLED)
+            if (GC_is_disabled())
                 GC_enable();
             GC_set_disable_automatic_collection(false);
             break;
 
         case IL2CPP_GC_MODE_DISABLED:
-            if (s_CurrentGCMode != IL2CPP_GC_MODE_DISABLED)
+            if (!GC_is_disabled())
                 GC_disable();
             break;
 
         case IL2CPP_GC_MODE_MANUAL:
-            if (s_CurrentGCMode == IL2CPP_GC_MODE_DISABLED)
+            if (GC_is_disabled())
                 GC_enable();
             GC_set_disable_automatic_collection(true);
             break;
     }
-
-    s_CurrentGCMode = mode;
 }
 
 void
@@ -582,52 +561,11 @@ void il2cpp::gc::GarbageCollector::UnregisterRoot(char* start)
     GC_call_with_alloc_lock(deregister_root, start);
 }
 
-struct DynamicRootData
-{
-    void* root;
-    il2cpp::gc::GarbageCollector::GetDynamicRootDataProc getRootDataFunc;
-};
-
-static void* register_dynamic_root(void* arg)
-{
-    DynamicRootData* rootData = (DynamicRootData*)arg;
-    IL2CPP_ASSERT(s_DynamicRoots.find(rootData->root) == s_DynamicRoots.end());
-    s_DynamicRoots.add(rootData->root, rootData->getRootDataFunc);
-    
-    return NULL;
-}
-
-static void* deregister_dynamic_root(void* arg)
-{
-    IL2CPP_ASSERT(s_DynamicRoots.find(arg) != s_DynamicRoots.end());
-    s_DynamicRoots.erase(arg);
-    return NULL;
-}
-
-void il2cpp::gc::GarbageCollector::RegisterDynamicRoot(void* root, GetDynamicRootDataProc getRootDataFunc)
-{
-    DynamicRootData rootData = {root, getRootDataFunc};
-    GC_call_with_alloc_lock(register_dynamic_root, &rootData);
-}
-
-void il2cpp::gc::GarbageCollector::UnregisterDynamicRoot(void* root)
-{
-    GC_call_with_alloc_lock(deregister_dynamic_root, root);
-}
-
 static void
 push_other_roots(void)
 {
     for (RootMap::iterator iter = s_Roots.begin(); iter != s_Roots.end(); ++iter)
         GC_push_all(iter->first, iter->second);
-    for (auto dynamicRootEntry : s_DynamicRoots)
-    {
-        std::pair<char*, size_t> dynamicRootData = dynamicRootEntry.second(dynamicRootEntry.first);
-        if (dynamicRootData.first)
-        {
-            GC_push_all(dynamicRootData.first, dynamicRootData.first + dynamicRootData.second);
-        }
-    }
     GC_push_all(&ephemeron_list, &ephemeron_list + 1);
     if (default_push_other_roots)
         default_push_other_roots();

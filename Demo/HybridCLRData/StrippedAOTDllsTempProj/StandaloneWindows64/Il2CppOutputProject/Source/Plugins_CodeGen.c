@@ -1,0 +1,89 @@
+﻿#include "pch-c.h"
+#ifndef _MSC_VER
+# include <alloca.h>
+#else
+# include <malloc.h>
+#endif
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+extern void Animal_Behavior_m21FE760EF4ACE4FFAD7BFC976A3FEF167D2E1872 (void);
+extern void Animal__ctor_m8863E333BC499CE3D0245A7C7E41CDC65ABCF005 (void);
+extern void ConsoleToScreen_OnEnable_m3B789C7A0FE90A3D51DB15D33899E9D7F7C15609 (void);
+extern void ConsoleToScreen_OnDisable_m6A5ADE235F02CA9CE4B98951C6F4A4C44221CBCB (void);
+extern void ConsoleToScreen_Log_m3E791A9D07491F8CEADDB24DF086AEA899ED87D2 (void);
+extern void ConsoleToScreen_OnGUI_mE64E509B1AF88608B4CD2A9EBD9056E1DC6CA743 (void);
+extern void ConsoleToScreen__ctor_m2D0666D81D40FADD6DC78423AB3973BDBB6ACCD3 (void);
+extern void HybridCLRController_Start_mDE66415EA677E696C00B54F1C40AC765886ABBC6 (void);
+extern void HybridCLRController_Update_m4ED51E9CA6DF863A89A73E41D741D94E3D2112C2 (void);
+extern void HybridCLRController__ctor_m1F1DB7C253A052813C7DFA488C737F548480688C (void);
+extern void HybridCLRController__cctor_m134DB8268C8E9CCBC2DCE0D13E7BAE658252DF47 (void);
+extern void Main_Start_m488C22F958952C9150FF85F045238027ACFC2011 (void);
+extern void Main_Update_m86D802521238341489B5E9727C195161EC25D9B7 (void);
+extern void Main__ctor_m5745EBC0DCB6CC111FB3E004A2C272317FB1C7BD (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m413AD876EE1ED6CB44A1FBF13706C8344DCE6048 (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m06E9E7BFE73DD47B4CD92B67ABE0D66BE29A7343 (void);
+static Il2CppMethodPointer s_methodPointers[16] = 
+{
+	Animal_Behavior_m21FE760EF4ACE4FFAD7BFC976A3FEF167D2E1872,
+	Animal__ctor_m8863E333BC499CE3D0245A7C7E41CDC65ABCF005,
+	ConsoleToScreen_OnEnable_m3B789C7A0FE90A3D51DB15D33899E9D7F7C15609,
+	ConsoleToScreen_OnDisable_m6A5ADE235F02CA9CE4B98951C6F4A4C44221CBCB,
+	ConsoleToScreen_Log_m3E791A9D07491F8CEADDB24DF086AEA899ED87D2,
+	ConsoleToScreen_OnGUI_mE64E509B1AF88608B4CD2A9EBD9056E1DC6CA743,
+	ConsoleToScreen__ctor_m2D0666D81D40FADD6DC78423AB3973BDBB6ACCD3,
+	HybridCLRController_Start_mDE66415EA677E696C00B54F1C40AC765886ABBC6,
+	HybridCLRController_Update_m4ED51E9CA6DF863A89A73E41D741D94E3D2112C2,
+	HybridCLRController__ctor_m1F1DB7C253A052813C7DFA488C737F548480688C,
+	HybridCLRController__cctor_m134DB8268C8E9CCBC2DCE0D13E7BAE658252DF47,
+	Main_Start_m488C22F958952C9150FF85F045238027ACFC2011,
+	Main_Update_m86D802521238341489B5E9727C195161EC25D9B7,
+	Main__ctor_m5745EBC0DCB6CC111FB3E004A2C272317FB1C7BD,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m413AD876EE1ED6CB44A1FBF13706C8344DCE6048,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m06E9E7BFE73DD47B4CD92B67ABE0D66BE29A7343,
+};
+static const int32_t s_InvokerIndices[16] = 
+{
+	4327,
+	4327,
+	4327,
+	4327,
+	1004,
+	4327,
+	4327,
+	4327,
+	4327,
+	4327,
+	6380,
+	4327,
+	4327,
+	4327,
+	6384,
+	4327,
+};
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Plugins_CodeGenModule;
+const Il2CppCodeGenModule g_Plugins_CodeGenModule = 
+{
+	"Plugins.dll",
+	16,
+	s_methodPointers,
+	0,
+	NULL,
+	s_InvokerIndices,
+	0,
+	NULL,
+	0,
+	NULL,
+	0,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+};

@@ -2,16 +2,17 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ConsoleToScreen : MonoBehaviour
 {
     const int maxLines = 50;
     const int maxLineLength = 120;
     private string _logStr = "";
-
+    public Text Text;
     private readonly List<string> _lines = new List<string>();
 
-    public int fontSize = 20;
+    public int fontSize = 6;
 
     void OnEnable() { Application.logMessageReceived += Log; }
     void OnDisable() { Application.logMessageReceived -= Log; }
@@ -43,12 +44,13 @@ public class ConsoleToScreen : MonoBehaviour
             _lines.RemoveRange(0, _lines.Count - maxLines);
         }
         _logStr = string.Join("\n", _lines);
+        Text.text =  _logStr;
     }
 
-    void OnGUI()
-    {
-        GUI.matrix = Matrix4x4.TRS(Vector3.zero, Quaternion.identity,
-            new Vector3(Screen.width / 1200.0f, Screen.height / 800.0f, 1.0f));
-        GUI.Label(new Rect(400, 200, 800, 370), _logStr, new GUIStyle() { fontSize = Math.Max(16, fontSize) });
-    }
+    // void OnGUI()
+    // {
+    //     GUI.matrix = Matrix4x4.TRS(Vector3.zero, Quaternion.identity,
+    //         new Vector3(Screen.width / 1200.0f, Screen.height / 800.0f, 1.0f));
+    //     GUI.Label(new Rect(400, 200, 800, 370), _logStr, new GUIStyle() { fontSize = Math.Max(4, fontSize) });
+    // }
 }
