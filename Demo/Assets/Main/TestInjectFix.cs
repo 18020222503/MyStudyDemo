@@ -32,6 +32,6 @@ public class TestInjectFix : MonoBehaviour
     [Patch]
     public string FuncA()
     {
-        return "old1111";
+        return "old111111";
     }
 }
