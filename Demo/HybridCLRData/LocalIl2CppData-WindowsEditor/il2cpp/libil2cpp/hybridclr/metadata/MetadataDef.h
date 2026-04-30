@@ -489,7 +489,7 @@ namespace metadata
 		const uint8_t* ilcodes;
 		uint32_t maxStack;
 		std::vector<ExceptionClause> exceptionClauses;
-		std::vector<const Il2CppType*> localVars;
+		il2cpp::utils::dynamic_array<const Il2CppType*> localVars;
 		// optional data sections
 	};
 
@@ -515,7 +515,7 @@ namespace metadata
 		uint32_t flags;
 		uint32_t genericParamCount;
 		const Il2CppType* returnType;
-		std::vector<const Il2CppType*> params;
+		il2cpp::utils::dynamic_array<const Il2CppType*> params;
 	};
 
 	struct MethodRefSig
@@ -523,7 +523,7 @@ namespace metadata
 		uint32_t flags;
 		uint32_t genericParamCount;
 		const Il2CppType* returnType;
-		std::vector<const Il2CppType*> params;
+		il2cpp::utils::dynamic_array<const Il2CppType*> params;
 	};
 
 	struct FieldRefSig

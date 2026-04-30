@@ -1584,5 +1584,3 @@ inline intptr_t il2cpp_unsafe_byte_offset(void* origin, void* target)
 {
     return reinterpret_cast<uint8_t*>(target) - reinterpret_cast<uint8_t*>(origin);
 }
-
-void FullGenericSharingReflectionInvokeInterpreter(void* obj, void** args, void* ret, const MethodInfo* method);

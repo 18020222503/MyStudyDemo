@@ -71,6 +71,11 @@ namespace interpreter
 			}
 		}
 
+		StackObject* AllocArgments(int32_t argCount)
+		{
+			return AllocStackSlot(argCount);
+		}
+
 		StackObject* GetStackBasePtr() const
 		{
 			return _stackBase;

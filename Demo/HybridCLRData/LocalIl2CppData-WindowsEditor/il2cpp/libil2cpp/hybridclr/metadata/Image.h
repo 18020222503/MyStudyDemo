@@ -6,14 +6,12 @@
 
 #include "vm/GlobalMetadataFileInternals.h"
 #include "vm/Assembly.h"
-#include "vm/MetadataAlloc.h"
 #include "gc/GarbageCollector.h"
 #include "gc/Allocator.h"
 #include "gc/AppendOnlyGCHashMap.h"
 #include "utils/Il2CppHashMap.h"
-#include "utils/MemoryPool.h"
 
-#include "RawImageBase.h"
+#include "RawImage.h"
 #include "VTableSetup.h"
 #include "MetadataUtil.h"
 #include "PDBImage.h"
@@ -23,26 +21,23 @@ namespace hybridclr
 {
 namespace metadata
 {
-	struct TokenGenericContextType
-	{
-		uint32_t token;
-		const Il2CppGenericContext* context;
-	};
+
+	typedef std::tuple<uint32_t, const Il2CppGenericContext*> TokenGenericContextType;
 
 	struct TokenGenericContextTypeHash {
 		size_t operator()(const TokenGenericContextType x) const noexcept {
-			return x.token * 0x9e3779b9 + (size_t)x.context;
+			return std::get<0>(x) * 0x9e3779b9 + (size_t)std::get<1>(x);
 		}
 	};
 
 	struct TokenGenericContextTypeEqual
 	{
 		bool operator()(const TokenGenericContextType a, const TokenGenericContextType b) const {
-			return a.token == b.token && a.context == b.context;
+			return std::get<0>(a) == std::get<0>(b) && std::get<1>(a) == std::get<1>(b);
 		}
 	};
 
-	typedef Il2CppNotDefaultKeyHashMap<TokenGenericContextType, void*, TokenGenericContextTypeHash, TokenGenericContextTypeEqual> Token2RuntimeHandleMap;
+	typedef Il2CppHashMap<std::tuple<uint32_t, const Il2CppGenericContext*>, void*, TokenGenericContextTypeHash, TokenGenericContextTypeEqual> Token2RuntimeHandleMap;
 
 	class Image
 	{
@@ -98,7 +93,7 @@ namespace metadata
 		void ReadFieldRefSig(BlobReader& reader, const Il2CppGenericContainer* klassGenericContainer, FieldRefSig& field);
 		void ReadMethodRefSig(BlobReader& reader, MethodRefSig& method);
 		const Il2CppGenericInst* ReadMethodSpecInstantiation(uint32_t signatureIdx, const Il2CppGenericContainer* klassGenericContainer, const Il2CppGenericContainer* methodGenericContainer);
-		void ReadLocalVarSig(BlobReader& reader, const Il2CppGenericContainer* klassGenericContainer, const Il2CppGenericContainer* methodGenericContainer, std::vector<const Il2CppType*>& vars);
+		void ReadLocalVarSig(BlobReader& reader, const Il2CppGenericContainer* klassGenericContainer, const Il2CppGenericContainer* methodGenericContainer, il2cpp::utils::dynamic_array<const Il2CppType*>& vars);
 		void ReadStandAloneSig(uint32_t signatureIdx, const Il2CppGenericContainer* klassGenericContainer, const Il2CppGenericContainer* methodGenericContainer, ResolveStandAloneMethodSig& sig);
 
 		// resolve from token
@@ -137,10 +132,8 @@ namespace metadata
 	protected:
 		Image() : _rawImage(nullptr), _pdbImage(nullptr)
 		{
-			_il2cppStringCache.SetUnderlyingHashMapDeleteKey((uint32_t)-1);
 			il2cpp::vm::AssemblyVector assemblies;
 			il2cpp::vm::Assembly::GetAllAssemblies(assemblies);
-			_nameToAssemblies.resize(assemblies.size() + 1); // +1 for self
 			for (auto ass : assemblies)
 			{
 				_nameToAssemblies[ass->image->nameNoExt] = ass;
@@ -180,12 +173,12 @@ namespace metadata
 			return nullptr;
 		}
 
-		const Il2CppTypeDefinition* FindNetStandardExportedType(const char* namespaceStr, const char* nameStr);
+		Il2CppClass* FindNetStandardExportedType(const char* namespaceStr, const char* nameStr);
 
 		RawImageBase* _rawImage;
 		PDBImage* _pdbImage;
-		Il2CppNotDefaultKeyHashMap<const char*, const Il2CppAssembly*, CStringHash, CStringEqualTo> _nameToAssemblies;
-		il2cpp::gc::AppendOnlyGCNotDefaultKeyHashMap<uint32_t, Il2CppString*, il2cpp::utils::PassThroughHash<uint32_t>> _il2cppStringCache;
+		Il2CppHashMap<const char*, const Il2CppAssembly*, CStringHash, CStringEqualTo> _nameToAssemblies;
+		il2cpp::gc::AppendOnlyGCHashMap<uint32_t, Il2CppString*, il2cpp::utils::PassThroughHash<uint32_t>> _il2cppStringCache;
 	};
 }
 }

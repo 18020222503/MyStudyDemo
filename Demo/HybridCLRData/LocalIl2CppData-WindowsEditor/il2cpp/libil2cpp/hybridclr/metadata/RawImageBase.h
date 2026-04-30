@@ -25,11 +25,6 @@ namespace metadata
 		UNKNOWN_IMAGE_FORMAT,
 		UNSUPPORT_FORMAT_VERSION,
 		UNMATCH_FORMAT_VARIANT,
-		UNSUPPORT_ENCRYPTION_ALGORHITHM,
-		DHE_NOT_DIFFERENTIAL_HYBRID_ASSEMBLY,
-		DHE_HAS_BEEN_LOADED,
-		DHE_BAD_DHAO_DATA,
-		DHE_BAD_META_VERSION_FILE,
 	};
 
 	class RawImageBase
@@ -62,8 +57,6 @@ namespace metadata
 			uint32_t stringLength = BlobReader::ReadCompressedUint32(str, lengthSize);
 			return CreateUserString((const char*)(str + lengthSize), stringLength);
 		}
-
-		virtual void DecryptMethodBodyIfNeed(const byte* methodBody, uint32_t methodBodySize) {}
 
 		const char* GetStringFromRawIndex(StringIndex index) const
 		{
@@ -252,7 +245,7 @@ namespace metadata
 			case 2: return GetU2LittleEndian(dataPtr);
 			case 4: return GetU4LittleEndian(dataPtr);
 			default: IL2CPP_ASSERT(false); return 0;
-		}
+			}
 		}
 
 		void ReadColumn(const byte* rowPtr, const ColumnOffsetSize& columnMt, uint8_t& value) const
@@ -339,59 +332,59 @@ __F(f6) \
 TABLE_END
 
 	TABLE5(Module, TableType::MODULE, generation, name, mvid, encid, encBaseId)
-		TABLE3(TypeRef, TableType::TYPEREF, resolutionScope, typeName, typeNamespace)
+	TABLE3(TypeRef, TableType::TYPEREF, resolutionScope, typeName, typeNamespace)
 	TABLE6(TypeDef, TableType::TYPEDEF, flags, typeName, typeNamespace, extends, fieldList, methodList)
-			TABLE1(TypeSpec, TableType::TYPESPEC, signature);
+	TABLE1(TypeSpec, TableType::TYPESPEC, signature);
 	TABLE4(ImplMap, TableType::IMPLMAP, mappingFlags, memberForwarded, importName, importScope)
 	TABLE1(ModuleRef, TableType::MODULEREF, name)
-		TABLE3(Field, TableType::FIELD, flags, name, signature)
-			TABLE4(GenericParam, TableType::GENERICPARAM, number, flags, owner, name)
-			TABLE2(GenericParamConstraint, TableType::GENERICPARAMCONSTRAINT, owner, constraint)
-			TABLE3(MemberRef, TableType::MEMBERREF, classIdx, name, signature)
-			TABLE1(StandAloneSig, TableType::STANDALONESIG, signature)
-			TABLE3(MethodImpl, TableType::METHODIMPL, classIdx, methodBody, methodDeclaration)
-			TABLE2(FieldRVA, TableType::FIELDRVA, rva, field)
-			TABLE2(FieldLayout, TableType::FIELDLAYOUT, offset, field)
+	TABLE3(Field, TableType::FIELD, flags, name, signature)
+	TABLE4(GenericParam, TableType::GENERICPARAM, number, flags, owner, name)
+	TABLE2(GenericParamConstraint, TableType::GENERICPARAMCONSTRAINT, owner, constraint)
+	TABLE3(MemberRef, TableType::MEMBERREF, classIdx, name, signature)
+	TABLE1(StandAloneSig, TableType::STANDALONESIG, signature)
+	TABLE3(MethodImpl, TableType::METHODIMPL, classIdx, methodBody, methodDeclaration)
+	TABLE2(FieldRVA, TableType::FIELDRVA, rva, field)
+	TABLE2(FieldLayout, TableType::FIELDLAYOUT, offset, field)
 	TABLE4(Constant, TableType::CONSTANT, type, padding, parent, value)
-			TABLE2(MethodSpec, TableType::METHODSPEC, method, instantiation)
-			TABLE3(CustomAttribute, TableType::CUSTOMATTRIBUTE, parent, type, value)
-			TABLE2(PropertyMap, TableType::PROPERTYMAP, parent, propertyList)
-			TABLE3(Property, TableType::PROPERTY, flags, name, type)
-			TABLE2(EventMap, TableType::EVENTMAP, parent, eventList)
-			TABLE3(Event, TableType::EVENT, eventFlags, name, eventType)
-			TABLE3(MethodSemantics, TableType::METHODSEMANTICS, semantics, method, association)
+	TABLE2(MethodSpec, TableType::METHODSPEC, method, instantiation)
+	TABLE3(CustomAttribute, TableType::CUSTOMATTRIBUTE, parent, type, value)
+	TABLE2(PropertyMap, TableType::PROPERTYMAP, parent, propertyList)
+	TABLE3(Property, TableType::PROPERTY, flags, name, type)
+	TABLE2(EventMap, TableType::EVENTMAP, parent, eventList)
+	TABLE3(Event, TableType::EVENT, eventFlags, name, eventType)
+	TABLE3(MethodSemantics, TableType::METHODSEMANTICS, semantics, method, association)
 
-			TABLE2(NestedClass, TableType::NESTEDCLASS, nestedClass, enclosingClass)
-			TABLE6(Method, TableType::METHOD, rva, implFlags, flags, name, signature, paramList)
-			TABLE3(Param, TableType::PARAM, flags, sequence, name)
+	TABLE2(NestedClass, TableType::NESTEDCLASS, nestedClass, enclosingClass)
+	TABLE6(Method, TableType::METHOD, rva, implFlags, flags, name, signature, paramList)
+	TABLE3(Param, TableType::PARAM, flags, sequence, name)
 
-			TABLE3(ClassLayout, TableType::CLASSLAYOUT, packingSize, classSize, parent)
-			TABLE2(InterfaceImpl, TableType::INTERFACEIMPL, classIdx, interfaceIdx)
+	TABLE3(ClassLayout, TableType::CLASSLAYOUT, packingSize, classSize, parent)
+	TABLE2(InterfaceImpl, TableType::INTERFACEIMPL, classIdx, interfaceIdx)
 
-			TABLE_BEGIN(Assembly, TableType::ASSEMBLY)
-			__F(hashAlgId)
-			__F(majorVersion)
-			__F(minorVersion)
-			__F(buildNumber)
-			__F(revisionNumber)
-			__F(flags)
-			__F(publicKey)
-			__F(name)
+	TABLE_BEGIN(Assembly, TableType::ASSEMBLY)
+	__F(hashAlgId)
+	__F(majorVersion)
+	__F(minorVersion)
+	__F(buildNumber)
+	__F(revisionNumber)
+	__F(flags)
+	__F(publicKey)
+	__F(name)
 	__F(locale)
-			TABLE_END
+	TABLE_END
 
 
-			TABLE_BEGIN(AssemblyRef, TableType::ASSEMBLYREF)
-			__F(majorVersion)
-			__F(minorVersion)
-			__F(buildNumber)
-			__F(revisionNumber)
-			__F(flags)
-			__F(publicKeyOrToken)
-			__F(name)
+	TABLE_BEGIN(AssemblyRef, TableType::ASSEMBLYREF)
+	__F(majorVersion)
+	__F(minorVersion)
+	__F(buildNumber)
+	__F(revisionNumber)
+	__F(flags)
+	__F(publicKeyOrToken)
+	__F(name)
 	__F(locale)
-			__F(hashValue)
-			TABLE_END
+	__F(hashValue)
+	TABLE_END
 
 	TABLE4(Document, TableType::DOCUMENT, name, hashAlgorithm, hash, language)
 	TABLE2(MethodDebugInformation, TableType::METHODDEBUGINFORMATION, document, sequencePoints)
@@ -403,28 +396,28 @@ TABLE_END
 	TABLE3(CustomDebugInformation, TableType::CUSTOMDEBUGINFORMATION, parent, kind, value)
 
 
-		protected:
-			const byte* _imageData;
-			uint32_t _imageLength;
-			const byte* _ptrRawDataEnd;
+	protected:
+		const byte* _imageData;
+		uint32_t _imageLength;
+		const byte* _ptrRawDataEnd;
 
-			std::vector<SectionHeader> _sections;
+		std::vector<SectionHeader> _sections;
 
 
-			uint32_t _entryPointToken;
+		uint32_t _entryPointToken;
 
-			CliStream _streamStringHeap;
-			CliStream _streamUS;
-			CliStream _streamBlobHeap;
-			CliStream _streamGuidHeap;
-			CliStream _streamTables;
+		CliStream _streamStringHeap;
+		CliStream _streamUS;
+		CliStream _streamBlobHeap;
+		CliStream _streamGuidHeap;
+		CliStream _streamTables;
 
-			bool _4byteStringIndex;
-			bool _4byteGUIDIndex;
-			bool _4byteBlobIndex;
+		bool _4byteStringIndex;
+		bool _4byteGUIDIndex;
+		bool _4byteBlobIndex;
 
-			Table _tables[TABLE_NUM];
-			std::vector<ColumnOffsetSize> _tableRowMetas[TABLE_NUM];
+		Table _tables[TABLE_NUM];
+		std::vector<ColumnOffsetSize> _tableRowMetas[TABLE_NUM];
 	};
 }
 }

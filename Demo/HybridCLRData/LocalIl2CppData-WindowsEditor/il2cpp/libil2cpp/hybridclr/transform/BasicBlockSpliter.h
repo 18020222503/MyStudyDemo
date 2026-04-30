@@ -12,7 +12,7 @@ namespace transform
 	class BasicBlockSpliter
 	{
 	public:
-		typedef std::unordered_set<uint32_t, il2cpp::utils::PassThroughHash<uint32_t>> Uin32Set;
+		typedef Il2CppHashSet<uint32_t, il2cpp::utils::PassThroughHash<uint32_t>> Uin32Set;
 
 		BasicBlockSpliter(const metadata::MethodBody& body) : _body(body) { }
 

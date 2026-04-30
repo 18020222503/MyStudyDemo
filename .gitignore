@@ -7,7 +7,7 @@
 /Demo/.idea
 /Demo/ProjectSettings
 /Demo/obj
-
+/Build
 *.csproj
 *.sln
 *.user

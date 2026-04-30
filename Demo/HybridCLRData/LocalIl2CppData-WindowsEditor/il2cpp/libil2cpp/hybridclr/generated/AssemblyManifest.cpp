@@ -6,19 +6,10 @@ namespace hybridclr
 	{
 		//!!!{{PLACE_HOLDER
 		"HotUpdate",
+		"Plugins",
+		"Main",
 
 		//!!!}}PLACE_HOLDER
 		nullptr,
 	};
-	
-	const char* g_differentialHybridAssemblies[]
-	{
-
-	//!!!{{DHE
-
-
-	//!!!}}DHE
-		nullptr,
-	};
-
 }

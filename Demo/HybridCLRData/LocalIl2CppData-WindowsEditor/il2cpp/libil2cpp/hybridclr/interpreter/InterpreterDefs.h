@@ -100,9 +100,6 @@ namespace hybridclr
 			bool passbyValWhenInvoke;
 			LocationDataType type;
 			uint16_t stackObjectSize;
-#if HYBRIDCLR_UNITY_2021_OR_NEW
-			bool fullGenericSharingParam;
-#endif
 		};
 
 		struct InterpMethodInfo
@@ -111,12 +108,16 @@ namespace hybridclr
 			MethodArgDesc* args;
 			uint64_t* resolveDatas;
 			const InterpExceptionClause* exClauses;
-			uint16_t argStackObjectSize;
-			uint16_t retStackObjectSize;
-			uint16_t localStackSize; // args + locals StackObject size
-			uint16_t maxStackSize; // args + locals + evalstack size
-			uint16_t exClauseCount;
-			bool initLocals;
+			uint32_t argStackObjectSize;
+			uint32_t retStackObjectSize : 24;
+			uint32_t initLocals : 8;
+			uint32_t localStackSize; // args + locals StackObject size
+			uint32_t maxStackSize; // args + locals + evalstack size
+			uint32_t argCount : 8;
+			uint32_t codeLength : 24;
+			uint32_t localVarBaseOffset;
+			uint32_t evalStackBaseOffset;
+			uint32_t exClauseCount;
 		};
 	}
 }

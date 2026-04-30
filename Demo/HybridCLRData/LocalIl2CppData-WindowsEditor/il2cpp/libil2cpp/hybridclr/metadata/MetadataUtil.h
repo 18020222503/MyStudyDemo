@@ -3,8 +3,6 @@
 
 #include "vm/GlobalMetadata.h"
 #include "vm/Exception.h"
-#include "vm/MetadataLock.h"
-#include "vm/MetadataAlloc.h"
 #include "utils/HashUtils.h"
 #include "metadata/Il2CppTypeHash.h"
 #include "metadata/Il2CppTypeCompare.h"
@@ -20,10 +18,9 @@ namespace metadata
 
 #pragma region byteorder
 
-    template<uint64_t N>
+    template<int N>
     inline void* GetAlignBorder(const void* pointer)
     {
-        static_assert((N & (N - 1)) == 0, "memory align border must be power of 2");
         uint64_t p = (uint64_t)pointer;
         if (p % N == 0)
         {
@@ -31,7 +28,7 @@ namespace metadata
         }
         else
         {
-            return (void*)((p + N - 1) & ~(N-1));
+            return (void*)((p + N - 1) / N * N);
         }
     }
 
@@ -454,20 +451,6 @@ namespace metadata
 	bool HasNotInstantiatedGenericType(const Il2CppType* type);
     bool HasNotInstantiatedGenericType(const Il2CppGenericInst* inst);
 
-    class InterpreterImage;
-
-    bool IsDifferentialHybridImage(const InterpreterImage* image);
-
-    bool IsDifferentialHybridImage(const Il2CppImage* image);
-
-    inline bool IsAOTImageDifferentialHybridImage(const Il2CppImage* image)
-    {
-        return image->assembly->dheAssembly;
-    }
-
-    bool NeedHotfix(const MethodInfo* method);
-
-    bool NeedHotfix(const Il2CppMethodDefinition* method);
 #pragma endregion
 
 
@@ -525,10 +508,6 @@ namespace metadata
     public:
         bool operator()(const Il2CppType* t1, const Il2CppType* t2) const
         {
-            if (!t1 || !t2)
-            {
-                return t1 == t2;
-            }
             return (t1->data.dummy == t2->data.dummy)
                 && t1->type == t2->type
                 && t1->attrs == t2->attrs
@@ -541,34 +520,5 @@ namespace metadata
         }
     };
 
-    template<typename T>
-    inline T* MallocMetadataWithLock()
-    {
-        il2cpp::os::FastAutoLock lock(&il2cpp::vm::g_MetadataLock);
-        T* mem = (T*)HYBRIDCLR_METADATA_MALLOC(sizeof(T));
-        *mem = {};
-        return mem;
-    }
-
-    template<typename T>
-    inline T* MallocMetadataWithoutLock()
-    {
-        T* mem = (T*)HYBRIDCLR_METADATA_MALLOC(sizeof(T));
-        *mem = {};
-        return mem;
-    }
-
-    template<typename T>
-    inline T* CallocMetadataWithLock(size_t count)
-    {
-        il2cpp::os::FastAutoLock lock(&il2cpp::vm::g_MetadataLock);
-        return (T*)HYBRIDCLR_METADATA_CALLOC(count, sizeof(T));
-    }
-
-    template<typename T>
-    inline T* CallocMetadataWithoutLock(size_t count)
-    {
-        return (T*)HYBRIDCLR_METADATA_CALLOC(count, sizeof(T));
-    }
 }
 }

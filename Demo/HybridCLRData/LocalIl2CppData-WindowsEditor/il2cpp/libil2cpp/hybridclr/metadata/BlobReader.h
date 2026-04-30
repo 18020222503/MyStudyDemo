@@ -46,11 +46,6 @@ namespace metadata
             return _readPos < _length;
         }
 
-        uint32_t GetDataSize() const
-        {
-			return _length - _readPos;
-        }
-
         int32_t ReadCompressedInt32()
         {
             uint32_t unsignedValue = ReadCompressedUint32();
@@ -112,16 +107,6 @@ namespace metadata
         {
             IL2CPP_ASSERT(_readPos < _length);
             return _buf[_readPos++];
-        }
-
-        bool TryReadByte(uint8_t& v)
-        {
-            if (_readPos < _length)
-            {
-                v = _buf[_readPos++];
-				return true;
-            }
-            return false;
         }
 
         uint16_t Read16()
@@ -196,17 +181,6 @@ namespace metadata
             IL2CPP_ASSERT(_readPos + len <= _length);
             const byte* data = _buf + _readPos;
             _readPos += len;
-        }
-
-        bool TrySkipBytes(uint32_t len)
-        {
-            if (_readPos + len <= _length)
-            {
-                const byte* data = _buf + _readPos;
-                _readPos += len;
-                return true;
-            }
-            return false;
         }
 
         const byte* GetAndSkipCurBytes(uint32_t len)

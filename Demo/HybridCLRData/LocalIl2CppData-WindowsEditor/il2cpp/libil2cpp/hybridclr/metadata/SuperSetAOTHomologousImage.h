@@ -62,10 +62,7 @@ namespace hybridclr
 		class SuperSetAOTHomologousImage : public AOTHomologousImage
 		{
 		public:
-			SuperSetAOTHomologousImage() : AOTHomologousImage()
-			{
-				_aotTypeIndex2TypeDefs.set_deleted_key(-1);
-			}
+			SuperSetAOTHomologousImage() : AOTHomologousImage() {}
 
 			void InitRuntimeMetadatas() override;
 
@@ -76,9 +73,8 @@ namespace hybridclr
 			Il2CppGenericContainer* GetGenericContainerByTypeDefRawIndex(int32_t typeDefIndex) override;
 			const Il2CppMethodDefinition* GetMethodDefinitionFromRawIndex(uint32_t index) override;
 			void ReadFieldRefInfoFromFieldDefToken(uint32_t rowIndex, FieldRefInfo& ret) override;
-		protected:
+		private:
 
-			virtual bool NeedAccessMethodBody(const Il2CppTypeDefinition* targetTypeDef, const Il2CppMethodDefinition* targetMethodDef);
 			void InitTypes0(std::vector<SuperSetTypeIntermediateInfo>& typeIntermediateInfos);
 			void InitNestedClass(std::vector<SuperSetTypeIntermediateInfo>& typeIntermediateInfos);
 			void InitType(std::vector<SuperSetTypeIntermediateInfo>& typeIntermediateInfos, SuperSetTypeIntermediateInfo& type);
@@ -90,9 +86,9 @@ namespace hybridclr
 			const Il2CppType* _defaultIl2CppType;
 
 			std::vector<SuperSetTypeDefDetail> _typeDefs;
-			Il2CppNotDefaultKeyHashMap<int32_t, SuperSetTypeDefDetail*, il2cpp::utils::PassThroughHash<int32_t>> _aotTypeIndex2TypeDefs;
+			Il2CppHashMap<int32_t, SuperSetTypeDefDetail*, il2cpp::utils::PassThroughHash<int32_t>> _aotTypeIndex2TypeDefs;
 
-			Il2CppNotDefaultKeyHashMap<uint32_t, SuperSetMethodDefDetail*, il2cpp::utils::PassThroughHash<uint32_t>> _token2MethodDefs;
+			Il2CppHashMap<uint32_t, SuperSetMethodDefDetail*, il2cpp::utils::PassThroughHash<uint32_t>> _token2MethodDefs;
 			std::vector<SuperSetMethodDefDetail> _methodDefs;
 
 			std::vector<SuperSetFieldDefDetail> _fields;

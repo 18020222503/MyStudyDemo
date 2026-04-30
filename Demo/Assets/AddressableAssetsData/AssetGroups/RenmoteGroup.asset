@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: RenmoteGroup
+  m_EditorClassIdentifier: 
+  m_GroupName: RenmoteGroup
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 04a321c3c7c358243b1d5e8b79d259fd
+  m_SerializeEntries:
+  - m_GUID: 6288fdcf4fada884687493e5c3a77f93
+    m_Address: Assets/Textures/kobe.jpg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 6bc873bc60bd90d4ab028be3ca781f17, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: deefa68195c24ed4089cc3b1cee1c86d, type: 2}
+    - {fileID: 11400000, guid: 601937720a1a72d49ba5fe5aef3fb61d, type: 2}

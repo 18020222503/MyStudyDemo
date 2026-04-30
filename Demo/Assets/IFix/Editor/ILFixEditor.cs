@@ -346,9 +346,11 @@ namespace IFix.Editor
         //默认的注入及备份程序集
         //另外可以直接调用InjectAssembly对其它程序集进行注入。
         static string[] injectAssemblys = new string[]
-        {
-            "Assembly-CSharp",
-            "Assembly-CSharp-firstpass"
+        {   
+            "Main",
+            "Plugins"
+            // "Assembly-CSharp",
+            // "Assembly-CSharp-firstpass"
         };
 
         /// <summary>

@@ -679,6 +679,21 @@
     <ClCompile Include="Source\Generics__44.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Generics__45.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__46.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__47.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__48.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Generics__49.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
     <ClCompile Include="Source\Generics__5.cpp">
       <Filter>Source</Filter>
     </ClCompile>
@@ -692,6 +707,12 @@
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\Generics__9.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\IFix.Core.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\IFix.Core__1.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\Il2CppCCalculateFieldValues.cpp">
@@ -757,6 +778,12 @@
     <ClCompile Include="Source\mscorlib__17.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\mscorlib__18.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\mscorlib__19.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
     <ClCompile Include="Source\mscorlib__2.cpp">
       <Filter>Source</Filter>
     </ClCompile>
@@ -779,9 +806,6 @@
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\mscorlib__9.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Plugins.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\System.Configuration.cpp">
@@ -842,6 +866,9 @@
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.IMGUIModule__1.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.IMGUIModule__2.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.InputLegacyModule.cpp">
@@ -982,6 +1009,9 @@
     <ClCompile Include="Source\Assembly-CSharp_CodeGen.c">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\IFix.Core_CodeGen.c">
+      <Filter>Source</Filter>
+    </ClCompile>
     <ClCompile Include="Source\Il2CppGenericAdjustorThunkTable.c">
       <Filter>Source</Filter>
     </ClCompile>
@@ -1016,9 +1046,6 @@
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\mscorlib_CodeGen.c">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Plugins_CodeGen.c">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\System.Configuration_CodeGen.c">

@@ -10,9 +10,19 @@ public class InterpertConfig
     {
         get
         {
-            return new List<Type>() {
-                typeof(TestInjectFix),
-            };
+            var types = new List<Type>();
+            foreach (var assembly in System.AppDomain.CurrentDomain.GetAssemblies())
+            {
+                if (assembly.GetName().Name == "Plugins" || assembly.GetName().Name == "Main")
+                {
+                    try
+                    {
+                        types.AddRange(assembly.GetTypes());
+                    }
+                    catch { }
+                }
+            }
+            return types;
         }
     }
 }

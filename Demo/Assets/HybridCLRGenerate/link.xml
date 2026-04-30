@@ -1,22 +1,72 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <linker>
-  <assembly fullname="UnityEngine.CoreModule">
-    <type fullname="UnityEngine.Debug" preserve="all" />
+  <assembly fullname="IFix.Core">
+    <type fullname="IFix.Core.PatchManager" preserve="all" />
+    <type fullname="IFix.Core.VirtualMachine" preserve="all" />
+    <type fullname="IFix.PatchAttribute" preserve="all" />
   </assembly>
-  <assembly fullname="netstandard">
-    <type fullname="System.Array" preserve="all" />
-    <type fullname="System.Byte" preserve="all" />
+  <assembly fullname="System">
     <type fullname="System.CodeDom.Compiler.GeneratedCodeAttribute" preserve="all" />
     <type fullname="System.ComponentModel.EditorBrowsableAttribute" preserve="all" />
     <type fullname="System.ComponentModel.EditorBrowsableState" preserve="all" />
+    <type fullname="System.Diagnostics.Stopwatch" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.CoreModule">
+    <type fullname="UnityEngine.Application" preserve="all" />
+    <type fullname="UnityEngine.Application/LogCallback" preserve="all" />
+    <type fullname="UnityEngine.Debug" preserve="all" />
+    <type fullname="UnityEngine.Events.UnityAction" preserve="all" />
+    <type fullname="UnityEngine.Events.UnityEvent" preserve="all" />
+    <type fullname="UnityEngine.GameObject" preserve="all" />
+    <type fullname="UnityEngine.HideInInspector" preserve="all" />
+    <type fullname="UnityEngine.LogType" preserve="all" />
+    <type fullname="UnityEngine.MonoBehaviour" preserve="all" />
+    <type fullname="UnityEngine.Object" preserve="all" />
+    <type fullname="UnityEngine.Random" preserve="all" />
+    <type fullname="UnityEngine.Rect" preserve="all" />
+    <type fullname="UnityEngine.Resources" preserve="all" />
+    <type fullname="UnityEngine.Screen" preserve="all" />
+    <type fullname="UnityEngine.SerializeField" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.IMGUIModule">
+    <type fullname="UnityEngine.GUI" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.UI">
+    <type fullname="UnityEngine.UI.Button" preserve="all" />
+    <type fullname="UnityEngine.UI.Button/ButtonClickedEvent" preserve="all" />
+    <type fullname="UnityEngine.UI.Text" preserve="all" />
+  </assembly>
+  <assembly fullname="mscorlib">
+    <type fullname="System.Array" preserve="all" />
+    <type fullname="System.Boolean" preserve="all" />
+    <type fullname="System.Byte" preserve="all" />
+    <type fullname="System.Collections.Generic.IEnumerable`1" preserve="all" />
+    <type fullname="System.Collections.Generic.IEnumerator`1" preserve="all" />
+    <type fullname="System.Collections.Generic.List`1" preserve="all" />
+    <type fullname="System.Collections.IEnumerator" preserve="all" />
     <type fullname="System.Diagnostics.DebuggableAttribute" preserve="all" />
     <type fullname="System.Diagnostics.DebuggableAttribute/DebuggingModes" preserve="all" />
+    <type fullname="System.Diagnostics.DebuggerHiddenAttribute" preserve="all" />
+    <type fullname="System.IDisposable" preserve="all" />
+    <type fullname="System.IO.File" preserve="all" />
+    <type fullname="System.IO.FileStream" preserve="all" />
+    <type fullname="System.IO.MemoryStream" preserve="all" />
+    <type fullname="System.IO.Stream" preserve="all" />
+    <type fullname="System.Int32" preserve="all" />
+    <type fullname="System.Int64" preserve="all" />
+    <type fullname="System.NotSupportedException" preserve="all" />
     <type fullname="System.Object" preserve="all" />
+    <type fullname="System.Reflection.Assembly" preserve="all" />
     <type fullname="System.Runtime.CompilerServices.CompilationRelaxationsAttribute" preserve="all" />
     <type fullname="System.Runtime.CompilerServices.CompilerGeneratedAttribute" preserve="all" />
+    <type fullname="System.Runtime.CompilerServices.IteratorStateMachineAttribute" preserve="all" />
     <type fullname="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute" preserve="all" />
     <type fullname="System.Runtime.CompilerServices.RuntimeHelpers" preserve="all" />
     <type fullname="System.RuntimeFieldHandle" preserve="all" />
+    <type fullname="System.Single" preserve="all" />
+    <type fullname="System.String" preserve="all" />
+    <type fullname="System.StringSplitOptions" preserve="all" />
+    <type fullname="System.Type" preserve="all" />
     <type fullname="System.ValueType" preserve="all" />
   </assembly>
 </linker>

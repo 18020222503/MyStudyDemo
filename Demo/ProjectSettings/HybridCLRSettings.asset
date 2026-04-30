@@ -18,6 +18,8 @@ MonoBehaviour:
   il2cppPlusRepoURL: https://gitee.com/focus-creative-games/il2cpp_plus
   hotUpdateAssemblyDefinitions:
   - {fileID: 5897886265953266890, guid: 2ba4d511abc10da4f85039fa3df97131, type: 3}
+  - {fileID: 5897886265953266890, guid: c112f3861e6763f46bfa4dfd7c7f8e9b, type: 3}
+  - {fileID: 5897886265953266890, guid: 6e0a54652e0f21142ac0fa5ed692eba1, type: 3}
   hotUpdateAssemblies: []
   preserveHotUpdateAssemblies: []
   hotUpdateDllCompileOutputRootDir: HybridCLRData/HotUpdateDlls
@@ -25,22 +27,6 @@ MonoBehaviour:
   strippedAOTDllOutputRootDir: HybridCLRData/AssembliesPostIl2CppStrip
   patchAOTAssemblies: []
   outputLinkFile: HybridCLRGenerate/link.xml
-  differentialHybridAssemblies:
-  - HotUpdate
-  injectRuleFiles: []
-  generateCompatibleMethodSignature: 0
   outputAOTGenericReferenceFile: HybridCLRGenerate/AOTGenericReferences.cs
   maxGenericReferenceIteration: 10
   maxMethodBridgeGenericIteration: 10
-  encryptionSettings:
-    encryptGlobalMetadataData: 0
-    vmSeed: 0
-    metadataSeed: 0
-    key: 1234567890abcdef
-    stringEncCodeLength: 128
-    blobEncCodeLength: 128
-    userStringEncCodeLength: 128
-    tableEncCodeLength: 128
-    lazyUserStringEncCodeLength: 16
-    lazyTableEncCodeLength: 16
-    methodBodyEncCodeLength: 16
