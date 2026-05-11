@@ -7,6 +7,8 @@
 /Demo/.idea
 /Demo/ProjectSettings
 /Demo/obj
+/Demo/HybridCRLData
+/Demo/ServerData
 /Build
 *.csproj
 *.sln
