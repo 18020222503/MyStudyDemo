@@ -17,10 +17,18 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 04a321c3c7c358243b1d5e8b79d259fd
   m_SerializeEntries:
+  - m_GUID: 00e1066b63a06c94e8a2d8473ee05b6d
+    m_Address: Assets/Textures/james.jpg
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Texture
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6288fdcf4fada884687493e5c3a77f93
     m_Address: Assets/Textures/kobe.jpg
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - Texture
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 6bc873bc60bd90d4ab028be3ca781f17, type: 2}

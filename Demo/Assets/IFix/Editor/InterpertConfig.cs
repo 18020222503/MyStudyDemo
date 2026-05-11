@@ -13,7 +13,7 @@ public class InterpertConfig
             var types = new List<Type>();
             foreach (var assembly in System.AppDomain.CurrentDomain.GetAssemblies())
             {
-                if (assembly.GetName().Name == "Plugins" || assembly.GetName().Name == "Main")
+                if (assembly.GetName().Name == "Plugins")
                 {
                     try
                     {

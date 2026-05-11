@@ -8,7 +8,8 @@ public class InjectFixController : MonoBehaviour
 {
     IEnumerator Start()
     {
-        yield return LoadPatchFromPrefab("InjectFix/InjectFix");
+        // yield return LoadPatchFromPrefab("InjectFix/InjectFix");
+        yield return new WaitForSeconds(3f);
         yield return LoadPatchFromPrefab("InjectFix/InjectFix1");
     }
 
@@ -44,11 +45,5 @@ public class InjectFixController : MonoBehaviour
         //         Debug.LogError("Patch load failed: " + request.error);
         //     }
         // }
-    }
-
-    [Patch]
-    public void Print()
-    {
-        Debug.Log("【InjectFixController】 Print#22222#####################*");
     }
 }

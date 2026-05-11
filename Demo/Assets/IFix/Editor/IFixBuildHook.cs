@@ -12,7 +12,7 @@
 //
 //     static readonly string[] TargetAssemblies = new[]
 //     {   
-//         "Main.dll",
+//         // "Main.dll",
 //         "Plugins.dll"
 //         // "Assembly-CSharp.dll",
 //         // "Assembly-CSharp-firstpass.dll"

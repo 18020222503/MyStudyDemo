@@ -15,9 +15,9 @@ MonoBehaviour:
   m_DefaultGroup: 11a341eed712cfa4c90fb5104536d91a
   m_currentHash:
     serializedVersion: 2
-    Hash: 34e08e7b128974ad88be28dbdd302ac3
+    Hash: 22868c5a4d6c205ba5822b5e004ab0d2
   m_OptimizeCatalogSize: 0
-  m_BuildRemoteCatalog: 0
+  m_BuildRemoteCatalog: 1
   m_BundleLocalCatalog: 0
   m_CatalogRequestsTimeout: 0
   m_DisableCatalogUpdateOnStart: 0
@@ -35,9 +35,9 @@ MonoBehaviour:
   m_CheckForContentUpdateRestrictionsOption: 0
   m_MonoScriptBundleCustomNaming: 
   m_RemoteCatalogBuildPath:
-    m_Id: 
+    m_Id: b9505e2652a7cd840af9f59333cd7fa6
   m_RemoteCatalogLoadPath:
-    m_Id: 
+    m_Id: 4ed917e46278e3340be3a4a178017a3f
   m_ContentStateBuildPathProfileVariableName: <default settings path>
   m_CustomContentStateBuildPath: 
   m_ContentStateBuildPath: 
@@ -102,6 +102,7 @@ MonoBehaviour:
   m_LabelTable:
     m_LabelNames:
     - default
+    - Texture
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 26cfa9c7012936b49ba3d06ef8ce7dfd, type: 2}
