@@ -1,18 +1,23 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UITest : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    
+    public Button  testButton;
+
+
+    private void Start()
     {
-        
+        testButton.onClick.AddListener(OnTestClick);
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public void OnTestClick()
     {
-        
+        Debug.Log("OnTestClick********************");
     }
 }
