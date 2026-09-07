@@ -1,0 +1,92 @@
+﻿#include "pch-c.h"
+#ifndef _MSC_VER
+# include <alloca.h>
+#else
+# include <malloc.h>
+#endif
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+extern void DllBundleConst_GetRuntimePlatformName_mA2B58E25A5EE61AB990373459F4D108075AB7FC5 (void);
+extern void HybridCLRController_Start_mDE66415EA677E696C00B54F1C40AC765886ABBC6 (void);
+extern void HybridCLRController_Update_m4ED51E9CA6DF863A89A73E41D741D94E3D2112C2 (void);
+extern void HybridCLRController__ctor_m1F1DB7C253A052813C7DFA488C737F548480688C (void);
+extern void HybridCLRController__cctor_m134DB8268C8E9CCBC2DCE0D13E7BAE658252DF47 (void);
+extern void Main_Start_m488C22F958952C9150FF85F045238027ACFC2011 (void);
+extern void Main_Update_m86D802521238341489B5E9727C195161EC25D9B7 (void);
+extern void Main__ctor_m5745EBC0DCB6CC111FB3E004A2C272317FB1C7BD (void);
+extern void ResourceManager_Start_m39C63F1BA57576B8543EB8F7C3444E9CCF7EEDA3 (void);
+extern void ResourceManager_LoadResources_m949ED8C7350F60091F81208E5C09218E8A81A75D (void);
+extern void ResourceManager__ctor_mAB42BAC9DAFE0E8CFD9CB59E760F86921D61E65E (void);
+extern void Root_Start_m7D6EBC30215907D7AE0D8CCAD03A8DA884CE4C20 (void);
+extern void Root_Update_mBDC92A4D2906CFA623079D30AE5959FB3EEE9930 (void);
+extern void Root__ctor_m9F93EA7E6E77B4C0CAA7816AD11D33BE9B0F4734 (void);
+extern void UITest__ctor_mFE7656CEF0D29D433F9486D818E271483A0225A8 (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m413AD876EE1ED6CB44A1FBF13706C8344DCE6048 (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m06E9E7BFE73DD47B4CD92B67ABE0D66BE29A7343 (void);
+static Il2CppMethodPointer s_methodPointers[17] = 
+{
+	DllBundleConst_GetRuntimePlatformName_mA2B58E25A5EE61AB990373459F4D108075AB7FC5,
+	HybridCLRController_Start_mDE66415EA677E696C00B54F1C40AC765886ABBC6,
+	HybridCLRController_Update_m4ED51E9CA6DF863A89A73E41D741D94E3D2112C2,
+	HybridCLRController__ctor_m1F1DB7C253A052813C7DFA488C737F548480688C,
+	HybridCLRController__cctor_m134DB8268C8E9CCBC2DCE0D13E7BAE658252DF47,
+	Main_Start_m488C22F958952C9150FF85F045238027ACFC2011,
+	Main_Update_m86D802521238341489B5E9727C195161EC25D9B7,
+	Main__ctor_m5745EBC0DCB6CC111FB3E004A2C272317FB1C7BD,
+	ResourceManager_Start_m39C63F1BA57576B8543EB8F7C3444E9CCF7EEDA3,
+	ResourceManager_LoadResources_m949ED8C7350F60091F81208E5C09218E8A81A75D,
+	ResourceManager__ctor_mAB42BAC9DAFE0E8CFD9CB59E760F86921D61E65E,
+	Root_Start_m7D6EBC30215907D7AE0D8CCAD03A8DA884CE4C20,
+	Root_Update_mBDC92A4D2906CFA623079D30AE5959FB3EEE9930,
+	Root__ctor_m9F93EA7E6E77B4C0CAA7816AD11D33BE9B0F4734,
+	UITest__ctor_mFE7656CEF0D29D433F9486D818E271483A0225A8,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m413AD876EE1ED6CB44A1FBF13706C8344DCE6048,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m06E9E7BFE73DD47B4CD92B67ABE0D66BE29A7343,
+};
+static const int32_t s_InvokerIndices[17] = 
+{
+	6197,
+	4189,
+	4189,
+	4189,
+	6225,
+	4189,
+	4189,
+	4189,
+	4189,
+	4189,
+	4189,
+	4189,
+	4189,
+	4189,
+	4189,
+	6231,
+	4189,
+};
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Plugins_CodeGenModule;
+const Il2CppCodeGenModule g_Plugins_CodeGenModule = 
+{
+	"Plugins.dll",
+	17,
+	s_methodPointers,
+	0,
+	NULL,
+	s_InvokerIndices,
+	0,
+	NULL,
+	0,
+	NULL,
+	0,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+};

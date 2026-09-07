@@ -2,6 +2,7 @@ using System.IO;
 using System.Security.Cryptography;
 using UnityEditor;
 using UnityEngine;
+using HybridCLR.Editor.Commands;
 
 /// <summary>
 /// 把 Assets/Dlls/Game.dll.bytes 打成一个 AssetBundle，输出到工程外的 BuildBundles/&lt;平台&gt;/，
@@ -12,7 +13,36 @@ public static class BuildDllBundle
     // 源 .bytes（由 BuildHotUpdateDll 生成）
     private const string SrcBytes = "Assets/Dlls/Game.dll.bytes";
     // bundle 输出根目录（工程外，避免被 Unity 当资源导入）
-    private static string OutputRoot => Path.GetFullPath(Path.Combine(Application.dataPath, "../../BuildBundles"));
+    private static string OutputRoot => @"E:\study\Demo\Bundle";
+
+    /// <summary>
+    /// 一键：HybridCLR Generate/All → 编译并拷贝热更DLL(.bytes) → 打 Bundle。
+    /// 整合原来需要手点的三步，按顺序执行，任一步抛异常即中止并报错。
+    /// </summary>
+    [MenuItem("BuildPackage/一键: 生成+编译+打Bundle", false, 10)]
+    public static void GenerateCompileAndBuild()
+    {
+        try
+        {
+            // 步骤1：HybridCLR 生成（AOT 泛型引用 / 方法桥接 / link.xml 等，针对当前 activeBuildTarget）
+            Debug.Log("[一键] 步骤1/3 HybridCLR Generate/All ...");
+            PrebuildCommand.GenerateAll();
+
+            // 步骤2：编译热更程序集并拷成 Assets/Dlls/*.dll.bytes
+            Debug.Log("[一键] 步骤2/3 编译并拷贝热更DLL(.bytes) ...");
+            BuildHotUpdateDll.CompileAndCopy();
+
+            // 步骤3：打 Bundle + 生成 version.json（输出到 CDN 目录）
+            Debug.Log("[一键] 步骤3/3 打包热更DLL Bundle ...");
+            Build();
+
+            Debug.Log("[一键] 全部完成 ✓");
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError($"[一键] 失败：{e}");
+        }
+    }
 
     [MenuItem("BuildPackage/打包热更DLL Bundle", false, 30)]
     public static void Build()
@@ -30,7 +60,7 @@ public static class BuildDllBundle
         }
 
         BuildTarget target = EditorUserBuildSettings.activeBuildTarget;
-        string outDir = Path.Combine(OutputRoot, target.ToString());
+        string outDir = Path.Combine(OutputRoot, DllBundleConst.GetPlatformName(target));
         Directory.CreateDirectory(outDir);
 
         // 2. 显式构建单个 bundle

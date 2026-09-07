@@ -261,7 +261,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdf77edf02e68594cb5b8a6dcd2dbabd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fontSize: 30
+  fontHeightRatio: 0.022
+  minFontSize: 14
+  marginRatio: 0.01
+  textColor: {r: 1, g: 1, b: 1, a: 1}
+  backgroundColor: {r: 0, g: 0, b: 0, a: 0.5}
 --- !u!1 &538077178
 GameObject:
   m_ObjectHideFlags: 0

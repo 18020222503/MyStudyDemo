@@ -6,10 +6,10 @@ dependencies {
 
 android {
     namespace "com.DefaultCompany.Demo"
-    ndkPath "F:/work/UnityEditor/2022.3.56f1c1/Editor/Data/PlaybackEngines/AndroidPlayer/NDK"
+    ndkPath "E:/work/Editor/2022.3.56f1c1/Editor/Data/PlaybackEngines/AndroidPlayer/NDK"
 
-    compileSdkVersion 36
-    buildToolsVersion '35.0.0'
+    compileSdkVersion 35
+    buildToolsVersion '34.0.0'
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_11
@@ -18,7 +18,7 @@ android {
 
     defaultConfig {
         minSdkVersion 22
-        targetSdkVersion 36
+        targetSdkVersion 35
         applicationId 'com.DefaultCompany.Demo'
         ndk {
             abiFilters 'armeabi-v7a', 'arm64-v8a'
@@ -32,6 +32,15 @@ android {
         ignoreAssetsPattern = "!.svn:!.git:!.ds_store:!*.scc:!CVS:!thumbs.db:!picasa.ini:!*~"
     }
 
+    signingConfigs {
+        release {
+            storeFile file('E:/study/Demo/MyStudyDemo/Demo/user.keystore')
+            storePassword 'qq6212592'
+            keyAlias '11'
+            keyPassword 'qq6212592'
+        }
+    }
+
     lintOptions {
         abortOnError false
     }
@@ -40,13 +49,13 @@ android {
         debug {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt')
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.release
             jniDebuggable true
         }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt')
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.release
         }
     }
 

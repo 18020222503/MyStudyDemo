@@ -348,11 +348,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 211364520}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bac44856350078b479e0519471a90c6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Text: {fileID: 425900086}
-  fontSize: 6
+  m_Script: {fileID: 11500000, guid: fdf77edf02e68594cb5b8a6dcd2dbabd, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  fontHeightRatio: 0.022
+  minFontSize: 14
+  marginRatio: 0.01
+  textColor: {r: 1, g: 1, b: 1, a: 1}
+  backgroundColor: {r: 0, g: 0, b: 0, a: 0.5}
 --- !u!114 &211364529
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -39,8 +39,11 @@ public class DllBundleLoader : MonoBehaviour
     {
         Directory.CreateDirectory(CacheDir);
 
+        // CDN 上按平台分目录存放（与打包输出目录 Bundle/<平台>/ 对齐）
+        string cdnBase = $"{DllCdnConfig.CdnRoot}/{DllBundleConst.GetRuntimePlatformName()}";
+
         // 1. 下 version.json
-        string remoteVerUrl = $"{DllCdnConfig.CdnRoot}/{DllBundleConst.VersionFile}";
+        string remoteVerUrl = $"{cdnBase}/{DllBundleConst.VersionFile}";
         VersionInfo remoteVer = null;
         using (var req = UnityWebRequest.Get(remoteVerUrl))
         {
@@ -77,7 +80,7 @@ public class DllBundleLoader : MonoBehaviour
         // 3. 需要则下 bundle
         if (needDownload)
         {
-            string bundleUrl = $"{DllCdnConfig.CdnRoot}/{remoteVer.bundle}";
+            string bundleUrl = $"{cdnBase}/{remoteVer.bundle}";
             Debug.Log($"[DllBundleLoader] 下载 bundle: {bundleUrl}");
             using (var req = UnityWebRequest.Get(bundleUrl))
             {

@@ -20,11 +20,14 @@
 #include "vm/Reflection.h"
 #include "vm/String.h"
 #include "vm/Type.h"
+#include "vm/GlobalMetadata.h"
 #include "vm-utils/VmStringUtils.h"
 #include "il2cpp-class-internals.h"
 #include "il2cpp-object-internals.h"
 #include "il2cpp-tabledefs.h"
 #include "vm/Array.h"
+
+#include "hybridclr/metadata/MetadataUtil.h"
 
 static char* copy_name(const char* name)
 {
@@ -129,15 +132,35 @@ namespace vm
 
         if (last_dot == _end)
         {
-            _info._name.assign(begin, _p);
+            //_info._name.assign(begin, _p);
+            AssignSkipEscapeSymbol(_info._name, begin, _p);
         }
         else
         {
-            _info._namespace.assign(begin, last_dot);
-            _info._name.assign(last_dot + 1, _p);
+            //_info._namespace.assign(begin, last_dot);
+            AssignSkipEscapeSymbol(_info._namespace, begin, last_dot);
+            //_info._name.assign(last_dot + 1, _p);
+            AssignSkipEscapeSymbol(_info._name, last_dot + 1, _p);
         }
 
         return true;
+    }
+
+    void TypeNameParser::AssignSkipEscapeSymbol(std::string& s, std::string::const_iterator begin, std::string::const_iterator end)
+    {
+        for (std::string::const_iterator it = begin; it != end; ++it)
+        {
+            auto ch = *it;
+            if (ch != '\\')
+            {
+                s.push_back(ch);
+            }
+            else
+            {
+                ++it;
+                s.push_back(*it);
+            }
+        }
     }
 
     bool TypeNameParser::ParseNestedTypeOptional(int32_t &arity)
@@ -147,9 +170,17 @@ namespace vm
             if (!Next())
                 return false; // Invalid format
 
-            std::string::const_iterator begin = _p;
+            std::string::const_iterator begin;
 
-            ConsumeIdentifier();
+            while (true)
+            {
+                begin = _p;
+                ConsumeIdentifier();
+                if (!CurrentIs('.'))
+                    break;
+                if (!Next())
+                    break;
+            }
 
             if (CurrentIs('`'))
             {
@@ -164,7 +195,9 @@ namespace vm
                 arity += nested_arity;
             }
 
-            _info._nested.push_back(std::string(begin, _p));
+            std::string nestedTypeName;
+            AssignSkipEscapeSymbol(nestedTypeName, begin, _p);
+            _info._nested.push_back(nestedTypeName);
         }
 
         return true;
@@ -1038,15 +1071,27 @@ namespace vm
 
     const Il2CppType* Type::GetUnderlyingType(const Il2CppType *type)
     {
-        if (type->type == IL2CPP_TYPE_VALUETYPE && !type->byref && MetadataCache::GetTypeInfoFromType(type)->enumtype)
-            return Class::GetEnumBaseType(MetadataCache::GetTypeInfoFromType(type));
-        if (IsGenericInstance(type))
+        if (type->byref)
         {
-            Il2CppClass* definition = GenericClass::GetTypeDefinition(type->data.generic_class);
-            if (definition != NULL && definition->enumtype && !type->byref)
-                return Class::GetEnumBaseType(definition);
+            return type;
         }
-        return type;
+
+        if (!IsEnum(type))
+        {
+            return type;
+        }
+
+        const Il2CppTypeDefinition* typeDef;
+        if (type->type == IL2CPP_TYPE_VALUETYPE)
+        {
+            typeDef = (const Il2CppTypeDefinition*)type->data.typeHandle;
+        }
+        else
+        {
+            IL2CPP_ASSERT(type->type == IL2CPP_TYPE_GENERICINST);
+            typeDef = (const Il2CppTypeDefinition*)type->data.generic_class->type->data.typeHandle;
+        }
+        return il2cpp::vm::GlobalMetadata::GetIl2CppTypeFromIndex(typeDef->elementTypeIndex);
     }
 
     bool Type::IsGenericInstance(const Il2CppType* type)
@@ -1139,9 +1184,6 @@ namespace vm
 
     bool Type::IsReference(const Il2CppType* type)
     {
-        if (!type)
-            return false;
-
         if (type->type == IL2CPP_TYPE_STRING ||
             type->type == IL2CPP_TYPE_SZARRAY ||
             type->type == IL2CPP_TYPE_CLASS ||
@@ -1160,16 +1202,17 @@ namespace vm
         if (type->byref)
             return false;
 
-        if (type->type == IL2CPP_TYPE_VALUETYPE && !MetadataCache::GetTypeInfoFromType(type)->enumtype)
-            return true;
-
         if (type->type == IL2CPP_TYPE_TYPEDBYREF)
             return true;
 
-        if (IsGenericInstance(type) &&
-            GenericClass::IsValueType(type->data.generic_class) &&
-            !GenericClass::IsEnum(type->data.generic_class))
-            return true;
+        if (type->type == IL2CPP_TYPE_VALUETYPE)
+            return !IsEnum(type);
+
+        if (type->type == IL2CPP_TYPE_GENERICINST)
+        {
+            const Il2CppType* genericType = type->data.generic_class->type;
+            return genericType->type == IL2CPP_TYPE_VALUETYPE && !IsEnum(genericType);
+        }
 
         return false;
     }
@@ -1220,16 +1263,16 @@ namespace vm
 
     bool Type::IsEnum(const Il2CppType *type)
     {
-        if (type->type != IL2CPP_TYPE_VALUETYPE)
-            return false;
-
-        Il2CppClass* klass = GetClass(type);
-        return klass->enumtype;
-    }
-
-    bool Type::IsValueType(const Il2CppType *type)
-    {
-        return type->valuetype;
+        if (type->type == IL2CPP_TYPE_VALUETYPE)
+        {
+            const Il2CppTypeDefinition* typeDefinition = (const Il2CppTypeDefinition*)type->data.typeHandle;
+            return (typeDefinition->bitfield >> (kBitIsEnum - 1)) & 0x1;
+        }
+        if (type->type == IL2CPP_TYPE_GENERICINST)
+        {
+            return IsEnum(type->data.generic_class->type);
+        }
+        return false;
     }
 
     bool Type::IsPointerType(const Il2CppType *type)
@@ -1278,11 +1321,20 @@ namespace vm
         return type;
     }
 
-    static void InvokeDelegateConstructor(Il2CppDelegate* delegate, Il2CppObject* target, const MethodInfo* method)
+    void Type::InvokeDelegateConstructor(Il2CppDelegate* delegate, Il2CppObject* target, const MethodInfo* method)
     {
         typedef void (*DelegateCtor)(Il2CppDelegate* delegate, Il2CppObject* target, intptr_t method, MethodInfo* hiddenMethodInfo);
         const MethodInfo* ctor = Class::GetMethodFromName(delegate->object.klass, ".ctor", 2);
-        void* ctorArgs[2] = {target, (void*)&method};
+        if (ctor->methodPointer == nullptr || ctor->isInterpterImpl)
+        {
+            delegate->target = target;
+            delegate->method = method;
+            delegate->invoke_impl = hybridclr::InitAndGetInterpreterDirectlyCallMethodPointer(method);
+            delegate->invoke_impl_this = target;
+            //il2cpp::vm::Exception::Raise(il2cpp::vm::Exception::GetNotSupportedException("interperter delegate can't be constructed by InvokeDelegateConstructor"));
+            return;
+        }
+        void* ctorArgs[2] = { target, (void*)&method };
         ctor->invoker_method(ctor->methodPointer, ctor, delegate, ctorArgs, NULL);
     }
 
