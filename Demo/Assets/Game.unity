@@ -349,8 +349,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fdf77edf02e68594cb5b8a6dcd2dbabd, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   fontHeightRatio: 0.022
   minFontSize: 14
   marginRatio: 0.01
@@ -368,7 +368,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abbd4631f11f88a44a8d69a86cfcd575, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Button: {fileID: 941895506}
 --- !u!1 &264203925
 GameObject:
   m_ObjectHideFlags: 0
