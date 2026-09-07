@@ -1,35 +1,22 @@
 using UnityEngine;
-using UnityEngine.AddressableAssets;
 
-public class ResourceManager:MonoBehaviour
+public class ResourceManager : MonoBehaviour
 {
-    public AssetReference spherePrefabRef;
+    // Addressables 已从项目移除。原先通过 Addressables 加载资源的逻辑先行下线，
+    // 后续如需资源加载请改用 Resources / AssetBundle 或新的资源方案。
     private void Start()
     {
         LoadResources();
-        // LoadReferenceRes();
     }
 
     // 加载
     public void LoadResources()
     {
-        Addressables.LoadAssetAsync<GameObject>("HelloCube").Completed += (handle) =>
-            {
-                // 预设物体
-                GameObject prefabObj = handle.Result;
-                GameObject cubeObj = Instantiate(prefabObj);
-            };
-    }
-
-
-    public void LoadReferenceRes()
-    {
-        spherePrefabRef.LoadAssetAsync<GameObject>().Completed += (obj) =>
-            {
-                // 预设
-                GameObject spherePrefab = obj.Result;
-                // 实例化
-                GameObject sphereObj = Instantiate(spherePrefab);
-            };
+        // TODO: 替换为新的资源加载方案（原实现使用 Addressables.LoadAssetAsync("HelloCube")）
+        var prefab = Resources.Load<GameObject>("HelloCube");
+        if (prefab != null)
+        {
+            Instantiate(prefab);
+        }
     }
 }

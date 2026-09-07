@@ -1,28 +1,41 @@
-using HybridCLR;
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.Networking;
 
 public class LoadDll : MonoBehaviour
 {
-
     void Start()
     {
-        // Editor环境下，HotUpdate.dll.bytes已经被自动加载，不需要加载，重复加载反而会出问题。
-#if !UNITY_EDITOR
-        Assembly hotUpdateAss = Assembly.Load(File.ReadAllBytes($"{Application.streamingAssetsPath}/Game.dll.bytes"));
+#if UNITY_EDITOR
+        // Editor 下 Game 程序集已随工程编译加载，直接查找，无需热更下载
+        Assembly hotUpdateAss = AppDomain.CurrentDomain.GetAssemblies()
+            .First(a => a.GetName().Name == "Game");
+        InvokeEntry(hotUpdateAss);
 #else
-        // Editor下无需加载，直接查找获得HotUpdate程序集
-        Assembly hotUpdateAss = System.AppDomain.CurrentDomain.GetAssemblies().First(a => a.GetName().Name == "Game");
+        // 真机：从 CDN 下载 Game.dll 的 AssetBundle 并加载，完成后反射进入热更入口
+        var loader = gameObject.AddComponent<DllBundleLoader>();
+        loader.Load(hotUpdateAss =>
+        {
+            if (hotUpdateAss == null)
+            {
+                Debug.LogError("[LoadDll] 热更程序集加载失败");
+                return;
+            }
+            InvokeEntry(hotUpdateAss);
+        });
 #endif
-        
+    }
+
+    // 反射调用热更入口 Hello.Run()
+    private static void InvokeEntry(Assembly hotUpdateAss)
+    {
         Type type = hotUpdateAss.GetType("Hello");
-        type.GetMethod("Run").Invoke(null, null);
+        if (type == null)
+        {
+            Debug.LogError("[LoadDll] 未找到 Hello 类型");
+            return;
+        }
+        type.GetMethod("Run")?.Invoke(null, null);
     }
 }
