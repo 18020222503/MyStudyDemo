@@ -10135,7 +10135,7 @@ IL_0263:
 		Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_89 = (L_86)->GetAt(static_cast<il2cpp_array_size_t>(L_88));
 		NullCheck(L_89);
 		int32_t L_90;
-		L_90 = VirtualFuncInvoker0< int32_t >::Invoke(4, L_89);
+		L_90 = VirtualFuncInvoker0< int32_t >::Invoke(5, L_89);
 		int32_t L_91 = __this->___m_AtlasWidth;
 		if ((!(((uint32_t)L_90) == ((uint32_t)L_91))))
 		{
@@ -10150,7 +10150,7 @@ IL_0263:
 		Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_95 = (L_92)->GetAt(static_cast<il2cpp_array_size_t>(L_94));
 		NullCheck(L_95);
 		int32_t L_96;
-		L_96 = VirtualFuncInvoker0< int32_t >::Invoke(6, L_95);
+		L_96 = VirtualFuncInvoker0< int32_t >::Invoke(7, L_95);
 		int32_t L_97 = __this->___m_AtlasHeight;
 		G_B45_0 = ((((int32_t)((((int32_t)L_96) == ((int32_t)L_97))? 1 : 0)) == ((int32_t)0))? 1 : 0);
 		goto IL_029d;
@@ -11031,7 +11031,7 @@ IL_0268:
 		Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_89 = (L_86)->GetAt(static_cast<il2cpp_array_size_t>(L_88));
 		NullCheck(L_89);
 		int32_t L_90;
-		L_90 = VirtualFuncInvoker0< int32_t >::Invoke(4, L_89);
+		L_90 = VirtualFuncInvoker0< int32_t >::Invoke(5, L_89);
 		int32_t L_91 = __this->___m_AtlasWidth;
 		if ((!(((uint32_t)L_90) == ((uint32_t)L_91))))
 		{
@@ -11046,7 +11046,7 @@ IL_0268:
 		Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_95 = (L_92)->GetAt(static_cast<il2cpp_array_size_t>(L_94));
 		NullCheck(L_95);
 		int32_t L_96;
-		L_96 = VirtualFuncInvoker0< int32_t >::Invoke(6, L_95);
+		L_96 = VirtualFuncInvoker0< int32_t >::Invoke(7, L_95);
 		int32_t L_97 = __this->___m_AtlasHeight;
 		G_B44_0 = ((((int32_t)((((int32_t)L_96) == ((int32_t)L_97))? 1 : 0)) == ((int32_t)0))? 1 : 0);
 		goto IL_02a2;
@@ -11531,7 +11531,7 @@ IL_004a_1:
 				Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_15 = (L_12)->GetAt(static_cast<il2cpp_array_size_t>(L_14));
 				NullCheck(L_15);
 				bool L_16;
-				L_16 = VirtualFuncInvoker0< bool >::Invoke(8, L_15);
+				L_16 = VirtualFuncInvoker0< bool >::Invoke(11, L_15);
 				V_4 = (bool)((((int32_t)L_16) == ((int32_t)0))? 1 : 0);
 				bool L_17 = V_4;
 				if (!L_17)
@@ -11588,7 +11588,7 @@ IL_00c1_1:
 				Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_38 = (L_35)->GetAt(static_cast<il2cpp_array_size_t>(L_37));
 				NullCheck(L_38);
 				int32_t L_39;
-				L_39 = VirtualFuncInvoker0< int32_t >::Invoke(4, L_38);
+				L_39 = VirtualFuncInvoker0< int32_t >::Invoke(5, L_38);
 				int32_t L_40 = __this->___m_AtlasWidth;
 				if ((!(((uint32_t)L_39) == ((uint32_t)L_40))))
 				{
@@ -11603,7 +11603,7 @@ IL_00c1_1:
 				Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_44 = (L_41)->GetAt(static_cast<il2cpp_array_size_t>(L_43));
 				NullCheck(L_44);
 				int32_t L_45;
-				L_45 = VirtualFuncInvoker0< int32_t >::Invoke(6, L_44);
+				L_45 = VirtualFuncInvoker0< int32_t >::Invoke(7, L_44);
 				int32_t L_46 = __this->___m_AtlasHeight;
 				G_B10_0 = ((((int32_t)((((int32_t)L_45) == ((int32_t)L_46))? 1 : 0)) == ((int32_t)0))? 1 : 0);
 				goto IL_00fb_1;
@@ -12011,7 +12011,7 @@ IL_00ed:
 		Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_43 = (L_40)->GetAt(static_cast<il2cpp_array_size_t>(L_42));
 		NullCheck(L_43);
 		bool L_44;
-		L_44 = VirtualFuncInvoker0< bool >::Invoke(8, L_43);
+		L_44 = VirtualFuncInvoker0< bool >::Invoke(11, L_43);
 		V_10 = (bool)((((int32_t)L_44) == ((int32_t)0))? 1 : 0);
 		bool L_45 = V_10;
 		if (!L_45)
@@ -12068,7 +12068,7 @@ IL_0166:
 		Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_66 = (L_63)->GetAt(static_cast<il2cpp_array_size_t>(L_65));
 		NullCheck(L_66);
 		int32_t L_67;
-		L_67 = VirtualFuncInvoker0< int32_t >::Invoke(4, L_66);
+		L_67 = VirtualFuncInvoker0< int32_t >::Invoke(5, L_66);
 		int32_t L_68 = __this->___m_AtlasWidth;
 		if ((!(((uint32_t)L_67) == ((uint32_t)L_68))))
 		{
@@ -12083,7 +12083,7 @@ IL_0166:
 		Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_72 = (L_69)->GetAt(static_cast<il2cpp_array_size_t>(L_71));
 		NullCheck(L_72);
 		int32_t L_73;
-		L_73 = VirtualFuncInvoker0< int32_t >::Invoke(6, L_72);
+		L_73 = VirtualFuncInvoker0< int32_t >::Invoke(7, L_72);
 		int32_t L_74 = __this->___m_AtlasHeight;
 		G_B23_0 = ((((int32_t)((((int32_t)L_73) == ((int32_t)L_74))? 1 : 0)) == ((int32_t)0))? 1 : 0);
 		goto IL_01a0;
@@ -14043,7 +14043,7 @@ IL_0044:
 		Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_20 = V_0;
 		NullCheck(L_20);
 		bool L_21;
-		L_21 = VirtualFuncInvoker0< bool >::Invoke(8, L_20);
+		L_21 = VirtualFuncInvoker0< bool >::Invoke(11, L_20);
 		V_6 = (bool)((((int32_t)L_21) == ((int32_t)0))? 1 : 0);
 		bool L_22 = V_6;
 		if (!L_22)
@@ -14077,7 +14077,7 @@ IL_009d:
 		Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_27 = V_0;
 		NullCheck(L_27);
 		int32_t L_28;
-		L_28 = VirtualFuncInvoker0< int32_t >::Invoke(4, L_27);
+		L_28 = VirtualFuncInvoker0< int32_t >::Invoke(5, L_27);
 		int32_t L_29 = __this->___m_AtlasWidth;
 		if ((!(((uint32_t)L_28) == ((uint32_t)L_29))))
 		{
@@ -14088,7 +14088,7 @@ IL_009d:
 		Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_30 = V_0;
 		NullCheck(L_30);
 		int32_t L_31;
-		L_31 = VirtualFuncInvoker0< int32_t >::Invoke(6, L_30);
+		L_31 = VirtualFuncInvoker0< int32_t >::Invoke(7, L_30);
 		int32_t L_32 = __this->___m_AtlasHeight;
 		G_B15_0 = ((((int32_t)((((int32_t)L_31) == ((int32_t)L_32))? 1 : 0)) == ((int32_t)0))? 1 : 0);
 		goto IL_00bf;

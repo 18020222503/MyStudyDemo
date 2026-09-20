@@ -1,4 +1,5 @@
 using UnityEngine;
+using GameSDKNS;
 
 public class Hello
 {
@@ -13,5 +14,18 @@ public class Hello
         Object.DontDestroyOnLoad(go);
         go.AddComponent<UITest>();
         Debug.Log("[Hello] 已动态创建 UITest");
+
+        // 演示：调用上层 SDK 门面（Editor 走空实现，模拟成功回调）
+        GameSDK.Init(ok =>
+        {
+            Debug.Log($"[Hello] SDK Init 完成 ok={ok}");
+            if (ok)
+            {
+                GameSDK.Login((success, userInfo) =>
+                {
+                    Debug.Log($"[Hello] SDK Login 完成 success={success} userInfo={userInfo}");
+                });
+            }
+        });
     }
 }

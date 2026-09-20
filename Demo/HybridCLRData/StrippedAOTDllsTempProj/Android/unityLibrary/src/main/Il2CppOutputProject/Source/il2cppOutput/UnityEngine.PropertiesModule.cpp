@@ -773,6 +773,7 @@ struct NonSerializedAttribute_t3E57D1A7E7F31DE192694AB4C8927BAE7D1BE177  : publi
 };
 struct PropertyAttribute_t5E0CB5A6CDA6E24CBD4FF26DE3B0C29D8BB54BF0  : public Attribute_tFDA8EFEFB0711976D22474794576DAF28F7440AA
 {
+	int32_t ___U3CorderU3Ek__BackingField;
 };
 struct PropertyInfo_t  : public MemberInfo_t
 {

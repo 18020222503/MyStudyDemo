@@ -1,0 +1,25 @@
+// OpenHarmony(鸿蒙) SDK 桥接占位（纯占位）。
+//
+// 鸿蒙通过 .etslib / .har 与 ArkTS 层通信，机制与 Android/iOS 不同：
+//   - C# 侧对应 SDKServerHarmony（当前无 UNITY_OPENHARMONY 宏时仅占位）
+//   - host 侧推送回调回填缓存，再由 C# 轮询/读取
+//
+// 原生 → C# 回调同样约定统一格式：
+//   {"Method":"Login","Code":10010,"Data":"..."}
+//
+// TODO: 接入 OneSDK 鸿蒙版后，用真实的 .etslib/.har 替换本占位，
+//       在 ArkTS 侧实现 Init/Login/Logout 并回填回调。
+//
+// 注意：本文件仅为占位说明，不是可编译的 etslib。真机鸿蒙构建时需替换为真实库。
+
+export class OneSDKBridge {
+  static Init(args: string): void {
+    // TODO
+  }
+  static Login(args: string): void {
+    // TODO
+  }
+  static Logout(args: string): void {
+    // TODO
+  }
+}

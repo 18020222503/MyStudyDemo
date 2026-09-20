@@ -26,10 +26,9 @@ extern void ResourceManager__ctor_mAB42BAC9DAFE0E8CFD9CB59E760F86921D61E65E (voi
 extern void Root_Start_m7D6EBC30215907D7AE0D8CCAD03A8DA884CE4C20 (void);
 extern void Root_Update_mBDC92A4D2906CFA623079D30AE5959FB3EEE9930 (void);
 extern void Root__ctor_m9F93EA7E6E77B4C0CAA7816AD11D33BE9B0F4734 (void);
-extern void UITest__ctor_mFE7656CEF0D29D433F9486D818E271483A0225A8 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m413AD876EE1ED6CB44A1FBF13706C8344DCE6048 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m06E9E7BFE73DD47B4CD92B67ABE0D66BE29A7343 (void);
-static Il2CppMethodPointer s_methodPointers[17] = 
+static Il2CppMethodPointer s_methodPointers[16] = 
 {
 	DllBundleConst_GetRuntimePlatformName_mA2B58E25A5EE61AB990373459F4D108075AB7FC5,
 	HybridCLRController_Start_mDE66415EA677E696C00B54F1C40AC765886ABBC6,
@@ -45,35 +44,33 @@ static Il2CppMethodPointer s_methodPointers[17] =
 	Root_Start_m7D6EBC30215907D7AE0D8CCAD03A8DA884CE4C20,
 	Root_Update_mBDC92A4D2906CFA623079D30AE5959FB3EEE9930,
 	Root__ctor_m9F93EA7E6E77B4C0CAA7816AD11D33BE9B0F4734,
-	UITest__ctor_mFE7656CEF0D29D433F9486D818E271483A0225A8,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m413AD876EE1ED6CB44A1FBF13706C8344DCE6048,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m06E9E7BFE73DD47B4CD92B67ABE0D66BE29A7343,
 };
-static const int32_t s_InvokerIndices[17] = 
+static const int32_t s_InvokerIndices[16] = 
 {
-	6197,
-	4189,
-	4189,
-	4189,
-	6225,
-	4189,
-	4189,
-	4189,
-	4189,
-	4189,
-	4189,
-	4189,
-	4189,
-	4189,
-	4189,
-	6231,
-	4189,
+	9344,
+	5615,
+	5615,
+	5615,
+	9388,
+	5615,
+	5615,
+	5615,
+	5615,
+	5615,
+	5615,
+	5615,
+	5615,
+	5615,
+	9400,
+	5615,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Plugins_CodeGenModule;
 const Il2CppCodeGenModule g_Plugins_CodeGenModule = 
 {
 	"Plugins.dll",
-	17,
+	16,
 	s_methodPointers,
 	0,
 	NULL,
